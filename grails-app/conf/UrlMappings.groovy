@@ -11,9 +11,9 @@ class UrlMappings {
         "/logout/$action?"(controller: "logout")
 
 
-		//"/"(controller:"home")
+		"/"(controller:"home")
 
-		"/"(view:"/index")
+		//"/"(view:"/index")
 		"500"(view:'/error')
 	}
 }

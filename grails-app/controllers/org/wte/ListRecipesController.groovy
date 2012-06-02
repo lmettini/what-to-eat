@@ -4,7 +4,8 @@ class ListRecipesController {
 
     def index = {
         def components = []
-        
+        def resultList = []
+
         if(params.id){
 		    def ingredientsIds = params.id.toString().split(',')
 		    ingredientsIds.each {
@@ -12,7 +13,19 @@ class ListRecipesController {
 		    }
         }
 
-        ["components":components]
+        components.each { cp ->
+            def recipe = resultList.find{it.recipe==cp.recipe}
+            if(recipe){
+                recipe.ingredients.add(cp.ingredient)
+            }else{
+                resultList.add(new RecipiesListByIngredientRow(recipe:cp.recipe,ingredients:[cp.ingredient]))
+            }
+        }
+
+        resultList.sort({it.ingredients.size() * -1})
+
+        [   "components":components,
+            "resultList":resultList]
 
     }
 }

@@ -4,51 +4,119 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        RecipeComponent component = new RecipeComponent(qty: 3)
+        // defino algunas unidades de medida
+        MeasureUnit gramos = new MeasureUnit(name: "gramos")
+        gramos.save(flush:true)
+
+        MeasureUnit cucharada = new MeasureUnit(name: "cucharadas")
+        cucharada.save(flush:true)
+
+
+        // defino ingredientes
+        Ingredient tallarines = new Ingredient(name: "Tallarines")
+        tallarines.save(flush:true)
+
+        Ingredient pimienta = new Ingredient(name: "Pimienta")
+        pimienta.save(flush:true)
+
+        Ingredient lenteja = new Ingredient(name: "Lenteja")
+        lenteja.save(flush:true)
+
+        Ingredient panceta = new Ingredient(name: "Panceta")
+        panceta.save(flush:true)
+
+        Ingredient tomate = new Ingredient(name: "Tomate")
+        tomate.save(flush:true)
+
+        // defino recetas
+        Recipe fideos = new Recipe(name: "Fideos con tuco")
+        fideos.save(flush:true)
+
+        Recipe casuelaLentejas = new Recipe(name: "Casuela de lentejas")
+        casuelaLentejas.save(flush:true)
+
+
+        RecipeComponent component
+        // agrego tallarine a la receta de fideos
+        component = new RecipeComponent(qty: 100)
         component.save(flush:true);
 
-        MeasureUnit unit = new MeasureUnit(name: "gramos")
-        unit.save(flush:true)
-
-        Ingredient ingredient = new Ingredient(name: "Tallarines")
-        ingredient.save(flush:true)
-
-        Recipe recipe = new Recipe(name: "Fideos con tuco")
-        recipe.save(flush:true)
-
-
-        unit.addToComponents(component)
-        ingredient.addToComponents(component)
-        recipe.addToComponents(component)
+        gramos.addToComponents(component)
+        tallarines.addToComponents(component)
+        fideos.addToComponents(component)
 
         component.save(flush:true);
-        unit.save(flush:true)
-        ingredient.save(flush:true)
-        recipe.save(flush:true)
+        gramos.save(flush:true)
+        tallarines.save(flush:true)
+        fideos.save(flush:true)
 
 
-
-        component = new RecipeComponent(qty: 3)
+        // agrego pimienta a la receta de pimienta
+        component = new RecipeComponent(qty: 2)
         component.save(flush:true);
 
-        unit = new MeasureUnit(name: "cucharadas")
-        unit.save(flush:true)
-
-        ingredient = new Ingredient(name: "Pimienta")
-        ingredient.save(flush:true)
-
-        recipe = new Recipe(name: "Casuela de lentejas")
-        recipe.save(flush:true)
-
-
-        unit.addToComponents(component)
-        ingredient.addToComponents(component)
-        recipe.addToComponents(component)
+        cucharada.addToComponents(component)
+        pimienta.addToComponents(component)
+        casuelaLentejas.addToComponents(component)
 
         component.save(flush:true);
-        unit.save(flush:true)
-        ingredient.save(flush:true)
-        recipe.save(flush:true)
+        cucharada.save(flush:true)
+        pimienta.save(flush:true)
+        casuelaLentejas.save(flush:true)
+
+        // agrego lentejas a la casuela de lentejas
+        component = new RecipeComponent(qty: 50)
+        component.save(flush:true);
+
+        gramos.addToComponents(component)
+        lenteja.addToComponents(component)
+        casuelaLentejas.addToComponents(component)
+
+        component.save(flush:true);
+        gramos.save(flush:true)
+        lenteja.save(flush:true)
+        casuelaLentejas.save(flush:true)
+
+         // agrego panceta a la casuela de lentejas
+        component = new RecipeComponent(qty: 50)
+        component.save(flush:true);
+
+        gramos.addToComponents(component)
+        panceta.addToComponents(component)
+        casuelaLentejas.addToComponents(component)
+
+        component.save(flush:true);
+        gramos.save(flush:true)
+        panceta.save(flush:true)
+        casuelaLentejas.save(flush:true)
+
+        // agrego tomate a la casuela de lentejas
+        component = new RecipeComponent(qty: 50)
+        component.save(flush:true);
+
+        gramos.addToComponents(component)
+        tomate.addToComponents(component)
+        casuelaLentejas.addToComponents(component)
+
+        component.save(flush:true);
+        gramos.save(flush:true)
+        tomate.save(flush:true)
+        casuelaLentejas.save(flush:true)
+
+        // agrego tomate a los fideos
+        component = new RecipeComponent(qty: 50)
+        component.save(flush:true);
+
+        gramos.addToComponents(component)
+        tomate.addToComponents(component)
+        fideos.addToComponents(component)
+
+        component.save(flush:true);
+        gramos.save(flush:true)
+        tomate.save(flush:true)
+        fideos.save(flush:true)
+
+
 
     }
     def destroy = {
