@@ -8,7 +8,7 @@ class ListRecipesController {
         if(params.id){
 		    def ingredientsIds = params.id.toString().split(',')
 		    ingredientsIds.each {
-		        components.addAll(RecipeComponent.findByIngredient(Ingredient.get(it.toInteger())))
+		        components.addAll(RecipeComponent.findAllByIngredient(Ingredient.get(it.toInteger())))
 		    }
         }
 
