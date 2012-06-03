@@ -111,3 +111,5 @@ grails {
    }
 }
 grails.mail.default.from="server@yourhost.com"
+
+grails.views.javascript.library="jquery"

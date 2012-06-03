@@ -6,7 +6,7 @@
 	  <link type="text/css" href="css/jquery-ui/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
 	  <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
 	  <script type="text/javascript" src="/js/jquery-ui-1.8.20.custom.min.js"></script>
-	  <script type="text/javascript">					
+	  <script type="text/javascript">						
 			$(function(){		
 				$( "#ingredient" ).autocomplete({
 						source: function( request, response ) {
@@ -47,6 +47,14 @@
 		<div style="float:left">Listado:</div>
 		<div id="ingredientList" style="float:left;height: 200px; width: 300px; overflow: auto;" class="ui-widget-content">
 		</div>
+	</div>
+	<div id="searchFormContainer" style="clear:both">
+		<g:formRemote name="searchForm" update="recipes" url="[controller: 'searchable', action:'index']">
+			<g:textField name="q" value=""/>
+			<g:submitButton name="Buscar"/>
+		</g:formRemote>
+	</div>
+	<div id="recipes">
 	</div>
   </body>
 </html>
