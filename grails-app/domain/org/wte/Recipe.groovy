@@ -9,4 +9,7 @@ class Recipe {
     static constraints = {
     }
 
+	static searchable = {
+	    components component: true
+	}
 }

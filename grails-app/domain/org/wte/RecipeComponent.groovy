@@ -8,8 +8,12 @@ class RecipeComponent {
     MeasureUnit unit
 
     Integer qty
-
-
+	
+	static searchable = {
+	    ingredient component: true
+	 	root false
+	}
+	
     static constraints = {
     }
 

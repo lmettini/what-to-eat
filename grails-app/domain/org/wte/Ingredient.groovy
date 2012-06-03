@@ -13,4 +13,9 @@ class Ingredient {
         components cascade: "all-delete-orphan"
 
     }
+
+	static searchable = {
+	    only: "name"
+		root false
+	}
 }
