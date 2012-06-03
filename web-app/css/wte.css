@@ -1,0 +1,7 @@
+.wte-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.ui-autocomplete-loading { 
+	background: white url('../images/ui-anim_basic_16x16.gif') right center no-repeat; 
+}

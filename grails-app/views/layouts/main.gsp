@@ -1,17 +1,24 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
     <head>
         <title><g:layoutTitle default="Grails" /></title>
-        <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
-        <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
+  		<link type="text/css" href="css/wte.css" rel="stylesheet" />
+		<link type="text/css" href="css/jquery-ui/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+		<g:javascript library="jquery-1.7.2.min" />
+		<g:javascript library="jquery-ui-1.8.20.custom.min" />
+		<g:javascript library="wte/wte.core" />
         <g:layoutHead />
-        <g:javascript library="application" />
     </head>
     <body>
-        <div id="spinner" class="spinner" style="display:none;">
-            <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
-        </div>
-        <div id="grailsLogo"><a href="http://grails.org"><img src="${resource(dir:'images',file:'grails_logo.png')}" alt="Grails" border="0" /></a></div>
-        <g:layoutBody />
+		<div id="header">
+			<g:render template="/commons/header" />
+		</div>
+		<div id="mainBody">
+        	<g:layoutBody />
+		</div>
+		<div id="footer">
+			<g:render template="/commons/footer" />
+		</div>
     </body>
 </html>
