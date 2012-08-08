@@ -11,7 +11,6 @@ class Ingredient {
 
     static mapping = {
         components cascade: "all-delete-orphan"
-
     }
 
 	static searchable = {

@@ -2,6 +2,8 @@ package org.wte
 
 class SecUser {
 
+    static hasMany = [components:UserLikeRecipe, recipes: Recipe]
+
 	transient springSecurityService
 
 	String username
