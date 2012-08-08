@@ -1,2 +1,4 @@
 <!-- footer -->
-Copyright Zumos (proximamente footer copado)
+<footer>
+<p style="color:white;">© HoyQueComemos</p>
+</footer>

@@ -1,77 +1,87 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
   <head>
-      <title>Simple GSP page</title>
+    <meta charset="utf-8">
+    <title>HoyQueComemos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+  <g:render template="/commons/styles" />
+
   </head>
   <body>
   <g:render template="/commons/header" />
-  <h3>Qué ingredientes tenes?</h3>
-  <input type="text" id="word"/>
-  <h3>Selecciona</h3>
-  <ul id="ingredientList"></ul>
-  -------------------------------
-  <h3>Lista de ingredientes seleccionados</h3>
-  <ul id="selectedIngredients"></ul>
-  <input id="buscar" type="button" value="Buscar" disabled>
 
-  <br><br><br>
+   <div class="container-fluid">
+    <div class="row-fluid">
+
+        <div class="span12">
+          <div class="hero-unit">
+            <h1>HoyQueComemos</h1>
+
+          </div>
+
+      <div class="well">
+
+    <br>
+    <form action="#" method="post" id="search_form" class="clearfix">
+    <div>
+        <input type="text" id="input-recp" size="40" maxlength="150" name="search_text" placeholder="search for treats..." />
+    </div>
+    <input type="submit" name="search" value="Search" id="search_button">
+    </form>
+      <br>
+          <div class="row-fluid">
+            <div class="span4">
+               <h2><img style="padding-right:10px" class="bs-icon" src="/img/pie.png">Happy Pie</h2>
+                    <p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>
+               <p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2><img style="padding-right:10px" class="bs-icon" src="/img/brownie.png">Bouncin Brownies</h2>
+              <p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>
+              <p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>
+            </div><!--/span-->
+            <div class="span4">
+
+              <h2><img style="padding-right:10px" class="bs-icon" src="/img/cupcake.png">Sweet Cupcake</h2>
+                    <p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>
+              <p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>
+            </div><!--/span-->
+          </div><!--/row-->
+
+        </div><!--/span-->
+      </div><!--/row-->
+    </div>
+      <hr>
+
+
   <g:render template="/commons/footer" />
 
-  <!--script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script-->
-  <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
-  <script type="text/javascript">
-    var ingIds = []
-    function deleteIngredient(id, name){
-        $("#li"+id).remove();
-        ingIds = jQuery.grep(ingIds, function(value) {
-            return value != id;
+
+    </div><!--/.fluid-container-->
+
+  <g:render template="/commons/js" />
+
+
+
+      <script type="text/javascript">
+    $(document).ready(function() {
+        $("input[type=button]").click(function () {
+            alert("Would submit: " + $(this).siblings("input[type=text]").val());
         });
-
-        if(ingIds.length==0){
-            $("#buscar").attr("disabled",true);
-        }
-
-    }
-    function addIngredient(id, name){
-        if($.inArray(id,ingIds)==-1){
-            ingIds[ingIds.length]=id;
-            var html = "<li id='li"+id+"'>"+name+" <a href='javascript:deleteIngredient(\""+id+"\")'>Eliminar</a></li>";
-            $("#selectedIngredients").append(html);
-            $("#buscar").attr("disabled",false);
-            $("#word").val("");
-            $("#ingredientList").html("");
-
-        }
-    }
-
-    $("#word").keyup(function(){
-        $.getJSON("/ingredient/getRelated/"+this.value+"?callback=?",
-              function(data) {
-                $("#ingredientList").attr("display","none");
-                $("#ingredientList").html("");
-                $.each(data, function(i,ingredient){
-                  var html = "<li>"+ingredient.name
-                   // console.log(ingredient.id)
-                    console.log(ingIds)
-                  if($.inArray(ingredient.id+"",ingIds)>-1){
-                    html +=" (Ya esta agregado)"
-                  } else {
-                    html +=" <a href='javascript:addIngredient(\""+ingredient.id+"\",\""+ingredient.name+"\")'>Agregar</a>"
-                  }
-                  html +="</li>"
-                  $("#ingredientList").append(html);
-                });
-                $("#ingredientList").removeAttr("display");
-              });
     });
-    $("#buscar").click(function(){
-        var idsToSearch= "";
-        $.each(ingIds, function(i,ingredient){
-            idsToSearch += ingredient+",";
+    </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#input-recp").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
+                theme: "facebook"
+            });
         });
-        document.location = "/listRecipes/index/"+idsToSearch
-    });
-      $("#word").val("");
-  </script>
+        </script>
+
+
+
   </body>
 </html>
