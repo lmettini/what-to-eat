@@ -6,12 +6,12 @@
         <webroots>
           <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/spring-security-ui-0.2/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/spring-security-ui-0.2/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/searchable-0.6.3/grails-app/views" relative="/" />
           <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/famfamfam-1.0.1/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/mail-1.0/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/mail-1.0/grails-app/views" relative="/" />
           <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/jquery-1.7.1/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/jquery-ui-1.8.15/web-app" relative="/" />
-          <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/searchable-0.6.3/grails-app/views" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -97,12 +97,12 @@
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (what-to-eat-grailsPlugins)">
         <CLASSES>
-          <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/tomcat-1.3.7/lib" />
-          <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/searchable-0.6.3/lib" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework.security/spring-security-web/jars/spring-security-web-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework.security/spring-security-core/jars/spring-security-core-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/javax.mail/mail/jars/mail-1.4.3.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework/spring-test/jars/spring-test-3.1.0.RELEASE.jar!/" />
+          <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/searchable-0.6.3/lib" />
+          <root url="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/tomcat-1.3.7/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
