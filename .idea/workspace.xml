@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccb849de-1a41-4cb7-8672-b0400180bae6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/commons/_header.gsp" afterPath="$PROJECT_DIR$/grails-app/views/commons/_header.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/token-input.css" afterPath="$PROJECT_DIR$/web-app/css/token-input.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/js/jquery.tokeninput.js" afterPath="$PROJECT_DIR$/web-app/js/jquery.tokeninput.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
     </list>
     <ignored path="what-to-eat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,127 +94,101 @@
     <favorites_list name="what-to-eat" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.28636363">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="token-input-facebook.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web-app/css/token-input-facebook.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="19" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="token-input.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web-app/css/token-input.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="45" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SearchRecipeController.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/SearchRecipeController.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.3043479">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProfileController.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ProfileController.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.3043479">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ListRecipesController.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="71" selection-start="335" selection-end="335" vertical-scroll-proportion="-7.826087">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IngredientController.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="66" selection-start="367" selection-end="367" vertical-scroll-proportion="-9.130435">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="36" selection-start="416" selection-end="444" vertical-scroll-proportion="0.13089006">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="jquery.tokeninput.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web-app/js/jquery.tokeninput.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="781" column="65" selection-start="25227" selection-end="25227" vertical-scroll-proportion="-5.96">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MeasureUnit.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/MeasureUnit.groovy">
-              <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-                <state />
-              </provider>
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="11" selection-start="751" selection-end="751" vertical-scroll-proportion="-6.7021275">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_header.gsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/views/commons/_header.gsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="59" selection-start="312" selection-end="312" vertical-scroll-proportion="-2.2340426">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Config.groovy" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="104" column="17" selection-start="4164" selection-end="4183" vertical-scroll-proportion="0.5683453">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="token-input-facebook.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-app/css/token-input-facebook.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="19" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="token-input.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-app/css/token-input.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="45" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchRecipeController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/SearchRecipeController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.3043479">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ProfileController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.3043479">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListRecipesController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="71" selection-start="335" selection-end="335" vertical-scroll-proportion="-7.826087">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IngredientController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="66" selection-start="367" selection-end="367" vertical-scroll-proportion="-9.130435">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="36" selection-start="416" selection-end="444" vertical-scroll-proportion="-1.0638298">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuildConfig.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="8" selection-start="925" selection-end="925" vertical-scroll-proportion="0.6272727">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.tokeninput.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-app/js/jquery.tokeninput.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="781" column="65" selection-start="25227" selection-end="25227" vertical-scroll-proportion="-5.96">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MeasureUnit.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/MeasureUnit.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="-2.7272727">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -236,7 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/org/wte/RecipiesListByIngredientRow.groovy" />
@@ -252,6 +218,7 @@
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/commons/_header.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
       </list>
     </option>
   </component>
@@ -297,6 +264,7 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
@@ -520,11 +488,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/commons/_js.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/commons/_styles.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="51" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" />
@@ -540,70 +503,6 @@
     <entry file="file://$PROJECT_DIR$/web-app/css/bootstrap-responsive.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="782" column="40" selection-start="13604" selection-end="13604" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/MeasureUnit.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/css/token-input-facebook.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="19" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/css/token-input.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ProfileController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.3043479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/js/jquery.tokeninput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="781" column="65" selection-start="25227" selection-end="25227" vertical-scroll-proportion="-5.96">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="71" selection-start="335" selection-end="335" vertical-scroll-proportion="-7.826087">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/SearchRecipeController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.3043479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="66" selection-start="367" selection-end="367" vertical-scroll-proportion="-9.130435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="416" selection-end="444" vertical-scroll-proportion="0.13089006">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp">
@@ -622,7 +521,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="17" selection-start="4164" selection-end="4183" vertical-scroll-proportion="0.5683453">
+        <state line="104" column="17" selection-start="4164" selection-end="4183" vertical-scroll-proportion="1.1366906">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/token-input-facebook.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="19" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/token-input.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="45" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/SearchRecipeController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.3043479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ProfileController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.3043479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="71" selection-start="335" selection-end="335" vertical-scroll-proportion="-7.826087">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="66" selection-start="367" selection-end="367" vertical-scroll-proportion="-9.130435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/js/jquery.tokeninput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="781" column="65" selection-start="25227" selection-end="25227" vertical-scroll-proportion="-5.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/MeasureUnit.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="-2.7272727">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="36" selection-start="416" selection-end="444" vertical-scroll-proportion="-1.0638298">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="8" selection-start="925" selection-end="925" vertical-scroll-proportion="0.6272727">
           <folding />
         </state>
       </provider>
