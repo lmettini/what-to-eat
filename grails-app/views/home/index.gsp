@@ -68,14 +68,32 @@
 
       <script type="text/javascript">
     $(document).ready(function() {
-        $("input[type=button]").click(function () {
-            alert("Would submit: " + $(this).siblings("input[type=text]").val());
+        $("#search_button").click(function (e) {
+            var tokens = $("#input-recp").tokenInput("get");
+            if (tokens.length==0){
+                alert("Elegi por lo menos 1 ingrediente [Mensaje a ser mejorado]")
+            } else {
+                var i,query="";
+
+                for(i=0;i<tokens.length;i++){
+                    if(i>0){
+                        query+=","
+                    }
+                    query+=tokens[i].id
+                }
+                document.location="/listRecipes?q="+query
+            }
+            e.preventDefault();
+            e.stopPropagation();
         });
     });
     </script>
         <script type="text/javascript">
+            // /ingredient/getRelated/
+            // http://shell.loopj.com/tokeninput/tvshows.php
         $(document).ready(function() {
-            $("#input-recp").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
+            //$("#input-recp").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
+            $("#input-recp").tokenInput("/ingredient/getRelated/", {
                 theme: "facebook"
             });
         });
