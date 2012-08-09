@@ -24,9 +24,10 @@
   </ul>
 
      </div>
-     </div>
 
+  <hr>
   <g:render template="/commons/footer" />
+  </div>
   <g:render template="/commons/js" />
   </body>
 </html>
