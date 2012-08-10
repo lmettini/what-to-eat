@@ -5,6 +5,10 @@ import grails.converters.JSON
 
 class IngredientController {
 
+    def create ={
+        [:]
+    }
+
     def getRelated = {
         def ingredients = Ingredient.findAllByNameIlike("%${params.q}%"  )
         ingredients = ingredients.findAll {it.components.size()>0}

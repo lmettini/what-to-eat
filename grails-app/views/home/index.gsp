@@ -17,7 +17,7 @@
     <div class="row-fluid">
 
         <div class="span12">
-          <div class="hero-unit">
+          <div class="hero-unit-home">
             <h1>HoyQueComemos</h1>
 
           </div>
@@ -29,7 +29,7 @@
     <div>
         <input type="text" id="input-recp" size="40" maxlength="150" name="search_text" placeholder="search for treats..." />
     </div>
-    <input type="submit" name="search" value="Search" id="search_button">
+    <input type="submit" name="search" value="Buscar" class="button-form" id="search_button">
     </form>
       <br>
           <div class="row-fluid">
@@ -87,8 +87,6 @@
             e.stopPropagation();
         });
     });
-    </script>
-        <script type="text/javascript">
             // /ingredient/getRelated/
             // http://shell.loopj.com/tokeninput/tvshows.php
         $(document).ready(function() {
