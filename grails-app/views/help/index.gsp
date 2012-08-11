@@ -1,7 +1,7 @@
 <html>
   <head>
-      <title>Ayuda y Preguntas</title>
 	  <meta name="layout" content="main">
+	  <title>Ayuda y Preguntas</title>
   </head>
   <body>
 	 <div class="well">
