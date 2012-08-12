@@ -29,15 +29,15 @@ class BootStrap {
         tomate.save(flush:true)
 
         // defino recetas
-        Recipe fideos = new Recipe(name: "Fideos con tuco")
+        Recipe fideos = new Recipe(name: "Fideos con tuco", title: "Fideos con tuco", summary:"Fideos con tuco de la nona", description: "los mejores fideos que podes probar en tu vida")
         fideos.save(flush:true)
 
-        Recipe casuelaLentejas = new Recipe(name: "Casuela de lentejas")
+        Recipe casuelaLentejas = new Recipe(name: "Casuela de lentejas", title: "Casuela de lentejas", summary: "Casuela de lentejas de la tia", description: "Casuela de lentejas de la tia, la mejor del condado" )
         casuelaLentejas.save(flush:true)
 
 
         RecipeComponent component
-        // agrego tallarine a la receta de fideos
+        // agrego tallarines a la receta de fideos
         component = new RecipeComponent(qty: 100)
         component.save(flush:true);
 

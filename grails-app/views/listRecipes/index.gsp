@@ -18,7 +18,8 @@
   <ul>
   <g:each in="${resultList}" var="res">
       <div class="row-fluid">
-    <li>Encontramos la receta "${res.recipe.name}" para los ingredientes [<g:each in="${res.ingredients}" var="ing" status="i"><g:if test="${i!=0}">,</g:if>${ing.name}</g:each>]</li>
+    <li>"${res.recipe.name}" para los ingredientes [<g:each in="${res.ingredients}" var="ing" status="i"><g:if test="${i!=0}">,</g:if>${ing.name}</g:each>]</li>
+          %{--<span>"${res.recipe.}"</span>--}%
      </div>
   </g:each>
   </ul>
