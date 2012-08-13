@@ -28,11 +28,22 @@ class BootStrap {
         Ingredient tomate = new Ingredient(name: "Tomate")
         tomate.save(flush:true)
 
+
+        //defino categorias
+        RecipeCategory platoPrincipal = new RecipeCategory(description: "plato principal")
+        platoPrincipal.save(flush: true)
+
+        RecipeCategory entrada = new RecipeCategory(description: "entrada")
+        entrada.save(flush: true)
+
+        RecipeCategory postre = new RecipeCategory(description: "postre")
+        postre.save(flush: true)
+
         // defino recetas
-        Recipe fideos = new Recipe(name: "Fideos con tuco", title: "Fideos con tuco", summary:"Fideos con tuco de la nona", description: "los mejores fideos que podes probar en tu vida")
+        Recipe fideos = new Recipe(name: "Fideos con tuco", title: "Fideos con tuco", summary:"Fideos con tuco de la nona", description: "los mejores fideos que podes probar en tu vida", video: "", points: 0, category: platoPrincipal )
         fideos.save(flush:true)
 
-        Recipe casuelaLentejas = new Recipe(name: "Casuela de lentejas", title: "Casuela de lentejas", summary: "Casuela de lentejas de la tia", description: "Casuela de lentejas de la tia, la mejor del condado" )
+        Recipe casuelaLentejas = new Recipe(name: "Casuela de lentejas", title: "Casuela de lentejas", summary: "Casuela de lentejas de la tia", description: "Casuela de lentejas de la tia, la mejor del condado", video: "", points: 0, category: platoPrincipal)
         casuelaLentejas.save(flush:true)
 
 
@@ -77,7 +88,7 @@ class BootStrap {
         lenteja.save(flush:true)
         casuelaLentejas.save(flush:true)
 
-         // agrego panceta a la casuela de lentejas
+         // agrego panceta a la cazuela de lentejas
         component = new RecipeComponent(qty: 50)
         component.save(flush:true);
 
