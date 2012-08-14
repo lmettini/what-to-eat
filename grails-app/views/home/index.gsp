@@ -1,19 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
   <head>
-    <meta charset="utf-8">
+ <meta name="layout" content="main">
     <title>HoyQueComemos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-  <g:render template="/commons/styles" />
-
   </head>
   <body>
-  <g:render template="/commons/header" />
-
-   <div class="container-fluid">
+  	<content tag="menu">
+		 <li class="active"><a href="/">Inicio</a></li>
+         <li><a href="/help">Ayuda y preguntas</a></li>
+         <li><a href="#contact">Contactanos</a></li>
+	</content>
     <div class="row-fluid">
 
         <div class="span12">
@@ -23,7 +18,6 @@
           </div>
 
       <div class="well">
-
     <br>
     <form action="#" method="post" id="search_form" class="clearfix">
     <div>
@@ -54,20 +48,8 @@
 
         </div><!--/span-->
       </div><!--/row-->
-    </div>
-      <hr>
-
-
-  <g:render template="/commons/footer" />
-
-
-    </div><!--/.fluid-container-->
-
-  <g:render template="/commons/js" />
-
-
-
-      <script type="text/javascript">
+	<content tag="js">	
+     <script type="text/javascript">
     $(document).ready(function() {
         $("#search_button").click(function (e) {
             var tokens = $("#input-recp").tokenInput("get");
@@ -97,8 +79,6 @@
             });
         });
         </script>
-
-
-
+	</content>
   </body>
 </html>

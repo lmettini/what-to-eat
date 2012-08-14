@@ -8,22 +8,27 @@
       </a>
       <a class="brand" href="/">HoyQueComemos</a>
       <div class="btn-group pull-right">
-      
-        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-          <i class="icon-user"></i> Iniciar sesión
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Perfil</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Cerrar sesión</a></li>
-        </ul>
+			<sec:ifLoggedIn>
+			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+	          <i class="icon-user"></i> Usuario: <sec:username/>
+	          <span class="caret"></span>
+	        </a>
+      		</sec:ifLoggedIn>
+			 <sec:ifNotLoggedIn>
+		        <a class="btn dropdown-toggle" data-toggle="dropdown" href="/login">
+		          <i class="icon-user"></i> Iniciar sesión
+		          <span class="caret"></span>
+		        </a>
+		      </sec:ifNotLoggedIn>
+ 			 <ul class="dropdown-menu">
+		          <li><a href="#">Perfil</a></li>
+		          <li class="divider"></li>
+		          <li><g:link controller='logout'>Cerrar sesión</g:link></li>
+		     </ul>
       </div>
       <div class="nav-collapse">
         <ul class="nav">
-          <li class="active"><a href="/">Inicio</a></li>
-          <li><a href="/help">Ayuda y preguntas</a></li>
-          <li><a href="#contact">Contactanos</a></li>
+			<g:pageProperty name="page.menu"/>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

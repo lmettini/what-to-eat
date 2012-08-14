@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<div id='login'>
+<div id='login' class="well">
 	<div class='inner'>
 		<div class='fheader'><g:message code="springSecurity.login.header"/></div>
 
