@@ -32,24 +32,25 @@
     <input type="submit" name="search" value="Buscar" class="button-form" id="search_button">
     </form>
       <br>
-          <div class="row-fluid">
-            <div class="span4">
-               <h2><img style="padding-right:10px" class="bs-icon" src="/img/pie.png">Happy Pie</h2>
-                    <p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>
-               <p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2><img style="padding-right:10px" class="bs-icon" src="/img/brownie.png">Bouncin Brownies</h2>
-              <p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>
-              <p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>
-            </div><!--/span-->
-            <div class="span4">
+          <h3><a href="/help">No entiendo! ¿cómo funciona?</a></h3>
+          %{--<div class="row-fluid">--}%
+            %{--<div class="span4">--}%
+               %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/pie.png">Happy Pie</h2>--}%
+                    %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
+               %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
+            %{--</div><!--/span-->--}%
+            %{--<div class="span4">--}%
+              %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/brownie.png">Bouncin Brownies</h2>--}%
+              %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
+              %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
+            %{--</div><!--/span-->--}%
+            %{--<div class="span4">--}%
 
-              <h2><img style="padding-right:10px" class="bs-icon" src="/img/cupcake.png">Sweet Cupcake</h2>
-                    <p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>
-              <p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
+              %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/cupcake.png">Sweet Cupcake</h2>--}%
+                    %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
+              %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
+            %{--</div><!--/span-->--}%
+          %{--</div><!--/row-->--}%
 
         </div><!--/span-->
       </div><!--/row-->
@@ -71,7 +72,7 @@
         $("#search_button").click(function (e) {
             var tokens = $("#input-recp").tokenInput("get");
             if (tokens.length==0){
-                alert("Elegi por lo menos 1 ingrediente [Mensaje a ser mejorado]")
+                alert("Por favor ingresá algún ingrediente que poseas.")
             } else {
                 var i,query="";
 
