@@ -79,7 +79,7 @@ div.token-input-dropdown-facebook {
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     cursor: default;
-    font-size: 11px;
+    font-size: 13px;
     font-family: Verdana;
     z-index: 1;
 }
@@ -117,6 +117,6 @@ div.token-input-dropdown-facebook ul li em {
 }
 
 div.token-input-dropdown-facebook ul li.token-input-selected-dropdown-item-facebook {
-    background-color: #A65656;
+    background-color: #D24242;
     color: #fff;
 }

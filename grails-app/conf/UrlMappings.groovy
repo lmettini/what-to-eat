@@ -1,5 +1,5 @@
 class UrlMappings {
-
+    static excludes = [ '/favicon.ico']
 	static mappings = {
 		"/$controller/$action?/$id?"{
 			constraints {
