@@ -7,11 +7,17 @@ class SecUser {
 	transient springSecurityService
 
 	String username
+	String name
+	String surname
+	String email
 	String password
+    Long avatar
+    boolean mailPublic
 	boolean enabled
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+
 
 	static constraints = {
 		username blank: false, unique: true
