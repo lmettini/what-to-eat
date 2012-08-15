@@ -1,16 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
   <head>
-      <meta charset="utf-8">
+ <meta name="layout" content="main">
     <title>HoyQueComemos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-  <g:render template="/commons/styles" />
   </head>
   <body>
-  <g:render template="/commons/header" />
-     <div class="container-fluid">
+  	<content tag="menu">
+		 <li class="active"><a href="/">Inicio</a></li>
+         <li><a href="/help">Ayuda y preguntas</a></li>
+         <li><a href="#contact">Contactanos</a></li>
+	</content>
       <div class="well">
 
   <h2>Recetas que encontramos</h2>
@@ -24,11 +23,6 @@
   </g:each>
   </ul>
 
-     </div>
 
-  <hr>
-  <g:render template="/commons/footer" />
-  </div>
-  <g:render template="/commons/js" />
   </body>
 </html>
