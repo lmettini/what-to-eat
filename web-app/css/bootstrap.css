@@ -300,7 +300,6 @@ a:hover {
   width: 100%;
   *zoom: 1;
 }
-
 .row-fluid:before,
 .row-fluid:after {
   display: table;
@@ -5119,5 +5118,12 @@ input[type="text"] .wte-form{
     margin-left: 5px;
 }
 #forgot_password{
+    clear: both;
+}
+.ingredient-row{
+    *zoom: 1;
+    float:left;
+}
+#ingredients-list, #recipe-description{
     clear: both;
 }

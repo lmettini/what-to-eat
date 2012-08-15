@@ -6,4 +6,8 @@ class RecipeController {
         [:]
     }
 
+    def show ={
+        def recipeToShow = Recipe.get(params.r)
+        [recipe: recipeToShow, recipeComponents: recipeToShow.components]
+    }
 }

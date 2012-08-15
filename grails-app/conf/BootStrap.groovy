@@ -33,6 +33,11 @@ class BootStrap {
         Ingredient tomate = new Ingredient(name: "Tomate")
         tomate.save(flush:true)
 
+        Ingredient pollo = new Ingredient(name: "Pollo")
+        pollo.save(flush:true)
+
+        Ingredient papa = new Ingredient(name: "Papa")
+        papa.save(flush:true)
 
         //defino categorias
         RecipeCategory platoPrincipal = new RecipeCategory(description: "plato principal")
@@ -51,6 +56,11 @@ class BootStrap {
         Recipe casuelaLentejas = new Recipe(name: "Casuela de lentejas", title: "Casuela de lentejas", user: zumosuser2, summary: "Casuela de lentejas de la tia", description: "Casuela de lentejas de la tia, la mejor del condado", video: "", points: 0, category: platoPrincipal)
         casuelaLentejas.save(flush:true)
 
+        Recipe polloPimienta = new Recipe(name: "Pollo a la pimienta", title: "Pollo a la pimienta", user: zumosuser2, summary: "Una gran y fácil receta con pollo", description: "Para hacer la receta tenes que mezclar el pollo, la panceta y la pimienta", video: "", points: 0, category: platoPrincipal)
+        polloPimienta.save(flush:true)
+
+        Recipe purePicante = new Recipe(name: "Pure picante", title: "Pure picante", user: zumosuser1, summary: "Para salir del paso y tomarte hasta el agua del inodoro", description: "Hervir papa, pisarla y agregarle pimienta", video: "", points: 0, category: platoPrincipal)
+        purePicante.save(flush:true)
 
         RecipeComponent component
         // agrego tallarines a la receta de fideos
@@ -132,8 +142,57 @@ class BootStrap {
         tomate.save(flush:true)
         fideos.save(flush:true)
 
+        // agrego pimienta a la receta de pollo a la pimienta
+        component = new RecipeComponent(qty: 2)
+        component.save(flush:true);
 
+        cucharada.addToComponents(component)
+        pimienta.addToComponents(component)
+        polloPimienta.addToComponents(component)
 
+        component.save(flush:true);
+        cucharada.save(flush:true)
+        pimienta.save(flush:true)
+        polloPimienta.save(flush:true)
+
+        // agrego panceta a la receta de pollo a la pimienta
+        component = new RecipeComponent(qty: 50)
+        component.save(flush:true);
+
+        gramos.addToComponents(component)
+        panceta.addToComponents(component)
+        polloPimienta.addToComponents(component)
+
+        component.save(flush:true);
+        gramos.save(flush:true)
+        panceta.save(flush:true)
+        polloPimienta.save(flush:true)
+
+        // agrego pimienta a la receta de pure picante
+        component = new RecipeComponent(qty: 4)
+        component.save(flush:true);
+
+        cucharada.addToComponents(component)
+        pimienta.addToComponents(component)
+        purePicante.addToComponents(component)
+
+        component.save(flush:true);
+        cucharada.save(flush:true)
+        pimienta.save(flush:true)
+        purePicante.save(flush:true)
+
+        // agrego pimienta a la receta de pure picante
+        component = new RecipeComponent(qty: 4)
+        component.save(flush:true);
+
+        cucharada.addToComponents(component)
+        papa.addToComponents(component)
+        purePicante.addToComponents(component)
+
+        component.save(flush:true);
+        cucharada.save(flush:true)
+        papa.save(flush:true)
+        purePicante.save(flush:true)
     }
     def destroy = {
     }
