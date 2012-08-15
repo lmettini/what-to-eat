@@ -13,6 +13,11 @@
 </head>
 
 <body>
+	 <content tag="menu">
+		 <li><a href="/">Inicio</a></li>
+         <li><a href="/help">Ayuda y preguntas</a></li>
+         <li><a href="#contact">Contactanos</a></li>
+	</content>
 <div class="well">
 <p/>
 
