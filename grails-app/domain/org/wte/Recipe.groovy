@@ -6,7 +6,7 @@ class Recipe {
 
 	String name
     String title
-/*    SecUser user          */
+	SecUser user
     RecipeCategory category
     String summary
     String description
