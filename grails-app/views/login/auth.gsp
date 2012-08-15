@@ -28,14 +28,14 @@
 				<input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
 				<label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
 			</p>
-			<p>
-				<a href="/register/forgotPassword">Forgot password?</a>
+			<p id="forgot_password">
+				<a href="/register/forgotPassword">Te olvidaste tu contraseña?</a>
 			</p>
 			<p>
-				<a href="/register/index">Register as new User</a>
+				<a href="/register/index">Crear un nuevo usuario</a>
 			</p>
 			<p>
-				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
+				<input type='submit' class="btn" id="submit" value='${message(code: "springSecurity.login.button")}'/>
 			</p>
 		</form>
 	</div>

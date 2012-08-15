@@ -29,16 +29,16 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/controllers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/domain" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grails-app/utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/taglib" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/i18n" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
       <excludeFolder url="file://$MODULE_DIR$/web-app/plugins" />
@@ -49,12 +49,12 @@
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (what-to-eat)">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/lib" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework.security/spring-security-web/jars/spring-security-web-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework.security/spring-security-core/jars/spring-security-core-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/javax.mail/mail/jars/mail-1.4.3.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework/spring-test/jars/spring-test-3.1.0.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/javax.activation/activation/jars/activation-1.1.jar!/" />
+          <root url="file://$MODULE_DIR$/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
