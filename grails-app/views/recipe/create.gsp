@@ -33,6 +33,7 @@
                                 <label class="control-label" for="title">Titulo de la Receta</label>
                                 <div class="controls">
                                     <input type="text" autocomplete="off" class="input-xlarge" id="title" maxlength="100">
+                                    <div class="alert alert-error help-block alert-title">Debes ingresar un titulo</div>
                                 </div>
                             </div>
                             <div class="control-group">
@@ -44,7 +45,7 @@
                             </div>
                         </fieldset>
                         <div class="form-actions">
-                            <input type="button" onclick="loadTab('2')" name="create" value="Siguiente" class="button-form">
+                            <input type="button" id="nxtFS" name="create" value="Siguiente" class="button-form">
 
                         </div>
 
@@ -58,32 +59,37 @@
                                     <input type="text" id="ingred">
                                     <input type="number" min="0" max="99999" autocomplete="off" class="span1 inline-input" id="qty" maxlength="5">
                                     <select class="span2 inline-input" id="units">
-                                        <option>Medida</option>
+                                        <option value="0">Medida</option>
                                         <option>cucharadas</option>
                                         <option>gramos</option>
                                         <option>paquetes</option>
                                         <option>litros</option>
                                     </select>
-                                    <input type="button" onclick="loadTab('2')" name="create" value="Agregar" class="btn inline add-ing">
+                                    <input type="button" name="create" value="Agregar" class="btn inline add-ing">
+
+                                    <div class="alert alert-error help-block alert-ingred" id="ing-alert1">Debes completar todos los campos para ingresar un ingrediente</div>
+                                    <div class="alert alert-error help-block alert-ingred" id="ing-alert2">Debes agregar al menos un ingrediente</div>
+                                    <div class="alert alert-error help-block alert-ingred" id="ing-alert3">Ya ingresaste ese ingrediente</div>
                                 </div>
                             </div>
-                            <div class="control-group">
+                            <div id="select-ing" class="control-group">
                                 <label class="control-label" >Ingredientes ya elegidos</label>
                                 <div class="controls ">
-                                    <div class="alert token-ingredient">100 gr. Lentejas<button type="button" class="close" >×</button></div>
-                                    <div class="alert token-ingredient">2 cuch. Pimienta<button type="button" class="close" >×</button></div>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="steps">Cuentanos los pasos a seguir</label>
                                 <div class="controls">
-                                    <textarea class="input-xlarge" id="steps" rows="4"></textarea>
+                                    <textarea id="descrip" class="input-xlarge" id="steps" rows="4"></textarea>
+                                    <p class="help-block"><span id="counter" class="badge">200</span> caracteres restantes</p>
+                                    <div class="alert alert-error help-block alert-desc">Superaste los 200 caracteres permitidos</div>
                                 </div>
                             </div>
                         </fieldset>
+                        <div id="temporary" style="display: none;" class="alert alert-info help-block"></div>
                         <div class="form-actions">
                             <!--input type="button" onclick="loadTab('1')" name="create" value="Anterior" class="button-form"-->
-                            <input type="button" name="create" value="Crear" class="button-form">
+                            <input type="button" name="create" value="Crear" class="button-form" id="submit-but"/>
                         </div>
 
 
@@ -115,16 +121,16 @@
           $("#t-"+id).click();
       }
 
-          $(document).ready(function() {
-            //$("#input-recp").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
-            $("#ingred").tokenInput("/ingredient/getRelated/", {
-                theme: "recepy",
-                tokenLimit:1,
-                listId:""
+      $(document).ready(function() {
+        $("#ingred").tokenInput("/ingredient/getRelated/", {
+            theme: "recepy",
+            tokenLimit:1,
+            listId:""
 
-            });
         });
+      });
   </script>
+  <script src="/js/recipe.js" type="text/javascript"></script>
 
   </body>
 </html>

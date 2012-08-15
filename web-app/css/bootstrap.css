@@ -5082,6 +5082,7 @@ input[type="text"] .wte-form{
     background-color: #e8e8e7;
     border: 1px solid #d9d7d4;
     margin-bottom: 8px;
+    margin-right: 5px;
 }
 
 .del-ingred{
@@ -5089,4 +5090,23 @@ input[type="text"] .wte-form{
     color: #CFA6A6;
     cursor: pointer;
     font-weight: bold;
+}
+
+.alert-title{
+    width: 219px;
+    display: none;
+}
+
+.alert-desc{
+    width: 219px;
+    display: none;
+}
+
+.alert-ingred{
+    width: 532px;
+    display: none;
+}
+
+#select-ing{
+    display: none;
 }
