@@ -5,7 +5,4 @@ class RecipeCategory {
 
     String description
 
-    static constraints = {
-        description blank: false
-    }
 }

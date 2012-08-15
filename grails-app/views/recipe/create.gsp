@@ -1,19 +1,15 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
   <head>
-    <meta charset="utf-8">
+ <meta name="layout" content="main">
     <title>HoyQueComemos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-  <g:render template="/commons/styles" />
-
   </head>
   <body>
-  <g:render template="/commons/header" />
+    	<content tag="menu">
+		 <li class="active"><a href="/">Inicio</a></li>
+         <li><a href="/help">Ayuda y preguntas</a></li>
+         <li><a href="#contact">Contactanos</a></li>
+	</content>
 
-    <div class="container-fluid">
       <div class="well">
         <div class="row-fluid">
             <form class="form-horizontal wte-form">
@@ -109,18 +105,8 @@
       </div>
 
 
-
-      <hr>
-      <g:render template="/commons/footer" />
-    </div><!--/.fluid-container-->
-
-  <g:render template="/commons/js" />
-
+	<content tag="js">
   <script type="text/javascript">
-      function loadTab(id){
-          $("#t-"+id).click();
-      }
-
       $(document).ready(function() {
         $("#ingred").tokenInput("/ingredient/getRelated/", {
             theme: "recepy",
@@ -131,6 +117,7 @@
       });
   </script>
   <script src="/js/recipe.js" type="text/javascript"></script>
+	</content>
 
   </body>
 </html>

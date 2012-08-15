@@ -5110,3 +5110,14 @@ input[type="text"] .wte-form{
 #select-ing{
     display: none;
 }
+
+#remember_me{
+    float:left;
+}
+#remember_me_holder label{
+    float:left;
+    margin-left: 5px;
+}
+#forgot_password{
+    clear: both;
+}
