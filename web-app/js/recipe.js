@@ -111,6 +111,7 @@ function secondtStepOk(){
     }
     if($("#descrip").val().length>200){
         $(".alert-desc").show();
+        return false
     }
     return true;
 }
