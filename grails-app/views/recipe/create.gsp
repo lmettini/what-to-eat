@@ -48,6 +48,8 @@
 
                     </div>
                     <div class="tab-pane" id="tab2">
+						<div id="tab2Alert" class="alert alert-error" style="display:none">
+						</div>
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label" for="ingred">Qué ingredientes lleva tu Receta?</label>
@@ -113,8 +115,6 @@
 	    <h3>Crear ingrediente</h3>
 	  </div>
 	  <div class="modal-body">
-		<div id="ingredientAlert" class="alert alert-error">
-		</div>
 		<form id="ingredientForm" class="form-horizontal wte-form" action="/ingredient/save" method="post">
 		  <fieldset>
 			<div class="control-group">
@@ -140,20 +140,21 @@
             tokenLimit:1,
             listId:""
         });
-		$("#ingredientAlert").alert();
+		$("#tab2Alert").alert();
 		$("#btnIngredientModal").click(function(){
 			//$("form#ingredientForm input#name").val($("form#recipeForm input#ingred").val());
-			$("#ingredientAlert").hide();
-			$('#ingredientModal').modal({show:true})	
+			$("#tab2Alert").hide();
+			$('#ingredientModal').modal('show');
 		});
 		$("#btnCreateIngredient").click(function(){
 			$.ajax({
 			  type: "POST",
 			  url: "/ingredient/save?" + $("#ingredientForm").serialize(),
 			}).done(function( msg ) {
-			  $("#ingredientAlert").html(msg);
+			  $("#tab2Alert").html(msg);
 			  $("form#ingredientForm input#name").val("");
-			  $("#ingredientAlert").show();
+			  $("#tab2Alert").show();
+			  $('#ingredientModal').modal('hide');
 			});	
 		});
       });
