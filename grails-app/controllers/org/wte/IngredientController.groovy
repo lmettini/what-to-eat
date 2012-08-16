@@ -16,20 +16,15 @@ class IngredientController {
     }
 	
 	@Secured(['IS_AUTHENTICATED_FULLY'])
-	def create = {}
-	
-	@Secured(['IS_AUTHENTICATED_FULLY'])
 	def save = {
 		Ingredient ingredient = new Ingredient(params)
 		ingredient.creator = springSecurityService.currentUser
 		ingredient.approved = false
-		
 		  if (ingredient.save(flush: true)) { 
-			flash.message = "El ingrediente se creo con exito" 
+			render "El ingrediente se creo con exito" 
 		  } else {
-			flash.message = "No se pudo crear el ingrediente" 
+			render "No se pudo crear el ingrediente" 
 		  }
-		 redirect(controller: "home", action: "index") 
 	}
 	
 }

@@ -12,7 +12,7 @@
 
       <div class="well">
         <div class="row-fluid">
-            <form class="form-horizontal wte-form">
+            <form id="recipeForm" class="form-horizontal wte-form">
               <div class="hero-unit-forms">
 
                 <h2>Crea una Receta</h2>
@@ -62,7 +62,9 @@
                                         <option>litros</option>
                                     </select>
                                     <input type="button" name="create" value="Agregar" class="btn inline add-ing">
-
+									
+									<a id="btnIngredientModal" class="btn" data-toggle="modal">Crear ingrediente</a>
+									
                                     <div class="alert alert-error help-block alert-ingred" id="ing-alert1">Debes completar todos los campos para ingresar un ingrediente</div>
                                     <div class="alert alert-error help-block alert-ingred" id="ing-alert2">Debes agregar al menos un ingrediente</div>
                                     <div class="alert alert-error help-block alert-ingred" id="ing-alert3">Ya ingresaste ese ingrediente</div>
@@ -104,6 +106,31 @@
         </div>
       </div>
 
+		<!-- Model Crear ingrediente -->
+	<div class="modal hide" id="ingredientModal">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal">×</button>
+	    <h3>Crear ingrediente</h3>
+	  </div>
+	  <div class="modal-body">
+		<div id="ingredientAlert" class="alert alert-error">
+		</div>
+		<form id="ingredientForm" class="form-horizontal wte-form" action="/ingredient/save" method="post">
+		  <fieldset>
+			<div class="control-group">
+				<label class="control-label" for="title">Nombre de ingrediente</label>
+				<div class="controls">
+					<input type="text" autocomplete="off" class="input-xlarge" id="name" name="name" maxlength="100">
+				</div>
+			</div>
+		   </fieldset>
+		</form>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" class="btn" data-dismiss="modal">Cancelar</a>
+	    <a id="btnCreateIngredient"href="#" class="btn btn-primary">Crear</a>
+	  </div>
+	</div>
 
 	<content tag="js">
   <script type="text/javascript">
@@ -112,8 +139,23 @@
             theme: "recepy",
             tokenLimit:1,
             listId:""
-
         });
+		$("#ingredientAlert").alert();
+		$("#btnIngredientModal").click(function(){
+			//$("form#ingredientForm input#name").val($("form#recipeForm input#ingred").val());
+			$("#ingredientAlert").hide();
+			$('#ingredientModal').modal({show:true})	
+		});
+		$("#btnCreateIngredient").click(function(){
+			$.ajax({
+			  type: "POST",
+			  url: "/ingredient/save?" + $("#ingredientForm").serialize(),
+			}).done(function( msg ) {
+			  $("#ingredientAlert").html(msg);
+			  $("form#ingredientForm input#name").val("");
+			  $("#ingredientAlert").show();
+			});	
+		});
       });
   </script>
   <script src="/js/recipe.js" type="text/javascript"></script>
