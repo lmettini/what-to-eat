@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae53777-e237-489d-898f-594582907ff9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/bootstrap.css" afterPath="$PROJECT_DIR$/web-app/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/what-to-eat.iml" afterPath="$PROJECT_DIR$/what-to-eat.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/help/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/help/index.gsp" />
     </list>
     <ignored path="what-to-eat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,13 +60,13 @@
     <favorites_list name="what-to-eat" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45057032">
+    <splitter split-orientation="horizontal" split-proportion="0.43661973">
       <split-first>
         <leaf>
           <file leaf-file-name="main.gsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -83,7 +75,7 @@
           <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="32" selection-start="919" selection-end="919" vertical-scroll-proportion="-4.857143">
+                <state line="29" column="32" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -92,7 +84,7 @@
           <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web-app/css/bootstrap.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5126" column="38" selection-start="104167" selection-end="104167" vertical-scroll-proportion="0.91955835">
+                <state line="5126" column="38" selection-start="104167" selection-end="104167" vertical-scroll-proportion="0.7647059">
                   <folding />
                 </state>
               </provider>
@@ -113,20 +105,20 @@
         <leaf>
           <file leaf-file-name="MeasureUnit.groovy" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/MeasureUnit.groovy">
-              <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-                <state />
-              </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.7906977">
+                <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.39534885">
                   <folding />
                 </state>
+              </provider>
+              <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+                <state />
               </provider>
             </entry>
           </file>
           <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="34" selection-start="523" selection-end="523" vertical-scroll-proportion="-5.5510206">
+                <state line="19" column="34" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -135,7 +127,7 @@
           <file leaf-file-name="ListRecipesController.groovy" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="11" selection-start="134" selection-end="134" vertical-scroll-proportion="-5.9130435">
+                <state line="8" column="11" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -144,7 +136,7 @@
           <file leaf-file-name="RecipeController.groovy" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="9" selection-start="105" selection-end="105" vertical-scroll-proportion="-6.652174">
+                <state line="9" column="9" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -153,7 +145,7 @@
           <file leaf-file-name="show.gsp" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/show.gsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="45" selection-start="573" selection-end="573" vertical-scroll-proportion="0.27966103">
+                <state line="39" column="53" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.7328094">
                   <folding />
                 </state>
               </provider>
@@ -170,13 +162,13 @@
           </file>
           <file leaf-file-name="Recipe.groovy" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/Recipe.groovy">
-              <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-                <state />
-              </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="23" selection-start="136" selection-end="136" vertical-scroll-proportion="-2.7674417">
+                <state line="7" column="23" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
+              </provider>
+              <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+                <state />
               </provider>
             </entry>
           </file>
@@ -195,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/domain/org/wte/RecipeMultimedia.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/register/index.gsp" />
         <option value="$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/spring-security-core-1.2.7.3/grails-app/i18n/spring-security-core.properties" />
         <option value="$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/spring-security-ui-0.2/grails-app/i18n/messages.spring-security-ui.properties" />
@@ -210,6 +201,7 @@
         <option value="$PROJECT_DIR$/grails-app/views/recipe/view.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
         <option value="$PROJECT_DIR$/web-app/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/grails-app/views/help/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/recipe/show.gsp" />
       </list>
     </option>
@@ -219,10 +211,10 @@
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1320" />
-    <option name="y" value="26" />
-    <option name="width" value="1564" />
-    <option name="height" value="857" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -423,7 +415,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1320" y="26" width="1564" height="857" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -431,28 +423,28 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15584415" sideWeight="0.33441558" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711622" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13533333" sideWeight="0.6728838" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13555194" sideWeight="0.71103895" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15584415" sideWeight="0.3262987" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15584415" sideWeight="0.34253246" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18009119" sideWeight="0.6714976" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2898135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28896105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711622" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -516,28 +508,33 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/SecRole.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.062043797" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/UserLikeRecipe.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.06439394" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/SecUser.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/SecUser.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="16" selection-start="194" selection-end="194" vertical-scroll-proportion="0.027272727" />
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="32" selection-start="0" selection-end="5876" vertical-scroll-proportion="0.21518987" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/RecipeComponent.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="10" selection-start="176" selection-end="176" vertical-scroll-proportion="0.31233597" />
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
@@ -547,93 +544,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="32" selection-start="919" selection-end="919" vertical-scroll-proportion="-4.857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="32" selection-start="0" selection-end="5876" vertical-scroll-proportion="0.21518987">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="134" selection-end="134" vertical-scroll-proportion="-5.9130435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/Recipe.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="136" selection-end="136" vertical-scroll-proportion="-2.7674417">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="105" selection-end="105" vertical-scroll-proportion="-6.652174">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/js/recipe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="4" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="523" selection-end="523" vertical-scroll-proportion="-5.5510206">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/RecipeComponent.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="10" selection-start="176" selection-end="176" vertical-scroll-proportion="0.31233597">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/MeasureUnit.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.7906977">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="31" selection-start="6885" selection-end="6885" vertical-scroll-proportion="0.0">
+        <state line="29" column="32" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-app/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5126" column="38" selection-start="104167" selection-end="104167" vertical-scroll-proportion="0.91955835">
+        <state line="5126" column="38" selection-start="104167" selection-end="104167" vertical-scroll-proportion="0.7647059">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="31" selection-start="6885" selection-end="6885" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/MeasureUnit.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.39534885">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="34" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="11" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="9" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/js/recipe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="4" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/Recipe.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/help/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="20" selection-start="3151" selection-end="3151" vertical-scroll-proportion="0.6660118">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="573" selection-end="573" vertical-scroll-proportion="0.27966103">
+        <state line="39" column="53" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.7328094">
           <folding />
         </state>
       </provider>
