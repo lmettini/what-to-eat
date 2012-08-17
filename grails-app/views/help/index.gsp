@@ -54,6 +54,8 @@
                     <a href="mailto:consultas@hoyquecomemos.com">consultas@hoyquecomemos.com</a>. Te contestaremos lo más rápido que podamos!  </p>
             </div>
 		</div>
+         <br>
+         <a href="/"><h2>Volver a buscar recetas!</h2></a>
 	</div>
   </body>
 </html>
