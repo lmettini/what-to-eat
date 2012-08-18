@@ -8,13 +8,13 @@
   <body>
       <div class="well">
 
-  <h2>Recetas que encontramos</h2>
+  <h2>Mis Recetas</h2>
 
   <ul>
-  <g:each in="${resultList}" var="res">
+  <g:each in="${recipes}" var="recipe">
       <div class="row-fluid">
-    <li><a href="/recipe/show?r=${res.recipe.id}">"${res.recipe.name}"</a> para los ingredientes [<g:each in="${res.ingredients}" var="ing" status="i"><g:if test="${i!=0}">,</g:if>${ing.name}</g:each>]</li>
-          <span>"${res.recipe.summary}"</span>
+    	  <li><a href="/recipe/show?r=${recipe.id}">"${recipe.name}"</a> </li>
+          <span>"${recipe.summary}"</span>
      </div>
   </g:each>
   </ul>

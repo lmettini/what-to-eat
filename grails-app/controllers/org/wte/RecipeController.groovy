@@ -11,7 +11,7 @@ class RecipeController {
         [:]
     }
 
-
+    @Secured(['IS_AUTHENTICATED_FULLY'])
 	def list = {
 		def recipes = Recipe.findAllByUser(springSecurityService.currentUser)
 		[recipes: recipes]

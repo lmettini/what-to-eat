@@ -29,6 +29,9 @@
       <div class="nav-collapse">
         <ul class="nav">
 	 		<li class="${pageProperty(name:'page.home')}"><a href="/">Inicio</a></li>
+			<sec:ifLoggedIn>
+				<li class="${pageProperty(name:'page.myRecipes')}"><a href="/recipe/list">Mis Recetas</a></li>
+			</sec:ifLoggedIn>
      		<li class="${pageProperty(name:'page.help')}"><a href="/help">Ayuda y preguntas</a></li>
      		<li class="${pageProperty(name:'page.contact')}"><a href="#contact">Contactanos</a></li>
         </ul>
