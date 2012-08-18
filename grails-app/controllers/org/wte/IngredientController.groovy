@@ -12,7 +12,6 @@ class IngredientController {
 		def ingredients = ingCriteria {
 	    	ilike("name", "%${params.q}%")
 			eq("approved", true)
-			cache(false)
 		}
         render " ${params.callback} (${ingredients.collect{def tmp = [:];tmp.name=it.name;tmp.id=it.id;tmp} as JSON}) "
     }
@@ -28,7 +27,6 @@ class IngredientController {
 			        eq("creator", springSecurityService.currentUser)
 			    }
 	    	}
-		    cache(false)
 		}
         render " ${params.callback} (${ingredients.collect{def tmp = [:];tmp.name=it.name;tmp.id=it.id;tmp} as JSON}) "
     }
