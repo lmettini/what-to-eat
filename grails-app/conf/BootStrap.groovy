@@ -4,8 +4,8 @@ class BootStrap {
 
     def init = { servletContext ->
 
-		SecUser zumosuser1 = new SecUser(username:"zumosuser1", name: "zumo1", surname: "user1", email: "zumosuser1@zumos.com", password:"asdf#1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
-		SecUser zumosuser2 = new SecUser(username:"zumosuser2", name: "zumo2", surname: "user2", email: "zumosuser2@zumos.com", password:"asdf#1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
+		SecUser zumosuser1 = new SecUser(username:"zumos1", name: "zumos1", surname: "user1", email: "zumosuser1@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
+		SecUser zumosuser2 = new SecUser(username:"zumos2", name: "zumos2", surname: "user2", email: "zumosuser2@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
 		zumosuser1.save(flush:true)
 		zumosuser2.save(flush:true)
 

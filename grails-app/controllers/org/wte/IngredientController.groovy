@@ -6,13 +6,31 @@ import grails.plugins.springsecurity.Secured
 class IngredientController {
 
 	def springSecurityService
-
+	
     def getRelated = {
-        def ingredients = Ingredient.findAllByNameIlike("%${params.q}%"  )
-        ingredients = ingredients.findAll {it.components.size()>0}
-
+		def ingCriteria = Ingredient.createCriteria()
+		def ingredients = ingCriteria {
+	    	ilike("name", "%${params.q}%")
+			eq("approved", true)
+			cache(false)
+		}
         render " ${params.callback} (${ingredients.collect{def tmp = [:];tmp.name=it.name;tmp.id=it.id;tmp} as JSON}) "
-
+    }
+	
+	def getRelatedForCreation = {	
+		def ingCriteria = Ingredient.createCriteria()
+		def ingredients = ingCriteria {
+	    	ilike("name", "%${params.q}%")
+			or {
+	        	eq("approved", true)
+	        	and {
+			        eq("approved", false)
+			        eq("creator", springSecurityService.currentUser)
+			    }
+	    	}
+		    cache(false)
+		}
+        render " ${params.callback} (${ingredients.collect{def tmp = [:];tmp.name=it.name;tmp.id=it.id;tmp} as JSON}) "
     }
 	
 	@Secured(['IS_AUTHENTICATED_FULLY'])

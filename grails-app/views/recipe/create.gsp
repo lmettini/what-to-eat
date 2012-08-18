@@ -135,7 +135,7 @@
 	<content tag="js">
   <script type="text/javascript">
       $(document).ready(function() {
-        $("#ingred").tokenInput("/ingredient/getRelated/", {
+        $("#ingred").tokenInput("/ingredient/getRelatedForCreation/", {
             theme: "recepy",
             tokenLimit:1,
             listId:""
