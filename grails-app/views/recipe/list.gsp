@@ -3,6 +3,7 @@
   <head>
  <meta name="layout" content="main">
     <title>HoyQueComemos</title>
+	<parameter name="myRecipes" value="active" />
   </head>
   <body>
       <div class="well">

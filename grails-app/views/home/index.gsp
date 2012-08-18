@@ -2,13 +2,9 @@
   <head>
  <meta name="layout" content="main">
     <title>HoyQueComemos</title>
+    <parameter name="home" value="active" />
   </head>
   <body>
-  	<content tag="menu">
-		 <li class="active"><a href="/">Inicio</a></li>
-         <li><a href="/help">Ayuda y preguntas</a></li>
-         <li><a href="#contact">Contactanos</a></li>
-	</content>
     <div class="row-fluid">
 
         <div class="span12">

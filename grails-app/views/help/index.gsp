@@ -2,13 +2,9 @@
   <head>
 	  <meta name="layout" content="main">
 	  <title>Ayuda y Preguntas</title>
+	  <parameter name="help" value="active" />
   </head>
   <body>
-	 <content tag="menu">
-		 <li><a href="/">Inicio</a></li>
-         <li class="active"><a href="/help">Ayuda y preguntas</a></li>
-         <li><a href="#contact">Contactanos</a></li>
-	</content>
 	 <div class="well">
 		 <div class="row-fluid">
             <div class="span12">

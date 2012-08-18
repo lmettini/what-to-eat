@@ -28,7 +28,9 @@
       </div>
       <div class="nav-collapse">
         <ul class="nav">
-			<g:pageProperty name="page.menu"/>
+	 		<li class="${pageProperty(name:'page.home')}"><a href="/">Inicio</a></li>
+     		<li class="${pageProperty(name:'page.help')}"><a href="/help">Ayuda y preguntas</a></li>
+     		<li class="${pageProperty(name:'page.contact')}"><a href="#contact">Contactanos</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
