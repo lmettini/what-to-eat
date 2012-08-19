@@ -17,7 +17,6 @@ class IngredientController {
     }
 	
 	def getRelatedForCreation = {	
-		println "GET RELATED FOR CREATION"
 		def ingCriteria = Ingredient.createCriteria()
 		def ingredients = ingCriteria {
 	    	ilike("name", "%${params.q}%")
