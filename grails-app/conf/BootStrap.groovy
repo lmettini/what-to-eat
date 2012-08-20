@@ -3,7 +3,13 @@ import org.wte.*
 class BootStrap {
 
     def init = { servletContext ->
-
+		
+		SecUser adminuser = new SecUser(username:"admin", name: "admin", surname: "admin", email: "admin@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
+		adminuser.save(flush: true)
+		SecRole adminrole = new SecRole(authority: "ROLE_ADMIN")
+		adminrole.save(flush: true)
+		SecUserSecRole.create(adminuser, adminrole, true)
+		
 		SecUser zumosuser1 = new SecUser(username:"zumos1", name: "zumos1", surname: "user1", email: "zumosuser1@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
 		SecUser zumosuser2 = new SecUser(username:"zumos2", name: "zumos2", surname: "user2", email: "zumosuser2@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
 		zumosuser1.save(flush:true)

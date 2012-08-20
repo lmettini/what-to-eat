@@ -5,11 +5,6 @@
 </head>
 
 <body>
-	 <content tag="menu">
-		 <li><a href="/">Inicio</a></li>
-         <li><a href="/help">Ayuda y preguntas</a></li>
-         <li><a href="#contact">Contactanos</a></li>
-	</content>
 <div id='login' class="well">
 	<div class='inner'>
 		<div class='fheader'><g:message code="springSecurity.login.header"/></div>
