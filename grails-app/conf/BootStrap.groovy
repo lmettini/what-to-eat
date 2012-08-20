@@ -12,8 +12,10 @@ class BootStrap {
 		
 		SecUser zumosuser1 = new SecUser(username:"zumos1", name: "zumos1", surname: "user1", email: "zumosuser1@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
 		SecUser zumosuser2 = new SecUser(username:"zumos2", name: "zumos2", surname: "user2", email: "zumosuser2@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
+		SecUser zumosuser3 = new SecUser(username:"zumos3", name: "zumos3", surname: "user3", email: "zumosuser3@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true)
 		zumosuser1.save(flush:true)
 		zumosuser2.save(flush:true)
+		zumosuser3.save(flush:true)
 
         // defino algunas unidades de medida
         MeasureUnit gramos = new MeasureUnit(name: "gramos")

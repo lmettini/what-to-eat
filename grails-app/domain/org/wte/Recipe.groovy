@@ -16,4 +16,9 @@ class Recipe {
 	static searchable = {
 	    components component: true
 	}
+	
+	
+	boolean isLikedBy(user) {
+		likes.any { it.user == user }
+	}
 }

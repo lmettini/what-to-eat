@@ -9,7 +9,9 @@
       <div class="well">
 
   <h2>Mis Recetas</h2>
-  <g:message />
+	<g:if test="${flash.message!=null}">
+		<div id="flashAlert" class="alert alert-success">${flash.message}</div>
+	</g:if>
   <ul>
   <g:each in="${recipes}" var="recipe">
       <div class="row-fluid">
@@ -18,7 +20,14 @@
      </div>
   </g:each>
   </ul>
-
-
+	<content tag="js">
+		<script type="text/javascript">
+			<g:if test="${flash.message!=null}">
+    			$(document).ready(function() {
+					$("#flashAlert").alert();
+    				});
+		    </g:if>
+		</script>
+	</content>
   </body>
 </html>
