@@ -7,7 +7,7 @@
   <body>
       <div class="well">
 
-  <h2>Recetas que encontramos</h2>
+      <h2>Recetas que encontramos para los ingredientes: <g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each></h2>
 
   <ul>
   <g:each in="${resultList}" var="res">

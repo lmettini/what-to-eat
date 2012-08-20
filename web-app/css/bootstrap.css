@@ -5127,3 +5127,6 @@ input[type="text"] .wte-form{
 #ingredients-list, #recipe-description{
     clear: both;
 }
+#descrip{
+    width: 690px;
+}
