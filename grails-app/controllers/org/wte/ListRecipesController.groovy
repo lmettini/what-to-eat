@@ -5,6 +5,7 @@ class ListRecipesController {
     def index = {
         def components = []
         def resultList = []
+        def ingredientsList = []
 
         if(params.q){
 		    def ingredientsIds = params.q.toString().split(',')
@@ -12,6 +13,8 @@ class ListRecipesController {
 		        components.addAll(RecipeComponent.findAllByIngredient(Ingredient.get(it.toInteger())))
 		    }
         }
+        List<Long> ingIds = params.q.toString().split(',').toList()
+        ingredientsList = Ingredient.getAll(ingIds);
 
         components.each { cp ->
             def recipe = resultList.find{it.recipe==cp.recipe}
@@ -25,7 +28,8 @@ class ListRecipesController {
         resultList.sort({it.ingredients.size() * -1})
 
         [   "components":components,
-            "resultList":resultList]
+            "resultList":resultList,
+            "ingredients": ingredientsList]
 
     }
 }

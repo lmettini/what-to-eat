@@ -22,7 +22,7 @@
                 <h2>¿Cómo es la búsqueda inteligente de Recetas?</h2>
                 <br>
                 <p>Aparte de contar con un buscador de recetas convencional, HoyQueComemos.com te permite
-                ingresar todos los alimentos ó ingredientes que tengas a tu disposición, dándote como resultado
+                ingresar todos los alimentos o ingredientes que tengas a tu disposición, dándote como resultado
                 las recetas que los contienen. De esta manera, sabrás si podés hacerte algo rico de comer sin salir
                 de tu casa!</p>
                 <br><br>
