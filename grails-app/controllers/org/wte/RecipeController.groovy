@@ -46,25 +46,27 @@ class RecipeController {
 		redirect(action: "show", id: recipe.id)
 	}
 	
+	@Secured(['IS_AUTHENTICATED_FULLY'])
     def delete = {
         def recipe = Recipe.get(params.id)
-		def components = RecipeComponent.findAllByRecipe(recipe)
-        if (recipe) {
-            try {
-			    components*.delete(flush: true)
-                recipe.delete(flush: true)
-                flash.message = "La receta ha sido borrada"
-                redirect(action: "list")
-            }
-            catch (org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "No se pudo borrar la receta"
-                redirect(action: "list")
-            }
-        }
-        else {
-            flash.message = "No se encontro la receta"
-            redirect(action: "list")
-        }
+     	if (recipe) {
+ 			if (recipe.user == springSecurityService.currentUser){
+				def components = RecipeComponent.findAllByRecipe(recipe)
+            	try {
+			    	components*.delete(flush: true)
+                	recipe.delete(flush: true)
+                	flash.message = "La receta ha sido borrada"
+                	redirect(action: "list")
+            	} catch (org.springframework.dao.DataIntegrityViolationException e) {
+               		flash.message = "No se pudo borrar la receta"
+           		}
+       		} else {
+            	flash.message = "No puede borrar una receta que fue creada por otro usuario"
+        	}
+		} else {
+			flash.message = "No se encontro la receta"
+		}
+		redirect(action: "list")
     }
 
 }
