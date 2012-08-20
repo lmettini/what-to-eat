@@ -114,6 +114,10 @@ var methods = {
         this.data("tokenInputObject").remove(item);
         return this;
     },
+	flush: function() {
+        this.data("tokenInputObject").flush();
+        return this;
+    },
     get: function() {
     	return this.data("tokenInputObject").getTokens();
    	}
@@ -179,6 +183,7 @@ $.TokenList = function (input, url_or_data, settings) {
 
     // Basic cache to save on db hits
     var cache = new $.TokenList.Cache();
+	this.tokenCache = cache;
 
     // Keep track of the timeout, old vals
     var timeout;
@@ -394,6 +399,10 @@ $.TokenList = function (input, url_or_data, settings) {
 
     this.add = function(item) {
         add_token(item);
+    }
+
+	this.flush = function() {
+		this.tokenCache.flushCache();
     }
 
     this.remove = function(item) {
@@ -841,6 +850,10 @@ $.TokenList.Cache = function (options) {
         data = {};
         size = 0;
     };
+
+	this.flushCache = function(){
+		flush();
+	}
 
     this.add = function (query, results) {
         if(size > settings.max_size) {

@@ -148,6 +148,7 @@
 			  $("#tab2Alert").html(msg);
 			  $("form#ingredientForm input#name").val("");
 			  $("#tab2Alert").show();
+			  $("#ingred").tokenInput("flush");
 			  $('#ingredientModal').modal('hide');
 			});	
 		});
