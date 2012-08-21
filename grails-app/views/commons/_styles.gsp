@@ -15,6 +15,11 @@ background: url(/img/bg2.jpg) repeat;
 
 #search_button:hover {font-family: 'Karla', sans-serif; background: #e03c4c; cursor: pointer;
 }
+
+div.pagination-container .step{
+	padding: 1px;
+}
+
 </style>
 <link href="/css/bootstrap-responsive.css" rel="stylesheet">
 

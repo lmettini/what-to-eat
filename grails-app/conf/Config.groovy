@@ -141,8 +141,8 @@ zumos {
 			requiredpointsmorethan = 1
 		}
 		allrecipes {
-			maxrows = 3
-			requiredpointsmorethan = 0
+			maxrows = 2
+			requiredpointsmorethan = -1
 		}
 	}
 }
