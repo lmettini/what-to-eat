@@ -137,12 +137,12 @@ grails.hibernate.cache.queries = false
 zumos {
 	ranking {
 		bestrecipes {
-			maxrecipes = 3
-			requiredpointsmorethan = 1
+			maxrecipes = 10
+			requiredpointsmorethan = 10
 		}
 		allrecipes {
-			maxrows = 2
-			requiredpointsmorethan = -1
+			maxrows = 30
+			requiredpointsmorethan = 10
 		}
 	}
 }
