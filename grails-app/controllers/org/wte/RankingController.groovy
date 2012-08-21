@@ -33,7 +33,7 @@ class RankingController {
 		def users = SecUser.findAll( 	
 							[max:maxbestusers,sort:"points",order:"desc"]
 						)
-		[recipes: users, maxbestusers: maxbestusers]
+		[users: users, maxbestusers: maxbestusers]
  	}
 
  	def allusers = {
