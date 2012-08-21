@@ -8,14 +8,14 @@
   <body>
       <div class="well">
 
-  <h2>Mis Recetas</h2>
+    <h2>Mis Recetas - <a href="/recipe/create">Crear una nueva receta!</a></h2>
 	<g:if test="${flash.message!=null}">
 		<div id="flashAlert" class="alert alert-success">${flash.message}</div>
 	</g:if>
   <ul>
   <g:each in="${recipes}" var="recipe">
       <div class="row-fluid">
-    	 <li><a href="/recipe/show?r=${recipe.id}">"${recipe.name}"</a> - <a href="/recipe/delete/${recipe.id}">Eliminar</a></li>
+          <li><a href="/recipe/show?r=${recipe.id}">"${recipe.name}"</a> - <a href="/recipe/edit/${recipe.id}"><img src="\img\edit.png" title="Editar la receta"/></a><a href="/recipe/delete/${recipe.id}"><img src="\img\delete.png" title="Eliminar la receta"/></a></li>
          <span>"${recipe.summary}"</span>
      </div>
   </g:each>
