@@ -46,7 +46,7 @@
 						</div>
                         <fieldset>
                             <div class="control-group">
-                                <label class="control-label" for="ingred">Qué ingredientes lleva tu Receta?</label>
+                                <label class="control-label" for="ingred">Qué ingredientes lleva tu receta?</label>
                                 <div class="controls ">
                                     <input type="text" id="ingred">
                                     <input type="number" min="0" max="99999" autocomplete="off" class="span1 inline-input" id="qty" maxlength="5">
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="steps">Cuentanos los pasos a seguir</label>
+                                <label class="control-label" for="steps">Contanos los pasos a seguir</label>
                                 <div class="controls">
                                     <textarea id="descrip" class="input-xlarge" id="steps" rows="4"></textarea>
                                     <p class="help-block"><span id="counter" class="badge">500</span> caracteres restantes</p>
