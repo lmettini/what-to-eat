@@ -101,6 +101,20 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.wte.SecUser'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.wte.SecUserSecRole'
 grails.plugins.springsecurity.authority.className = 'org.wte.SecRole'
 
+grails.plugins.springsecurity.securityConfigType = "Annotation"
+grails.plugins.springsecurity.controllerAnnotations.staticRules = [
+   '/aclclass/**':				['ROLE_ADMIN'],
+   '/aclentry/**':				['ROLE_ADMIN'],
+   '/aclobjectidentity/**':		['ROLE_ADMIN'],
+   '/aclsid/**':				['ROLE_ADMIN'],
+   '/persistentlogin/**':		['ROLE_ADMIN'],
+   '/registrationcode/**':		['ROLE_ADMIN'],
+   '/requestmap/**':			['ROLE_ADMIN'],
+   '/role/**':					['ROLE_ADMIN'],
+   '/securityinfo/**':			['ROLE_ADMIN'],
+   '/user/**':					['ROLE_ADMIN']
+]
+
 // mails config
 grails {
    mail {
@@ -119,3 +133,17 @@ grails.mail.default.from="server@yourhost.com"
 grails.views.javascript.library="jquery"
 
 grails.hibernate.cache.queries = false
+
+zumos {
+	ranking {
+		bestrecipes {
+			maxrecipes = 3
+			requiredpointsmorethan = 1
+		}
+		allrecipes {
+			maxrows = 3
+			requiredpointsmorethan = 0
+		}
+	}
+}
+

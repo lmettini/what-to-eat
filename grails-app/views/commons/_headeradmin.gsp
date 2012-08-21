@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="/">HoyQueComemos</a>
+      <a class="brand" href="/">HoyQueComemos - Backend</a>
       <div class="btn-group pull-right">
 			<sec:ifLoggedIn>
 			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -28,12 +28,9 @@
       </div>
       <div class="nav-collapse">
         <ul class="nav">
-	 		<li class="${pageProperty(name:'page.home')}"><a href="/">Inicio</a></li>
-			<li class="${pageProperty(name:'page.ranking')}"><a href="/ranking/bestrecipes">Ranking</a></li>
-			<sec:ifLoggedIn>
-				<li class="${pageProperty(name:'page.myRecipes')}"><a href="/recipe/list">Mis Recetas</a></li>
-			</sec:ifLoggedIn>
-     		<li class="${pageProperty(name:'page.help')}"><a href="/help">Ayuda y preguntas</a></li>
+	 		<li class="${pageProperty(name:'page.homeadmin')}"><a href="/admin">Inicio</a></li>
+			<li class="${pageProperty(name:'page.myRecipes')}"><a href="/moderation/recipes">Moderar Recetas</a></li>
+     		<li class="${pageProperty(name:'page.myRecipes')}"><a href="/moderation/recipes">Moderar Ingredientes</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

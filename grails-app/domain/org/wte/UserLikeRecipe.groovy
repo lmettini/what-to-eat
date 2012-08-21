@@ -11,4 +11,5 @@ class UserLikeRecipe {
 
     static searchable = {
     }
+
 }
