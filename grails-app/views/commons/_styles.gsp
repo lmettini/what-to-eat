@@ -1,4 +1,5 @@
 <!-- Le styles -->
+<link href="/css/zumos.css" rel="stylesheet">
 <link href="/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
   body {
@@ -6,6 +7,8 @@ background: url(/img/bg1.jpg) repeat;
     padding-top: 60px;
     padding-bottom: 40px;
   }
+
+
   .sidebar-nav {
 background: url(/img/bg2.jpg) repeat;
     padding: 9px 0;
@@ -15,12 +18,8 @@ background: url(/img/bg2.jpg) repeat;
 
 #search_button:hover {font-family: 'Karla', sans-serif; background: #e03c4c; cursor: pointer;
 }
-
-div.pagination-container .step{
-	padding: 1px;
-}
-
 </style>
+
 <link href="/css/bootstrap-responsive.css" rel="stylesheet">
 
 
@@ -29,7 +28,6 @@ div.pagination-container .step{
 <link rel="stylesheet" href="/css/token-input-facebook.css" type="text/css" />
 
 
-    
 
 <link href="/css/css" rel="stylesheet" type="text/css">
 <link href="/css/css(1)" rel="stylesheet" type="text/css">
