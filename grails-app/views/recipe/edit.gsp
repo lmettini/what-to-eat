@@ -9,7 +9,7 @@
             <form id="recipeForm" class="form-horizontal wte-form">
               <div class="hero-unit-forms">
 
-                <h2>Crea una Receta</h2>
+                <h2>Editá la Receta</h2>
                 <br/>
                 <div class="tabbable"> <!-- Only required for left/right tabs -->
                   <ul class="nav nav-tabs">
@@ -22,7 +22,7 @@
                             <div class="control-group">
                                 <label class="control-label" for="title">Titulo de la Receta</label>
                                 <div class="controls">
-                                    <input type="text" autocomplete="off" class="input-xlarge" id="title" maxlength="100">
+                                    <input type="text" autocomplete="off" class="input-xlarge" id="title" maxlength="100" value="${recipe.title}">
                                     <div class="alert alert-error help-block alert-title">Debes ingresar un titulo</div>
                                 </div>
                             </div>
@@ -68,13 +68,22 @@
                             </div>
                             <div id="select-ing" class="control-group">
                                 <label class="control-label" >Ingredientes ya elegidos</label>
+                                <div id="ingredients-list">
+                                    <ul>
+                                        <g:each in="${recipeComponents}" var="comp">
+                                            <div class="ingredient-row">
+                                                <div class="alert token-ingredient">${comp.qty} ${comp.unit.name}  ${comp.ingredient.name}</div>
+                                            </div>
+                                        </g:each>
+                                    </ul>
+                                </div>
                                 <div class="controls ">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="steps">Contanos los pasos a seguir</label>
                                 <div class="controls">
-                                    <textarea id="descrip" class="input-xlarge" id="steps" rows="4"></textarea>
+                                    <textarea id="descrip" class="input-xlarge" id="steps" rows="4">${recipe.description}</textarea>
                                     <p class="help-block"><span id="counter" class="badge">500</span> caracteres restantes</p>
                                     <div class="alert alert-error help-block alert-desc">Superaste los 500 caracteres permitidos</div>
                                 </div>
