@@ -133,3 +133,17 @@ grails.mail.default.from="server@yourhost.com"
 grails.views.javascript.library="jquery"
 
 grails.hibernate.cache.queries = false
+
+zumos {
+	ranking {
+		bestrecipes {
+			maxrecipes = 3
+			requiredpointsmorethan = 1
+		}
+		allrecipes {
+			maxrows = 3
+			requiredpointsmorethan = 0
+		}
+	}
+}
+
