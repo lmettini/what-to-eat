@@ -144,6 +144,12 @@ zumos {
 			maxrows = 30
 			requiredpointsmorethan = 10
 		}
+		bestusers {
+			maxusers = 10
+		}
+		allusers {
+			maxrows = 30
+		}
 	}
 }
 

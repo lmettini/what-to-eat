@@ -9,12 +9,12 @@
 		<div class="hero-unit-forms">
 			<div class="tabbable"> <!-- Only required for left/right tabs -->
 			  	<ul class="nav nav-tabs">
-			    	<li class="active"><a href="#tab1" data-toggle="tab">Recetas</a></li>
-			    	<li><a href="/ranking/bestusers" data-toggle="tab">Usuarios</a></li>
+			    	<li class="active"><a href="#tab1">Recetas</a></li>
+			    	<li><a href="/ranking/bestusers">Usuarios</a></li>
 			  	</ul>
 			  	<div class="tab-content">
 			    	<div class="tab-pane active" id="tab1">
-			      		<p><strong>Mejores 10 recetas</strong> - <a href="/ranking/allrecipes">Ver todas las recetas</a></p>
+			      		<p><strong>Mejores ${maxbestrecipes} recetas</strong> - <a href="/ranking/allrecipes">Ver todas las recetas</a></p>
 						<div class="row-fluid">
 							<div class="span1">Posicion</div>
 							<div class="span4">Nombre de la receta</div>

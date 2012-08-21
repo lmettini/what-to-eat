@@ -41,8 +41,8 @@ class RecipeController {
 				flash.message = "Usted ya voto esta receta"
 			} else {
 				def userLikeRecipe = new UserLikeRecipe(user: currentUser, recipe: recipe)
+				recipe.like()
 				recipe.addToLikes(userLikeRecipe)
-				recipe.points = recipe.points + 1;
 				recipe.save(flush: true)
 				currentUser.addToLikes(userLikeRecipe)
 				currentUser.save(flush: true)

@@ -17,6 +17,10 @@ class Recipe {
 	    components component: true
 	}
 	
+	void like(){
+		this.points = this.points + 1
+		this.user.points = this.user.points + 1
+	}
 	
 	boolean isLikedBy(user) {
 		likes.any { it.user == user }
