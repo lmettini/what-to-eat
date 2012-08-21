@@ -22,7 +22,12 @@ class Recipe {
 		this.user.points = this.user.points + 1
 	}
 	
+	void removePointsToUser(){
+		this.user.points = this.user.points - this.points
+	}
+	
 	boolean isLikedBy(user) {
 		likes.any { it.user == user }
 	}
+	
 }

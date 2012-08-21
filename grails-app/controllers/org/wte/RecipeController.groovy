@@ -58,11 +58,13 @@ class RecipeController {
      	if (recipe) {
  			if (recipe.user == springSecurityService.currentUser){
 				def components = RecipeComponent.findAllByRecipe(recipe)
+				def likes = UserLikeRecipe.findAllByRecipe(recipe)
             	try {
 			    	components*.delete(flush: true)
+					likes*.delete(flush: true)
+					recipe.removePointsToUser()
                 	recipe.delete(flush: true)
                 	flash.message = "La receta ha sido borrada"
-                	redirect(action: "list")
             	} catch (org.springframework.dao.DataIntegrityViolationException e) {
                		flash.message = "No se pudo borrar la receta"
            		}

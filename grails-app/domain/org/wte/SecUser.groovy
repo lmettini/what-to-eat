@@ -23,7 +23,7 @@ class SecUser {
 		username blank: false, unique: true
 		password blank: false
 	}
-
+	
 	static mapping = {
 		password column: '`password`'
 	}
