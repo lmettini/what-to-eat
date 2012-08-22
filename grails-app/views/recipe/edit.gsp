@@ -66,18 +66,14 @@
                                     <div class="alert alert-error help-block alert-ingred" id="ing-alert3">Ya ingresaste ese ingrediente</div>
                                 </div>
                             </div>
-                            <div id="select-ing" class="control-group">
+                            <div id="select-ing" class="control-group" style="display: block;">
                                 <label class="control-label" >Ingredientes ya elegidos</label>
-                                <div id="ingredients-list">
-                                    <ul>
-                                        <g:each in="${recipeComponents}" var="comp">
-                                            <div class="ingredient-row">
-                                                <div class="alert token-ingredient">${comp.qty} ${comp.unit.name}  ${comp.ingredient.name}</div>
-                                            </div>
-                                        </g:each>
-                                    </ul>
-                                </div>
-                                <div class="controls ">
+                                <div class="controls">
+                                    <g:each in="${recipeComponents}" var="comp">
+                                        <div class="ingredient-row">
+                                            <div id="ing-${comp.ingredientId}" class="alert token-ingredient" x-ingid="${comp.ingredientId}" x-qty="${comp.unit.id}" x-unit="${comp.unit.name}" x-id="${comp.id}">${comp.qty} ${comp.unit.name}  ${comp.ingredient.name}<button onclick="deleteIngred(${comp.ingredientId})" type="button" class="close">×</button></div>
+                                        </div>
+                                    </g:each>
                                 </div>
                             </div>
                             <div class="control-group">
@@ -92,22 +88,13 @@
                         <div id="temporary" style="display: none;" class="alert alert-info help-block"></div>
                         <div class="form-actions">
                             <!--input type="button" onclick="loadTab('1')" name="create" value="Anterior" class="button-form"-->
-                            <input type="button" name="create" value="Crear" class="button-form" id="submit-but"/>
+                            <input type="button" name="create" value="Guardar" class="button-form" id="submit-but"/>
                         </div>
-
-
                     </div>
                   </div>
                 </div>
-
-
-
-
               </div>
-
-
             </form>
-
         </div>
       </div>
 
@@ -149,6 +136,13 @@
 			$("#tab2Alert").hide();
 			$('#ingredientModal').modal('show');
 		});
+
+        var descripCount = $("#descrip").val().length
+        if (descripCount > 0) {
+          var counterValue = parseInt($("#counter").text())
+          $("#counter").text(counterValue - descripCount)
+        }
+
 		$("#btnCreateIngredient").click(function(){
 			$.ajax({
 			  type: "POST",
