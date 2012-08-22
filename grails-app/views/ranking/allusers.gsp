@@ -25,7 +25,7 @@
 				  			<g:each status="i" in="${users}" var="user">
 				      		<div class="row-fluid">
 								<div class="span1">${offset + i + 1}</div>
-								<div class="span4"><a href="/userinfo/show/${user.id}">${user.username}</a></div>
+								<div class="span4"><a href="/userInfo/show/${user.id}">${user.username}</a></div>
 								<div class="span1">${user.points}</div>
 				     		</div>
 				  			</g:each>
