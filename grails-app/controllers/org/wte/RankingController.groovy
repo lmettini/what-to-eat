@@ -30,9 +30,13 @@ class RankingController {
 	
 	def bestusers = {
 		def maxbestusers = grailsApplication.config.zumos.ranking.bestusers.maxusers		
-		def users = SecUser.findAll( 	
-							[max:maxbestusers,sort:"points",order:"desc"]
-						)
+		
+		def userCriteria = SecUser.createCriteria()
+		def users = userCriteria.list(max: maxbestusers) {
+				isNotEmpty("recipes")
+				order("points", "desc")
+		}				
+						
 		[users: users, maxbestusers: maxbestusers]
  	}
 
@@ -40,12 +44,14 @@ class RankingController {
         def maxbestusers = grailsApplication.config.zumos.ranking.bestusers.maxusers
 		def maxrows = grailsApplication.config.zumos.ranking.allusers.maxrows
 		def offset = params.offset ? params.offset.toInteger() : 0
-		def usersCount = SecUser.count()
 		
-		def users = SecUser.findAll( 				  
-							[max:maxrows,offset:offset,sort:"points",order:"desc"] 
-						)
-		[users: users, total: usersCount, max: maxrows, offset: offset, maxbestusers: maxbestusers]
+		def userCriteria = SecUser.createCriteria()
+		def users = userCriteria.list(max: maxrows, offset: offset) {
+		    isNotEmpty("recipes")
+			order("points", "desc")
+		}
+			
+		[users: users, total: users.totalCount, max: maxrows, offset: offset, maxbestusers: maxbestusers]
 	}
 	
 }
