@@ -11,7 +11,7 @@ class SecUser {
 	String surname
 	String email
 	String password
-    Long avatar
+    Long avatar = 1
     boolean mailPublic
 	boolean enabled
 	boolean accountExpired

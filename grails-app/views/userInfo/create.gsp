@@ -1,0 +1,104 @@
+<html>
+  <head>
+ <meta name="layout" content="main">
+    <title>Registrar de usuario</title>
+  </head>  
+  <div class="well">
+	<div class="hero-unit-forms">
+		<h2>Registrar usuario</h2>
+    	<br/>
+	<form class="form-horizontal wte-form" action="/userInfo/save" method="POST">
+		<fieldset>
+      		<div class="row-fluid">
+	     		<div class="span5">	
+					<g:hasErrors bean="${user}">
+						<div id="flashAlert" class="alert alert-error">Debe completar todos los campos obligatorios</div>
+						
+					</g:hasErrors>
+                    <div class="control-group">
+                            <label class="control-label" for="title">Nombre de usuario</label>
+                            <div class="controls">
+                                <input type="text" id="name" name="username" class="input-xlarge" maxlength="100" value="${user.username}">
+							</div>
+					</div>
+                    <div class="control-group">
+                            <label class="control-label" for="title">Nombre</label>
+                            <div class="controls">
+                                <input type="text" id="name" name="name" class="input-xlarge" maxlength="100" value="${user.name}">
+                            </div>
+                    </div>
+                    <div class="control-group">
+                            <label class="control-label" for="surname">Apellido</label>
+                            <div class="controls">
+                                 <input type="text" id="surname" name="surname" class="input-xlarge" maxlength="100" value="${user.surname}">
+                            </div>
+                        </div>
+						<div class="control-group">
+                            <label class="control-label" for="email">Email</label>
+                            <div class="controls">
+                                 <input type="text" id="email" name="email" class="input-xlarge" maxlength="100" value="${user.email}">
+                            </div>
+                        </div>
+						<div class="control-group">
+                            <label class="control-label" for="password">Contraseña</label>
+                            <div class="controls">
+                                 <input type="password" id="password" name="password" class="input-xlarge" maxlength="100" value="${user.password}">
+                            </div>
+                        </div>
+						<div class="control-group">
+	                         <label class="control-label" for="mailPublic">Hacer público mi mail</label>
+	                          <div class="controls">
+	                              <input type="checkbox" id="mailPublic" name="mailPublic" <g:if test="${user.mailPublic}">checked</g:if>>
+		                      </div>
+	                    </div>
+				</div>
+				<div class="span6">
+					<div class="control-group">
+	                         <label class="control-label">Avatar seleccionado:</label>
+	                          <div class="controls">
+									<img id="imgSelectedAavatar" src="/img/avatars/avatar${user.avatar}.png" />		                        	
+		                      </div>
+	                </div>
+				</div>
+			</div>
+			<div class="row-fluid">
+			   <div class="span10">
+				   <label class="control-label">Seleccione un avatar:</label>
+		 	   </div>
+		    </div>
+			<div class="row-fluid">
+			   <div class="span10">
+                   <div class="controls"> 
+				     <g:each var="i" in="${ (1..<11) }">
+					    <div class="span1"><img id="imgAvatar${i}" src="/img/avatars/avatar${i}.png" onmouseover="javascript:overAvatar(${i});" onmouseout="javascript:outAvatar(${i});" onclick="javascript:selectAvatar(${i});" /></div>
+				      </g:each>
+				   </div>
+		 	   </div>
+		    </div>
+			<div class="row-fluid">
+			   <div class="span10">
+				 	<div class="form-actions">
+                        	<input type="submit" id="nxtFS" name="create" value="Registrar" class="button-form">
+                    	</div>
+			     	</div>
+		       </div>
+    		</div>
+    </fieldset>
+ 	</form>
+	</div>
+  </div>
+	<content tag="js">
+	<script type="text/javascript">
+    		function overAvatar(nroAvt){
+				$("#imgAvatar" + nroAvt).css("border","2px solid #FF0000");
+			}
+			function outAvatar(nroAvt){
+				$("#imgAvatar" + nroAvt).css("border","0px solid");
+			}
+			function selectAvatar(nroAvt){
+				$("#imgSelectedAavatar").attr("src","/img/avatars/avatar" + nroAvt + ".png");
+			}
+	</script>
+	</content>
+</body>
+</html>

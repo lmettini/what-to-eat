@@ -32,7 +32,7 @@
 				<a href="/register/forgotPassword">Te olvidaste tu contraseña?</a>
 			</p>
 			<p>
-				<a href="/register/index">Crear un nuevo usuario</a>
+				<a href="/userInfo/create">Crear un nuevo usuario</a>
 			</p>
 			<p>
 				<input type='submit' class="btn" id="submit" value='${message(code: "springSecurity.login.button")}'/>

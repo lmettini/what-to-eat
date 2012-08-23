@@ -5,7 +5,7 @@
   </head>  
   <div class="well">
     <div class="row-fluid">
-        <form id="recipeForm" class="form-horizontal wte-form" action="/userInfo/save" method="POST">
+        <form class="form-horizontal wte-form" action="/userInfo/update" method="POST">
           <div class="hero-unit-forms">
             <h2>Editar usuario</h2>
             <br/>
