@@ -20,10 +20,14 @@ class UserInfoController {
 	def save = {
 		def user = springSecurityService.currentUser
 		user.properties = params
-		if (!params.mailPublic){
-			user.mailPublic = false
+		if (user.validate()){
+			if (!params.mailPublic){
+				user.mailPublic = false
+			}
+			user.save(flush: true)
+			redirect(controller: "home", action: "index")
+		} else {
+			forward(action:"edit")
 		}
-		user.save(flush: true)
-		redirect(controller: "home", action: "index")
 	}
 }

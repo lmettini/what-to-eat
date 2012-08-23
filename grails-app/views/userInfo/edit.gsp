@@ -9,6 +9,9 @@
           <div class="hero-unit-forms">
             <h2>Editar usuario</h2>
             <br/>
+			<g:hasErrors bean="${user}">
+				<div id="flashAlert" class="alert alert-error">Debe completar todos los campos obligatorios</div>
+			</g:hasErrors>
                     <fieldset>
                         <div class="control-group">
                             <label class="control-label" for="title">Nombre</label>

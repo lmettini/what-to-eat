@@ -20,8 +20,11 @@ class SecUser {
 	Integer points
 
 	static constraints = {
-		username blank: false, unique: true
-		password blank: false
+		username blank: false, unique: true, size: 1..100
+		password blank: false, size: 1..100
+		name blank: false, size: 1..100
+		surname blank: false, size: 1..100
+		email blank: false, size: 1..100
 	}
 	
 	static mapping = {
