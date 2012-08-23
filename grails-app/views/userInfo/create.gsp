@@ -56,7 +56,8 @@
 					<div class="control-group">
 	                         <label class="control-label">Avatar seleccionado:</label>
 	                          <div class="controls">
-									<img id="imgSelectedAavatar" src="/img/avatars/avatar${user.avatar}.png" />		                        	
+							     	<img id="imgSelectedAavatar" src="/img/avatars/avatar${user.avatar}.png" />
+							 		<input type="hidden" id="inputAvatar" name="avatar" value="${user.avatar}">
 		                      </div>
 	                </div>
 				</div>
@@ -97,6 +98,7 @@
 			}
 			function selectAvatar(nroAvt){
 				$("#imgSelectedAavatar").attr("src","/img/avatars/avatar" + nroAvt + ".png");
+				$("#inputAvatar").val(nroAvt);
 			}
 	</script>
 	</content>

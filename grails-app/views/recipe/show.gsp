@@ -38,7 +38,13 @@
 				 <br/>
 				<div>
 					<span>
-						Cantidad de votos: ${recipe.points}
+						Cantidad de votos:
+						<g:if test="${recipe.points == 0}">
+							${recipe.points}
+						</g:if>
+						<g:else>
+					     	<a href="#likeUsersModal" role="button" class="btn" data-toggle="modal">${recipe.points}</a>
+						</g:else>						
 					</span>
 					<span>
 						<g:if test="${isNotAUserRecipe}">
@@ -55,6 +61,24 @@
         </form>
     </div>
     <a href="/"><h2>Volver a buscar recetas!</h2></a>
+
+	<div id="likeUsersModal" class="modal hide fade">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+	    <h3>Usuarios que les gusto la receta</h3>
+	  </div>
+	  <div class="modal-body">
+	    	<g:each in="${recipe.likes}" var="userLike">
+                 <div class="row-fluid">
+					<div class="span1"><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" /></div>
+					<div class="span4"><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></div>
+	     		</div>
+              </g:each>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" data-dismiss="modal" class="btn btn-primary">Cerrar</a>
+	  </div>
+	</div>
 </div>
 <content tag="js">
 	<script type="text/javascript">
