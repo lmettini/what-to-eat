@@ -17,28 +17,24 @@
                             <label class="control-label" for="title">Nombre</label>
                             <div class="controls">
                                 <input type="text" id="name" name="name" class="input-xlarge" maxlength="100" value="${user.name}">
-                                <div class="alert alert-error help-block alert-title">Debes ingresar un nombre</div>
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="surname">Apellido</label>
                             <div class="controls">
                                  <input type="text" id="surname" name="surname" class="input-xlarge" maxlength="100" value="${user.surname}">
-	                             <div class="alert alert-error help-block alert-title">Debes ingresar un apellido</div>
                             </div>
                         </div>
 						<div class="control-group">
                             <label class="control-label" for="email">Email</label>
                             <div class="controls">
                                  <input type="text" id="email" name="email" class="input-xlarge" maxlength="100" value="${user.email}">
-	                             <div class="alert alert-error help-block alert-title">Debes ingresar un email</div>
                             </div>
                         </div>
 						<div class="control-group">
                             <label class="control-label" for="password">Contraseña</label>
                             <div class="controls">
                                  <input type="password" id="password" name="password" class="input-xlarge" maxlength="100" value="${user.password}">
-	                             <div class="alert alert-error help-block alert-title">Debes ingresar una contraseña</div>
                             </div>
                         </div>
 						<div class="control-group">
