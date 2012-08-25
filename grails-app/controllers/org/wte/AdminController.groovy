@@ -8,8 +8,12 @@ class AdminController {
     def index = { }
 
 	def ingredients = {
-		def ingredients = Ingredient.findAllByApproved(false)
-		[ingredients: ingredients]
+		def offset = params.offset ? params.offset.toInteger() : 0
+		def ingredientsCount = Ingredient.countByApproved(false)
+		
+		def ingredients = Ingredient.findAllByApproved(false, [max:10,offset:offset])
+	
+		[ingredients: ingredients, total: ingredientsCount, max: 10, offset: offset]
 	}
 
 }

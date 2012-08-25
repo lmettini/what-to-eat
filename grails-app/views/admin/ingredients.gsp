@@ -21,5 +21,10 @@
           <div class="span2">${ingredient.creator.username}</div>
      </div>
   </g:each>
+	<div class="pagination-container">
+			<g:paginate next="Siguiente" prev="Anterior"
+	            controller="admin" action="ingredients"    
+	        max="${max}" maxsteps="10" total="${total}" />
+	</div>
   </body>
 </html>
