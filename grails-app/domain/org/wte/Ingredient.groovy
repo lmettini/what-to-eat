@@ -9,6 +9,7 @@ class Ingredient {
     String name
 
     static constraints = {
+		name blank: false
 		creator nullable: true
     }
 

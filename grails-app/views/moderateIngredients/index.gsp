@@ -19,6 +19,7 @@
       <div class="row-fluid">
           <div class="span2">${ingredient.name}</div>
           <div class="span2">${ingredient.creator.username}</div>
+		  <div class="span1"><a href="/moderateIngredients/edit/${ingredient.id}">Moderar</a></div>
      </div>
   </g:each>
 	<div class="pagination-container">
