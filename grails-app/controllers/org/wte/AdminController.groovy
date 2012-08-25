@@ -6,4 +6,10 @@ class AdminController {
 
 	@Secured(["hasRole('ROLE_ADMIN')"])
     def index = { }
+
+	def ingredients = {
+		def ingredients = Ingredient.findAllByApproved(false)
+		[ingredients: ingredients]
+	}
+
 }

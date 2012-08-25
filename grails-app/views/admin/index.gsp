@@ -9,8 +9,8 @@
 		 <div class="row-fluid">
 			 <h1>PANEL ADMIN</h1>
 			 <ul>
-						<li><a href="/recipe/moderate">Moderar Recetas</a></li>
-			     		<li><a href="/ingredient/moderate">Moderar Ingredientes</a></li>
+						<li><a href="/admin/recipes">Moderar Recetas</a></li>
+			     		<li><a href="/admin/ingredients">Moderar Ingredientes</a></li>
 				</ul>
 		</div>
 	</div>

@@ -29,8 +29,8 @@
       <div class="nav-collapse">
         <ul class="nav">
 	 		<li class="${pageProperty(name:'page.homeadmin')}"><a href="/admin">Inicio</a></li>
-			<li class="${pageProperty(name:'page.myRecipes')}"><a href="/moderation/recipes">Moderar Recetas</a></li>
-     		<li class="${pageProperty(name:'page.myRecipes')}"><a href="/moderation/recipes">Moderar Ingredientes</a></li>
+			<li class="${pageProperty(name:'page.recipes')}"><a href="/admin/recipes">Moderar Recetas</a></li>
+     		<li class="${pageProperty(name:'page.ingredients')}"><a href="/admin/ingredients">Moderar Ingredientes</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
