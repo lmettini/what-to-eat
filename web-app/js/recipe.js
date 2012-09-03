@@ -140,7 +140,7 @@ $("#submit-but").click(function (){
         imgs += $(this).attr("x-data-id");
     });
 
-    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], descripción: '"+$("#descrip").val()+"', categ:"+$("#categ").val()+" }";
+    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], descripcion: '"+$("#descrip").val()+"', categ:"+$("#categ").val()+" }";
 
     var jsonEncoded = encodeURIComponent(json)
 
