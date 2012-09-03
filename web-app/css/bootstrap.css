@@ -5091,7 +5091,16 @@ input[type="text"] .wte-form{
     font-weight: bold;
 }
 
+.alert-img{
+    width: 280px;
+    display: none;
+}
+
 .alert-title{
+    width: 219px;
+    display: none;
+}
+.alert-categ{
     width: 219px;
     display: none;
 }

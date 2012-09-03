@@ -27,10 +27,27 @@
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="file">Sube una foto</label>
+                                <label class="control-label" for="ingred">Elige una categoria</label>
+                                <div class="controls ">
+                                    <select class="inline-input" id="categ">
+                                        <option value="0">Categoria</option>
+                                        <g:each in="${categories}" var="ct">
+                                        <option value="${ct.id}">${ct.description}</option>
+                                        </g:each>
+                                    </select>
+                                    <div class="alert alert-error help-block alert-categ">Debes elegir una categoria</div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="uploadImage">Sube una foto</label>
                                 <div class="controls">
-                                    <input type="file" autocomplete="off" class="input-file" id="file" >
+
+                                    <button data-toggle="modal" type="button" class="btn" id="uploadImage">Cargar imagenes</button>
                                     <p class="help-block">Proximamente podras subir videos de Youtube</p>
+                                    <div>
+                                    <ul id="imgListRec" >
+                                    </ul>
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
@@ -52,10 +69,9 @@
                                     <input type="number" min="0" max="99999" autocomplete="off" class="span1 inline-input" id="qty" maxlength="5">
                                     <select class="span2 inline-input" id="units">
                                         <option value="0">Medida</option>
-                                        <option>cucharadas</option>
-                                        <option>gramos</option>
-                                        <option>paquetes</option>
-                                        <option>litros</option>
+                                        <g:each in="${measureUnits}" var="mu">
+                                        <option value="${mu.id}">${mu.name}</option>
+                                        </g:each>
                                     </select>
                                     <input type="button" name="create" value="Agregar" class="btn inline add-ing">
 									
@@ -91,16 +107,48 @@
                   </div>
                 </div>
 
-
-
-
               </div>
-
 
             </form>
 
         </div>
       </div>
+
+    <!-- modal carga imagenes -->>
+  	<div class="modal hide" id="imagesModal">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal">×</button>
+	    <h3>Subi tus fotos</h3>
+	  </div>
+	  <div class="modal-body">
+          <form class="form-horizontal" action="/image/postImage" method="post" enctype="multipart/form-data" id="imageform">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="photoimg">Busca una imagen</label>
+                    <div class="controls">
+                        <input type="file" name="photoimg" id="photoimg" />
+
+                        <p class="help-block">No debe superar el tamaño de 3MB</p>
+                    </div>
+                    <div class="alert alert-error help-block alert-img"></div>
+                </div>
+
+            </fieldset>
+          </form>
+          <div id='preview'>
+          </div>
+          <div>
+              <ul id="imgListModal" >
+              </ul>
+          </div>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" class="btn" data-dismiss="modal">Listo</a>
+	  </div>
+	</div>
+
+
+
 
 		<!-- Model Crear ingrediente -->
 	<div class="modal hide" id="ingredientModal">
@@ -152,9 +200,37 @@
 			  $('#ingredientModal').modal('hide');
 			});	
 		});
+
+
+        // funcion para upload de images
+        $("#uploadImage").click(function(){
+			$('#imagesModal').modal('show');
+		});
+
+        $('#imagesModal').on('show', function () {
+            $('#photoimg').attr("value","");
+        });
+
+        $('#photoimg').live('change', function() {
+            if ($(this).attr("value")!="") {
+                $("#preview").html('');
+                $("#preview").html('<div class="progress progress-striped active"><div class="bar" style="width: 100%;"></div></div>');
+                $("#imageform").ajaxForm(
+                        { target: '#preview'
+                        }).submit();
+            }
+        });
+
+
       });
+
+      var action = "${params.action}"
+
+
   </script>
   <script src="/js/recipe.js" type="text/javascript"></script>
+
+  <script src="/js/jquery.form.js"></script>
 	</content>
 
   </body>

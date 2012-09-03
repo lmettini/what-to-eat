@@ -1,6 +1,7 @@
 package org.wte
 
-import grails.plugins.springsecurity.Secured 
+import grails.plugins.springsecurity.Secured
+import grails.converters.JSON
 
 class RecipeController {
 
@@ -8,7 +9,12 @@ class RecipeController {
 
 	@Secured(['IS_AUTHENTICATED_FULLY'])
     def create ={
-        [:]
+        def measureUnits = MeasureUnit.getAll()
+        def categories = RecipeCategory.getAll()
+
+        ["action":"create",
+        "measureUnits":measureUnits,
+        "categories":categories]
     }
 
     @Secured(['IS_AUTHENTICATED_FULLY'])
@@ -75,6 +81,43 @@ class RecipeController {
 			flash.message = "No se encontro la receta"
 		}
 		redirect(action: "list")
+    }
+
+	@Secured(['IS_AUTHENTICATED_FULLY'])
+    def save = {
+        def data = params.data
+
+        def dataJson = JSON.parse(data)
+
+        def user = springSecurityService.currentUser
+
+        Recipe nRecipe = new Recipe(name: dataJson.title, title: dataJson.title, user: user, summary: "", description: dataJson.title, video: "", points: 0,category: RecipeCategory.get(dataJson.categ))
+        nRecipe.save(flush:true)
+
+        dataJson.ingredientes.each { ing ->
+            def component = new RecipeComponent(qty: ing.qty)
+            component.save(flush:true);
+
+            def unit = MeasureUnit.get(ing.unit)
+            def ingred = Ingredient.get(ing.ingredId)
+
+            unit.addToComponents(component)
+            ingred.addToComponents(component)
+            nRecipe.addToComponents(component)
+
+            component.save(flush:true)
+            unit.save(flush:true)
+            ingred.save(flush:true)
+            nRecipe.save(flush:true)
+        }
+
+        dataJson.images.each {img->
+            nRecipe.addToImages(Image.get(img))
+            nRecipe.save(flush:true)
+        }
+
+        forward([controller:"recipe" , action: "show", id:nRecipe.id])
+
     }
 
 }
