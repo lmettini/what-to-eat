@@ -2,7 +2,7 @@ package org.wte
 
 class Recipe {
 
-    static hasMany = [components:RecipeComponent, likes: UserLikeRecipe]
+    static hasMany = [components:RecipeComponent, likes: UserLikeRecipe, images: Image]
 
 	String name
     String title

@@ -1,6 +1,12 @@
 
 function firstStepOk(){
     if ($("#title").val().length==0){
+        $(".alert-title").show();
+        return false;
+    }
+
+    if ($("#categ").val()==0){
+        $(".alert-categ").show();
         return false;
     }
     return true;
@@ -10,9 +16,12 @@ $("#title").focus(function(){
     $(".alert-title").hide();
 });
 
+$("#categ").focus(function(){
+    $(".alert-categ").hide();
+});
+
 $("#t-2").bind("click",function(event){
     if(!firstStepOk()){
-        $(".alert-title").show();
 
         event.preventDefault();
         event.stopPropagation();
@@ -122,10 +131,44 @@ $("#submit-but").click(function (){
     var ings ="";
      $(".token-ingredient").each(function(i){
         if(i!=0)ings+=",";
-        ings += "id-ingrediente: '"+$(this).attr("x-ingid")+ "' qty: '"+$(this).attr("x-qty")+"' "+"unit: '"+$(this).attr("x-unit")+"' "
+        ings += "{ingredId: '"+$(this).attr("x-ingid")+ "', qty: '"+$(this).attr("x-qty")+"' "+",unit: '"+$(this).attr("x-unit")+"' }"
     });
-    var txt = "Aca esto haria submit de {title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , descripción: '"+$("#descrip").val()+"' }";
 
-    $("#temporary").html(txt);
-    $("#temporary").show();
+    var imgs ="";
+    $("#imgListRec > li[x-data-id]").each(function(i){
+        if(i!=0)imgs+=",";
+        imgs += $(this).attr("x-data-id");
+    });
+
+    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], descripcion: '"+$("#descrip").val()+"', categ:"+$("#categ").val()+" }";
+
+    var jsonEncoded = encodeURIComponent(json)
+
+    document.location = "/recipe/save?data="+jsonEncoded;
+
+});
+
+
+function addImageInsideModal(img) {
+    var html = createImgListTag(img);
+    $("#imgListRec").append(html);
+    $("#imgListModal").append(html);
+    $('#photoimg').attr("value","");
+
+}
+
+function createImgListTag(img){
+    return "<li x-data-id='"+img.id+"'><img src='"+img.thumbnail+"' width='90' height='90'/><a href='javascript:deteleImage("+img.id+")'>Eliminar</a></li>"
+}
+
+function deteleImage(id){
+    $("li[x-data-id="+id+"]").remove();
+}
+
+function alertImgMessage(msg){
+    $(".alert-img").html(msg).show()
+}
+
+$('#photoimg').click(function(){
+    $(".alert-img").hide()
 });
