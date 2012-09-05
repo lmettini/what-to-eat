@@ -12,6 +12,8 @@
 				<g:if test="${flash.message!=null}">
 					<div id="flashAlert" class="alert alert-success">${flash.message}</div>
 				</g:if>
+                <br/>
+                <label><strong>Resumen</strong></label>
                 <h3>${recipe.summary}</h3>
                 <br/>
                 <label><h2>Acá va la foto</h2></label>

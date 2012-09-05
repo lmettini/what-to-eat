@@ -33,7 +33,7 @@
 			<sec:ifLoggedIn>
 				<li class="${pageProperty(name:'page.myRecipes')}"><a href="/recipe/list">Mis Recetas</a></li>
 			</sec:ifLoggedIn>
-     		<li class="${pageProperty(name:'page.help')}"><a href="/help">Ayuda y preguntas</a></li>
+            <li class="${pageProperty(name:'page.help')}"><a href="/help">Ayuda y preguntas</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

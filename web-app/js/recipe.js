@@ -9,6 +9,11 @@ function firstStepOk(){
         $(".alert-categ").show();
         return false;
     }
+
+    if($("#summary").val().length>200){
+        $(".alert-desc").show();
+        return false
+    }
     return true;
 }
 
@@ -48,6 +53,21 @@ $("#descrip").keyup(function(){updateCounter()});
 
 $("#descrip").keydown(function(){setTimeout(updateCounter,100)});
 
+function updateSumaryCounter(){
+    var count = $("#summary").val().length;
+
+    if(count>200){
+        $("#summarycounter").addClass("badge-important");
+    } else{
+        $("#summarycounter").removeClass("badge-important");
+    }
+
+    $("#summarycounter").html(200-count);
+}
+
+$("#summary").keyup(function(){updateSumaryCounter()});
+
+$("#summary").keydown(function(){setTimeout(updateSumaryCounter,100)});
 
 var ingredients = [];
 
@@ -112,6 +132,7 @@ function idxOfIng(id){
 
 
 $("#descrip").focus(function(){$(".alert-desc").hide()});
+$("#summary").focus(function(){$(".alert-desc").hide()});
 
 function secondtStepOk(){
     if (ingredients.length==0){
@@ -140,7 +161,7 @@ $("#submit-but").click(function (){
         imgs += $(this).attr("x-data-id");
     });
 
-    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], descripcion: '"+$("#descrip").val()+"', categ:"+$("#categ").val()+" }";
+    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], summary: '"+$("#summary").val() +"', descripcion: '"+$("#descrip").val()+"', categ:"+$("#categ").val()+" }";
 
     var jsonEncoded = encodeURIComponent(json)
 

@@ -39,6 +39,15 @@
                                 </div>
                             </div>
                             <div class="control-group">
+                                <label class="control-label" for="steps">Cómo la resumirías?</label>
+                                <div class="controls">
+                                    <textarea id="summary" class="input-xlarge" id="steps" rows="4"></textarea>
+                                    <p class="help-block"><span id="summarycounter" class="badge">200</span> caracteres restantes</p>
+                                    <div class="alert alert-error help-block alert-desc">Superaste los 200 caracteres permitidos</div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="control-group">
                                 <label class="control-label" for="uploadImage">Sube una foto</label>
                                 <div class="controls">
 
@@ -198,9 +207,15 @@
 			  $("#tab2Alert").show();
 			  $("#ingred").tokenInput("flush");
 			  $('#ingredientModal').modal('hide');
-			});	
+			});
 		});
 
+      $('#name').on('keypress', function(e) {
+          if (e.which == 13 || event.keyCode == 13) {
+              e.preventDefault();
+              return false;
+          }
+      });
 
         // funcion para upload de images
         $("#uploadImage").click(function(){
