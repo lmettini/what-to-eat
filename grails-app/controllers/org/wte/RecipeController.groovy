@@ -20,7 +20,7 @@ class RecipeController {
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def edit ={
         def recipeToEdit = Recipe.get(params.id)
-        [recipe:recipeToEdit, recipeComponents: recipeToEdit.components]
+        ["action":"edit",recipe:recipeToEdit, recipeComponents: recipeToEdit.components]
     }
 
     @Secured(['IS_AUTHENTICATED_FULLY'])
@@ -91,7 +91,7 @@ class RecipeController {
 
         def user = springSecurityService.currentUser
 
-        Recipe nRecipe = new Recipe(name: dataJson.title, title: dataJson.title, user: user, summary: dataJson.summary, description: dataJson.descripcion, video: "", points: 0,category: RecipeCategory.get(dataJson.categ))
+        Recipe nRecipe = new Recipe(name: dataJson.title, title: dataJson.title, user: user, summary: dataJson.summary, description: dataJson.descripcion, video: dataJson.video, points: 0,category: RecipeCategory.get(dataJson.categ))
         nRecipe.save(flush:true)
 
         dataJson.ingredientes.each { ing ->

@@ -135,7 +135,7 @@ $("#descrip").focus(function(){$(".alert-desc").hide()});
 $("#summary").focus(function(){$(".alert-desc").hide()});
 
 function secondtStepOk(){
-    if (ingredients.length==0){
+    if (ingredients.length==0 && $(".ingredient-row").length==0){
         $("#ing-alert2").show();
         return false
     }
@@ -160,8 +160,8 @@ $("#submit-but").click(function (){
         if(i!=0)imgs+=",";
         imgs += $(this).attr("x-data-id");
     });
-
-    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], summary: '"+$("#summary").val() +"', descripcion: '"+$("#descrip").val()+"', categ:"+$("#categ").val()+" }";
+    var video = "http://www.youtube.com/v/" + $("#video").val().split('=')[1];
+    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], summary: '"+$("#summary").val() +"', descripcion: '"+$("#descrip").val()+"', categ: '"+$("#categ").val()+"', video: '"+video+"' }";
 
     var jsonEncoded = encodeURIComponent(json)
 

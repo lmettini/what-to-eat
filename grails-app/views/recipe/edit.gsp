@@ -27,18 +27,31 @@
                                 </div>
                             </div>
                             <div class="control-group">
+                                <label class="control-label" for="steps">Cómo la resumirías?</label>
+                                <div class="controls">
+                                    <textarea id="summary" class="input-xlarge" id="steps" rows="4">${recipe.summary}</textarea>
+                                    <p class="help-block"><span id="summarycounter" class="badge">200</span> caracteres restantes</p>
+                                    <div class="alert alert-error help-block alert-desc">Superaste los 200 caracteres permitidos</div>
+                                </div>
+                            </div>
+                            <div class="control-group">
                                 <label class="control-label" for="file">Sube una foto</label>
                                 <div class="controls">
                                     <input type="file" autocomplete="off" class="input-file" id="file" >
-                                    <p class="help-block">Proximamente podras subir videos de Youtube</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <p>Tenés un video para mostrar cómo se hace la receta?</p>
+                                <label class="control-label" for="video">Copiá el link acá!</label>
+                                <div class="controls">
+                                    <input type="text" autocomplete="off" class="input-xlarge" id="video" value="${recipe.video}">
                                 </div>
                             </div>
                         </fieldset>
                         <div class="form-actions">
                             <input type="button" id="nxtFS" name="create" value="Siguiente" class="button-form">
-
+                            <a href="/" class="button-cancel btn" data-dismiss="modal">Cancelar</a>
                         </div>
-
 
                     </div>
                     <div class="tab-pane" id="tab2">
@@ -89,6 +102,7 @@
                         <div class="form-actions">
                             <!--input type="button" onclick="loadTab('1')" name="create" value="Anterior" class="button-form"-->
                             <input type="button" name="create" value="Guardar" class="button-form" id="submit-but"/>
+                            <a href="/" class="button-cancel btn" data-dismiss="modal">Cancelar</a>
                         </div>
                     </div>
                   </div>
@@ -122,6 +136,7 @@
 	  </div>
 	</div>
 
+
 	<content tag="js">
   <script type="text/javascript">
       $(document).ready(function() {
@@ -143,7 +158,13 @@
           $("#counter").text(counterValue - descripCount)
         }
 
-		$("#btnCreateIngredient").click(function(){
+          var summaryCount = $("#summary").val().length
+          if (summaryCount > 0) {
+              var counterValue = parseInt($("#summarycounter").text())
+              $("#summarycounter").text(counterValue - summaryCount)
+          }
+
+          $("#btnCreateIngredient").click(function(){
 			$.ajax({
 			  type: "POST",
 			  url: "/ingredient/save?" + $("#ingredientForm").serialize()
@@ -156,6 +177,9 @@
 			});	
 		});
       });
+
+      var action = "${params.action}"
+
   </script>
   <script src="/js/recipe.js" type="text/javascript"></script>
 	</content>

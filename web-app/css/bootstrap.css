@@ -5033,6 +5033,18 @@ background: -webkit-linear-gradient(top, #D24242 0%,#C52E2E 100%);
 
 }
 
+.button-cancel {
+    font-size: 20px;
+    line-height: 40px;
+    width: 150px !important;
+    height: 40px;
+    padding: 0;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+
 .button-form:hover {
     /*font-family: 'Karla', sans-serif;*/
     background: #e03c4c; cursor: pointer;}
@@ -5142,4 +5154,7 @@ input[type="text"] .wte-form{
 
 #summary{
     width: 460px;
+}
+.video-container{
+    float:left;
 }

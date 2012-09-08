@@ -52,17 +52,23 @@
                                 <div class="controls">
 
                                     <button data-toggle="modal" type="button" class="btn" id="uploadImage">Cargar imagenes</button>
-                                    <p class="help-block">Proximamente podras subir videos de Youtube</p>
                                     <div>
                                     <ul id="imgListRec" >
                                     </ul>
                                     </div>
                                 </div>
                             </div>
+                            <div class="control-group">
+                                <p>Tenés un video para mostrar cómo se hace la receta?</p>
+                                <label class="control-label" for="video">Copiá el link acá!</label>
+                                <div class="controls">
+                                    <input type="text" autocomplete="off" class="input-xlarge" id="video">
+                                </div>
+                            </div>
                         </fieldset>
                         <div class="form-actions">
                             <input type="button" id="nxtFS" name="create" value="Siguiente" class="button-form">
-
+                            <a href="/" class="button-cancel btn" data-dismiss="modal">Cancelar</a>
                         </div>
 
 
@@ -109,6 +115,7 @@
                         <div class="form-actions">
                             <!--input type="button" onclick="loadTab('1')" name="create" value="Anterior" class="button-form"-->
                             <input type="button" name="create" value="Crear" class="button-form" id="submit-but"/>
+                            <a href="/" class="button-cancel btn" data-dismiss="modal">Cancelar</a>
                         </div>
 
 

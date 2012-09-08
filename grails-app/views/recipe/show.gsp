@@ -17,6 +17,9 @@
                 <h3>${recipe.summary}</h3>
                 <br/>
                 <label><h2>Acá va la foto</h2></label>
+                <div class="video-container">
+                    <object width="425" height="350"><param name="movie" value="${recipe.video}"><embed src="${recipe.video}" type="application/x-shockwave-flash" width="425" height="350"></object>
+                </div>
 				<br/>
 				 <div id="recipe-description">
 		        	<label><strong>Autor</strong></label>
