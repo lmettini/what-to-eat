@@ -138,17 +138,17 @@ zumos {
 	ranking {
 		bestrecipes {
 			maxrecipes = 10
-			requiredpointsmorethan = -1
+			requiredpointsmorethan = 10
 		}
 		allrecipes {
-			maxrows = 2
-			requiredpointsmorethan = -1
+			maxrows = 30
+			requiredpointsmorethan = 10
 		}
 		bestusers {
 			maxusers = 10
 		}
 		allusers {
-			maxrows = 1
+			maxrows = 30
 		}
 	}
 }
