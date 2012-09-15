@@ -73,12 +73,16 @@
 	    <h3>Usuarios que les gusto la receta</h3>
 	  </div>
 	  <div class="modal-body">
+			<table class="table table-hover">
+				<tbody>
 	    	<g:each in="${recipe.likes}" var="userLike">
-                 <div class="row-fluid">
-					<div class="span1"><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" /></div>
-					<div class="span4"><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></div>
-	     		</div>
+	      				<tr>
+							<td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" /></td>
+							<td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
+	     				</tr>
               </g:each>
+			</tbody>
+		</table>
 	  </div>
 	  <div class="modal-footer">
 	    <a href="#" data-dismiss="modal" class="btn btn-primary">Cerrar</a>
