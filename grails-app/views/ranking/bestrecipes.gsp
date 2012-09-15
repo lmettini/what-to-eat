@@ -14,19 +14,29 @@
 			  	</ul>
 			  	<div class="tab-content">
 			    	<div class="tab-pane active" id="tab1">
-			      		<p><strong>Mejores ${maxbestrecipes} recetas</strong> - <a href="/ranking/allrecipes">Ver todas las recetas</a></p>
-						<div class="row-fluid">
-							<div class="span1">Posicion</div>
-							<div class="span4">Nombre de la receta</div>
-							<div class="span1">Votos</div>
-				     	</div>
-			  			<g:each status="i" in="${recipes}" var="recipe">
-			      		<div class="row-fluid">
-							<div class="span1">${i + 1}</div>
-							<div class="span4"><a href="/recipe/show/${recipe.id}">${recipe.name}</a></div>
-							<div class="span1">${recipe.points}</div>
-			     		</div>
-			  			</g:each>
+						<br>
+						<div class="btn-group">		
+						  <button class="btn disabled">Mejores ${maxbestrecipes} recetas</button>
+							<a class="btn" href="/ranking/allrecipes">Ver todas las recetas</a>
+						</div>
+						<br>
+				
+							<table class="table table-hover">
+								<thead>
+									<th>#</th>
+									<th>Nombre de la receta</th>
+									<th>Votos</th>
+					     		</thead>
+								<tbody>
+				  					<g:each status="i" in="${recipes}" var="recipe">
+				      				<tr>
+										<td>${i + 1}</td>
+										<td><a href="/recipe/show/${recipe.id}">${recipe.name}</a></td>
+										<td>${recipe.points}</td>
+				     				</tr>
+				  					</g:each>
+								</tbody>
+							</table>
 			    	</div>
 			    	<div class="tab-pane" id="tab2">
 			    	</div>

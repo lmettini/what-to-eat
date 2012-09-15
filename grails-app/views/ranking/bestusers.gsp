@@ -16,19 +16,28 @@
 			    	<div class="tab-pane" id="tab1">
 			    	</div>
 			    	<div class="tab-pane active" id="tab2">
-							<p><strong>Mejores ${maxbestusers} usuarios</strong> - <a href="/ranking/allusers">Ver todos las usuarios</a></p>
-							<div class="row-fluid">
-								<div class="span1">Posicion</div>
-								<div class="span4">Nombre del usuario</div>
-								<div class="span1">Votos</div>
-					     	</div>
-				  			<g:each status="i" in="${users}" var="user">
-				      		<div class="row-fluid">
-								<div class="span1">${i + 1}</div>
-								<div class="span4"><a href="/userInfo/show/${user.id}">${user.username}</a></div>
-								<div class="span1">${user.points}</div>
-				     		</div>
-				  			</g:each>
+								<br>
+								<div class="btn-group">		
+								  <button class="btn disabled">Mejores ${maxbestusers} usuarios</button>
+									<a class="btn" href="/ranking/allusers">Ver todos las usuarios</a>
+								</div>
+								<br>
+								<table class="table table-hover">
+									<thead>
+										<th>#</th>
+										<th>Nombre del usuario</th>
+										<th>Votos</th>
+						     		</thead>
+									<tbody>
+					  					<g:each status="i" in="${users}" var="user">
+					      				<tr>
+											<td>${i + 1}</td>
+											<td><a href="/userInfo/show/${user.id}">${user.username}</a></td>
+											<td>${user.points}</td>
+					     				</tr>
+					  					</g:each>
+									</tbody>
+								</table>	
 			    	</div>
 			  	</div>
 			</div>

@@ -14,20 +14,29 @@
 			  	</ul>
 			  	<div class="tab-content">
 			    	<div class="tab-pane active" id="tab1">
-			      		<p><a href="/ranking/bestrecipes">Mejores ${maxbestrecipes} recetas</a> - <strong>Ver todas las recetas</strong></p>
-						<div class="row-fluid">
-							<div class="span1">Posicion</div>
-							<div class="span4">Nombre de la receta</div>
-							<div class="span1">Votos</div>
-				     	</div>
-			  			<g:each status="i" in="${recipes}" var="recipe">
-			      		<div class="row-fluid">
-							<div class="span1">${offset + i + 1}</div>
-							<div class="span4"><a href="/recipe/show/${recipe.id}">${recipe.name}</a></div>
-							<div class="span1">${recipe.points}</div>
-			     		</div>
-			  			</g:each>
-						<div class="pagination-container">
+						<br>
+						<div class="btn-group">
+						  <a class="btn" href="/ranking/bestrecipes">Mejores ${maxbestrecipes} recetas</a>
+						  <button class="btn disabled">Ver todas las recetas</button>
+						</div>
+						<br>
+						<table class="table table-hover">
+							<thead>
+								<th>#</th>
+								<th>Nombre de la receta</th>
+								<th>Votos</th>
+				     		</thead>
+							<tbody>
+			  					<g:each status="i" in="${recipes}" var="recipe">
+			      				<tr>
+									<td>${offset + i + 1}</td>
+									<td><a href="/recipe/show/${recipe.id}">${recipe.name}</a></td>
+									<td>${recipe.points}</td>
+			     				</tr>
+			  					</g:each>
+							</tbody>
+						</table>
+							<div class="pagination-container pagination-centered">
 								<g:paginate next="Siguiente" prev="Anterior"
 						            controller="ranking" action="allrecipes"    
 						        max="${max}" maxsteps="10" total="${total}" />
