@@ -42,6 +42,13 @@ class ModerateRecipesController {
 			if (recipe.validate()){
 				recipe.name = recipe.title
 				recipe.approved = true
+				recipe.images.clear()
+				if (params.imgList != null && params.imgList.length() > 0){
+					def images = params.imgList.split(",")
+					images.each {imgId->	
+		            	recipe.addToImages(Image.get(imgId))
+		        	}
+				}
 				recipe.save(flush: true)
 				flash.message = "La receta ha sido aprobada"
 				redirect(controller: "moderateRecipes", action: "index")

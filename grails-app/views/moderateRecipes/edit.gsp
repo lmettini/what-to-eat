@@ -39,6 +39,7 @@
 											<li x-data-id="${image.id}"><img src="${image.thumbnail}"><a href='javascript:deteleImage("${image.id}")'>Eliminar</a></li>
 					  					</g:each>
                                     </ul>
+									<input type="hidden" id="imgList" name="imgList" value="">
                            		</div>
                            </div>
 							<div class="control-group">
@@ -111,7 +112,14 @@
 				$("#descriptionDiv").show();
 				return;
 			}
-		   $("#moderateAction").val("approve");
+			var imgs ="";
+		    $("#imgListRec > li[x-data-id]").each(function(i){
+		        if(i!=0)imgs+=",";
+		        imgs += $(this).attr("x-data-id");
+		    });
+			$("#imgList").val(imgs);
+			
+		   $("#moderateAction").val("approve");			
 		   $('#recipeForm').submit();
 		});
 		
