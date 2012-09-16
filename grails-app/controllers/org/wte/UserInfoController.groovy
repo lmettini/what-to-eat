@@ -36,7 +36,7 @@ class UserInfoController {
 				mailService.sendMail {
 					to user.email
 					from conf.ui.register.emailFrom
-					subject conf.ui.register.emailSubject
+					subject "HoyQueComemos - Su usuario ha sido creado"
 					html "Su usuario es: " + user.username + ". Su contraseña es: " + pass
 				}
 			}

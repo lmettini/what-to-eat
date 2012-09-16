@@ -21,7 +21,7 @@
 		        </a>
 		      </sec:ifNotLoggedIn>
  			 <ul class="dropdown-menu">
-		          <li><a href="#">Perfil</a></li>
+		         <li><a href="/userInfo/edit">Perfil</a></li>
 		          <li class="divider"></li>
 		          <li><g:link controller='logout'>Cerrar sesión</g:link></li>
 		     </ul>

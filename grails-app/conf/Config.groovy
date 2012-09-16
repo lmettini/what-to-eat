@@ -153,3 +153,5 @@ zumos {
 	}
 }
 
+grails.plugins.springsecurity.ui.register.emailFrom = "zumos.utn@gmail.com"
+

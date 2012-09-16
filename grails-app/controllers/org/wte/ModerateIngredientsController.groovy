@@ -69,7 +69,7 @@ class ModerateIngredientsController {
 			mailService.sendMail {
 				to user.email
 				from conf.ui.register.emailFrom
-				subject conf.ui.register.emailSubject
+				subject "HoyQueComemos - Ingrediente moderado"
 				html "El ingrediente: " + ingredientName + " se ha rechazado. El ingrediente y todas las recetas asociadas han sido eliminadas de nuestro sistema. Motivo de rechazo: " + params.rejectDescription
 			}
 			redirect(controller: "moderateIngredients", action: "index")
