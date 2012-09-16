@@ -108,6 +108,12 @@ class RecipeController {
             component.save(flush:true)
             unit.save(flush:true)
             ingred.save(flush:true)
+
+			if (nRecipe.hasAllIngredientsApproved()){
+				nRecipe.readyForModeration = true;
+			} else {
+				nRecipe.readyForModeration = false;
+			}
             nRecipe.save(flush:true)
         }
 

@@ -12,9 +12,21 @@ class Recipe {
     String description
     String video
     Integer points
+	boolean approved = false
+	boolean readyForModeration = true;
 
 	static searchable = {
 	    components component: true
+	}
+	
+	boolean hasAllIngredientsApproved(){
+		def ready = true
+		components.each { cp ->
+				if (!cp.ingredient.approved){
+					ready = false;
+				}	           
+	    }
+		return ready;
 	}
 	
 	void like(){

@@ -33,6 +33,16 @@ class ModerateIngredientsController {
 			if (ingredient.validate()){
 				ingredient.approved = true
 				ingredient.save(flush: true)
+				if (ingredient.components != null){
+					ingredient.components.each { cp ->
+							if (cp.recipe.hasAllIngredientsApproved()){
+								cp.recipe.readyForModeration = true
+							} else {
+								cp.recipe.readyForModeration = false
+							}
+							cp.recipe.save(flush: true)
+				    }
+				}
 				redirect(controller: "moderateIngredients", action: "index")
 			} else {
 			 	render view: 'edit', model: [ingredient: ingredient]
