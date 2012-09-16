@@ -38,23 +38,15 @@ class ModerateRecipesController {
 		def recipe = Recipe.get(params.id)
 		def action = params.moderateAction
 		if (action == "approve"){
-			ingredient.properties = params
-			if (ingredient.validate()){
-				ingredient.approved = true
-				ingredient.save(flush: true)
-				if (ingredient.components != null){
-					ingredient.components.each { cp ->
-							if (cp.recipe.hasAllIngredientsApproved()){
-								cp.recipe.readyForModeration = true
-							} else {
-								cp.recipe.readyForModeration = false
-							}
-							cp.recipe.save(flush: true)
-				    }
-				}
+			recipe.properties = params
+			if (recipe.validate()){
+				recipe.name = recipe.title
+				recipe.approved = true
+				recipe.save(flush: true)
+				flash.message = "La receta ha sido aprobada"
 				redirect(controller: "moderateRecipes", action: "index")
 			} else {
-			 	render view: 'edit', model: [ingredient: ingredient]
+			 	render view: 'edit', model: [recipe: recipe]
 			}
 		} else if (action == "reject"){
 				def user = recipe.user

@@ -114,6 +114,7 @@ class RecipeController {
 			} else {
 				nRecipe.readyForModeration = false;
 			}
+			nRecipe.approved = false
             nRecipe.save(flush:true)
         }
 

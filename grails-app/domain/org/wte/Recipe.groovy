@@ -15,6 +15,13 @@ class Recipe {
 	boolean approved = false
 	boolean readyForModeration = true;
 
+	static constraints = {
+		name blank: false, size: 1..100
+		title blank: false, size: 1..100
+		summary size: 0..200
+		description size: 0..100
+	}
+
 	static searchable = {
 	    components component: true
 	}
