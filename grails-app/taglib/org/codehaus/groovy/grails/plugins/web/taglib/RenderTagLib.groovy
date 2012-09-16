@@ -368,7 +368,7 @@ class RenderTagLib implements RequestConstants {
             }
 			writer << '</li>'
         }
-
+ 
         // display steps when steps are enabled and laststep is not firststep
         if (steps && laststep > firststep) {
             //linkTagAttrs.class = 'step'

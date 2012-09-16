@@ -16,7 +16,7 @@ class ModerateRecipesController {
 		//def recipes = Recipe.findAllByApproved(false, [max:10,offset:offset])
 		
 		def recipeCriteria = Recipe.createCriteria()
-		def recipes = recipeCriteria.list(max: 10) {
+		def recipes = recipeCriteria.list(max: 10, offset: offset) {
 				eq("approved", false)
 				eq("readyForModeration", true)
 		}
