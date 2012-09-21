@@ -28,7 +28,7 @@ environments {
             driverClassName = "org.postgresql.Driver" //the database driver class name
             username = "arofjsvuojifkr" //database name
             password = "T8Y2DTWX_Lp976a7UC1K2hoG1r" //database password
-            dbCreate = "create" //"update"
+            dbCreate = "update"
             url = "jdbc:postgresql://ec2-23-21-209-58.compute-1.amazonaws.com:5432/dd2qd1r0jj283p"
             //url = "jdbc:hsqldb:file:prodDb;shutdown=true"
         }
