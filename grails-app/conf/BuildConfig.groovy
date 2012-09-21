@@ -29,6 +29,7 @@ grails.project.dependency.resolution = {
         compile 'org.apache.httpcomponents:httpcore:4.2.1'
         compile 'org.apache.httpcomponents:httpmime:4.2.1'
         compile 'org.apache.httpcomponents:httpclient:4.2.1'
+        runtime "postgresql:postgresql:9.1-901.jdbc4"
 
         // runtime 'mysql:mysql-connector-java:5.1.13'
     }
