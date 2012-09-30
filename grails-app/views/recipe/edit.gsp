@@ -8,6 +8,7 @@
         <div class="row-fluid">
             <form id="recipeForm" class="form-horizontal wte-form">
               <div class="hero-unit-forms">
+                <label id="recipeId" class="hidden"></label>
 
                 <h2>Editá la Receta</h2>
                 <br/>
@@ -249,6 +250,7 @@
       });
 
       var action = "${params.action}"
+      if(${recipe.id})$('#recipeId').val(${recipe.id});
 
   </script>
   <script src="/js/recipe.js" type="text/javascript"></script>

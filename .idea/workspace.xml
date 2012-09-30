@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae53777-e237-489d-898f-594582907ff9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/recipe/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/recipe/edit.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/js/recipe.js" afterPath="$PROJECT_DIR$/web-app/js/recipe.js" />
     </list>
     <ignored path="what-to-eat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +67,7 @@
       <file leaf-file-name="RecipeController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="28" selection-start="993" selection-end="993" vertical-scroll-proportion="-25.869566">
+            <state line="98" column="18" selection-start="3134" selection-end="3134" vertical-scroll-proportion="-7.3913045">
               <folding />
             </state>
           </provider>
@@ -83,16 +85,16 @@
       <file leaf-file-name="edit.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/edit.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="158" selection-start="6854" selection-end="6854" vertical-scroll-proportion="-8.472973">
+            <state line="10" column="16" selection-start="290" selection-end="334" vertical-scroll-proportion="-3.4693878">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="recipe.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-app/js/recipe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="30" selection-start="3819" selection-end="3819" vertical-scroll-proportion="0.0">
+            <state line="167" column="4" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.826484">
               <folding />
             </state>
           </provider>
@@ -110,7 +112,7 @@
       <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="29" selection-start="2319" selection-end="2321" vertical-scroll-proportion="-10.877551">
+            <state line="58" column="29" selection-start="2319" selection-end="2321" vertical-scroll-proportion="-18.163265">
               <folding />
             </state>
           </provider>
@@ -125,10 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="22" selection-start="4087" selection-end="4087" vertical-scroll-proportion="0.9411765">
+            <state line="71" column="34" selection-start="3688" selection-end="3688" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,12 +159,12 @@
         <option value="$PROJECT_DIR$/grails-app/views/login/auth.gsp" />
         <option value="$PROJECT_DIR$/web-app/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/grails-app/domain/org/wte/Recipe.groovy" />
-        <option value="$PROJECT_DIR$/web-app/js/recipe.js" />
         <option value="$PROJECT_DIR$/grails-app/views/recipe/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/recipe/create.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/recipe/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/recipe/edit.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
+        <option value="$PROJECT_DIR$/web-app/js/recipe.js" />
       </list>
     </option>
   </component>
@@ -470,8 +472,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15584415" sideWeight="0.34253246" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17938311" sideWeight="0.6714976" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22727273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17938311" sideWeight="0.77272725" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22727273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -606,16 +608,23 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="34" selection-start="3688" selection-end="3688" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="29" selection-start="2319" selection-end="2321" vertical-scroll-proportion="-10.877551">
+        <state line="58" column="29" selection-start="2319" selection-end="2321" vertical-scroll-proportion="-18.163265">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="158" selection-start="6854" selection-end="6854" vertical-scroll-proportion="-8.472973">
+        <state line="10" column="16" selection-start="290" selection-end="334" vertical-scroll-proportion="-3.4693878">
           <folding />
         </state>
       </provider>
@@ -629,21 +638,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="28" selection-start="993" selection-end="993" vertical-scroll-proportion="-25.869566">
+        <state line="98" column="18" selection-start="3134" selection-end="3134" vertical-scroll-proportion="-7.3913045">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-app/js/recipe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="30" selection-start="3819" selection-end="3819" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="22" selection-start="4087" selection-end="4087" vertical-scroll-proportion="0.9411765">
+        <state line="167" column="4" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.826484">
           <folding />
         </state>
       </provider>

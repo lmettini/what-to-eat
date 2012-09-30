@@ -160,8 +160,13 @@ $("#submit-but").click(function (){
         if(i!=0)imgs+=",";
         imgs += $(this).attr("x-data-id");
     });
-    var video = "http://www.youtube.com/v/" + $("#video").val().split('=')[1];
-    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], summary: '"+$("#summary").val() +"', descripcion: '"+$("#descrip").val()+"', categ: '"+$("#categ").val()+"', video: '"+video+"' }";
+    var video;
+    if($("#video").val().split('=').length != 1)
+        video = "http://www.youtube.com/v/" + $("#video").val().split('=')[1];
+    else
+        video = $("#video").val();
+
+    var json = "{action:'"+action+"', title: '"+$("#title").val()+"' , ingredientes: ["+ings+"] , images: ["+imgs+"], summary: '"+$("#summary").val() +"', descripcion: '"+$("#descrip").val()+"', recipeId: '"+$("#recipeId").val()+"', categ: '"+$("#categ").val()+"', video: '"+video+"' }";
 
     var jsonEncoded = encodeURIComponent(json)
 
