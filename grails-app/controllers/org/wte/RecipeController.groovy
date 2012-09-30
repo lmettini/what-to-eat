@@ -98,10 +98,10 @@ class RecipeController {
 
         def user = springSecurityService.currentUser
         Recipe nRecipe = null
-        if(!dataJson.recipeId)
-            nRecipe = new Recipe(name: dataJson.title, title: dataJson.title, user: user, summary: dataJson.summary, description: dataJson.descripcion, video: dataJson.video, points: 0,category: RecipeCategory.get(dataJson.categ))
+        if(dataJson.recipeId == null || dataJson.recipeId == 'undefined')
+            nRecipe = new Recipe(name: dataJson.title, title: dataJson.title, user: user, summary: dataJson.summary, description: dataJson.descripcion, video: dataJson.video, points: 0,category: RecipeCategory.get(Long.parseLong(dataJson.categ)))
         else{
-            nRecipe = Recipe.get(dataJson.recipeId)
+            nRecipe = Recipe.get(Long.parseLong(dataJson.recipeId))
             nRecipe.name = dataJson.title
             nRecipe.title = dataJson.title
             nRecipe.user = user
@@ -109,7 +109,7 @@ class RecipeController {
             nRecipe.description = dataJson.descripcion
             nRecipe.video = dataJson.video
             nRecipe.points = 0
-            nRecipe.category = RecipeCategory.get(dataJson.categ)
+            nRecipe.category = RecipeCategory.get(Long.parseLong(dataJson.categ))
         }
         nRecipe.save(flush:true)
 
