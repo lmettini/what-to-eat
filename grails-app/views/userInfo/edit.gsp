@@ -11,7 +11,7 @@
             <br/>
 			<g:if test="${user.email != null && user.email.length() > 0}">
 				<g:hasErrors bean="${user}" field="email">
-			   <div id="flashAlert" class="alert alert-error">El email ingresado ya se encuentra registrado en el sitio.</div>
+			   <div id="flashAlert" class="alert alert-error">El email ingresado ya se encuentra registrado en el sitio</div>
 				</g:hasErrors>
 			</g:if>
 			<g:hasErrors bean="${user}">
