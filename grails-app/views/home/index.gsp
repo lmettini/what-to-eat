@@ -24,6 +24,7 @@
       <br>
           <h3><a href="/help">No entiendo! ¿cómo funciona?</a></h3>
           <h3><a href="/recipe/create">Crear Receta</a></h3>
+		  <h3><a href="#">Prueba deploy 30/09/2012</a></h3>
           %{--<div class="row-fluid">--}%
             %{--<div class="span4">--}%
                %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/pie.png">Happy Pie</h2>--}%
