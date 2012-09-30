@@ -106,8 +106,8 @@
                                 <label class="control-label" for="steps">Contanos los pasos a seguir</label>
                                 <div class="controls">
                                     <textarea id="descrip" class="input-xlarge" id="steps" rows="4"></textarea>
-                                    <p class="help-block"><span id="counter" class="badge">500</span> caracteres restantes</p>
-                                    <div class="alert alert-error help-block alert-desc">Superaste los 500 caracteres permitidos</div>
+                                    <p class="help-block"><span id="counter" class="badge">1000</span> caracteres restantes</p>
+                                    <div class="alert alert-error help-block alert-desc">Superaste los 1000 caracteres permitidos</div>
                                 </div>
                             </div>
                         </fieldset>

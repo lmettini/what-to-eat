@@ -29,15 +29,29 @@ class BootStrap {
 		zumosuser4.save(flush:true)
 		zumosuser5.save(flush:true)
 
-                // defino algunas unidades de medida
-                MeasureUnit gramos = new MeasureUnit(name: "gramos")
-                gramos.save(flush:true)
+            // defino algunas unidades de medida
+                MeasureUnit centcub = new MeasureUnit(name: "Centímetros cúbicos")
+                centcub.save(flush:true)
 
-                MeasureUnit cucharada = new MeasureUnit(name: "cucharadas")
+                MeasureUnit cucharada = new MeasureUnit(name: "Cucharadas")
                 cucharada.save(flush:true)
 
+                MeasureUnit gramos = new MeasureUnit(name: "Gramos")
+                gramos.save(flush:true)
 
-                // defino ingredientes
+                MeasureUnit litros = new MeasureUnit(name: "Litros")
+                litros.save(flush:true)
+
+                MeasureUnit pizca = new MeasureUnit(name: "Pizca")
+                pizca.save(flush:true)
+
+                MeasureUnit tazas = new MeasureUnit(name: "Tazas")
+                tazas.save(flush:true)
+
+                MeasureUnit unidades = new MeasureUnit(name: "Unidades")
+                unidades.save(flush:true)
+
+            // defino ingredientes
                 Ingredient tallarines = new Ingredient(name: "Tallarines")
                 tallarines.save(flush:true)
 
@@ -60,13 +74,22 @@ class BootStrap {
                 papa.save(flush:true)
 
                 //defino categorias
-                RecipeCategory platoPrincipal = new RecipeCategory(description: "plato principal")
-                platoPrincipal.save(flush: true)
-
-                RecipeCategory entrada = new RecipeCategory(description: "entrada")
+                RecipeCategory entrada = new RecipeCategory(description: "Entrada")
                 entrada.save(flush: true)
 
-                RecipeCategory postre = new RecipeCategory(description: "postre")
+                RecipeCategory sopasYCremas = new RecipeCategory(description: "Sopas y Cremas")
+                sopasYCremas.save(flush: true)
+
+                RecipeCategory ensaladas = new RecipeCategory(description: "Ensaladas")
+                ensaladas.save(flush: true)
+
+                RecipeCategory platoPrincipal = new RecipeCategory(description: "Plato Principal")
+                platoPrincipal.save(flush: true)
+
+                RecipeCategory pastasYArroces = new RecipeCategory(description: "Pastas y Arroces")
+                pastasYArroces.save(flush: true)
+
+                RecipeCategory postre = new RecipeCategory(description: "Postres")
                 postre.save(flush: true)
         		
                 // defino recetas

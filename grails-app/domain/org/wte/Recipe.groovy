@@ -19,7 +19,7 @@ class Recipe {
 		name blank: false, size: 1..100
 		title blank: false, size: 1..100
 		summary size: 0..200
-		description size: 0..100
+		description size: 0..1000
 	}
 
 	static searchable = {

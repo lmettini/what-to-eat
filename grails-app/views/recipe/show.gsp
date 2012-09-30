@@ -13,21 +13,26 @@
 					<div id="flashAlert" class="alert alert-success">${flash.message}</div>
 				</g:if>
                 <br/>
-                <label><strong>Resumen</strong></label>
+                <label><strong>Resúmen</strong></label>
                 <h3>${recipe.summary}</h3>
                 <br/>
-                <label><h2>Fotos</h2></label>
+                <g:if test="${recipe.images}">
+                    <label><h2>Fotos</h2></label>
 					<div class="controls">
                           <ul id="imgListRec" >
 							<g:each status="i" in="${recipe.images}" var="image">
-								<li x-data-id="${image.id}"><img src="${image.medium}"></li>
+								<div x-data-id="${image.id}"><img src="${image.medium}"></div>
 		  					</g:each>
                         </ul>
                		</div>
-                <div class="video-container">
-                    <object width="425" height="350"><param name="movie" value="${recipe.video}"><embed src="${recipe.video}" type="application/x-shockwave-flash" width="425" height="350"></object>
-                </div>
-				<br/>
+                </g:if>
+                <g:if test="${recipe.video}">
+                    <label><h2>Video</h2></label>
+                    <div class="video-container">
+                        <object width="425" height="350"><param name="movie" value="${recipe.video}"><embed src="${recipe.video}" type="application/x-shockwave-flash" width="425" height="350"></object>
+                    </div>
+                    <br/>
+                </g:if>
 				 <div id="recipe-description">
 		        	<label><strong>Autor</strong></label>
 					<span>${recipe.user.username}</span>
