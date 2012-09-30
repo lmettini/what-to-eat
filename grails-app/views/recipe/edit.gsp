@@ -101,7 +101,7 @@
                                 <div class="controls">
                                     <g:each in="${recipeComponents}" var="comp">
                                         <div class="ingredient-row">
-                                            <div id="ing-${comp.ingredientId}" class="alert token-ingredient" x-ingid="${comp.ingredientId}" x-qty="${comp.unit.id}" x-unit="${comp.unit.name}" x-id="${comp.id}">${comp.qty} ${comp.unit.name}  ${comp.ingredient.name}<button onclick="deleteIngred(${comp.ingredientId})" type="button" class="close">×</button></div>
+                                            <div id="ing-${comp.ingredientId}" class="alert token-ingredient" x-ingid="${comp.ingredientId}" x-qty="${comp.qty}" x-unit="${comp.unit.id}" x-id="${comp.id}">${comp.qty} ${comp.unit.name}  ${comp.ingredient.name}<button onclick="deleteIngred(${comp.ingredientId})" type="button" class="close">×</button></div>
                                         </div>
                                     </g:each>
                                 </div>

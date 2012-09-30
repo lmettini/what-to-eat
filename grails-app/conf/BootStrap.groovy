@@ -73,6 +73,15 @@ class BootStrap {
                 Ingredient papa = new Ingredient(name: "Papa")
                 papa.save(flush:true)
 
+                Ingredient azucar = new Ingredient(name: "Azucar")
+                azucar.save(flush:true)
+
+                Ingredient sal = new Ingredient(name: "Sal")
+                sal.save(flush:true)
+
+                Ingredient harina = new Ingredient(name: "Harina")
+                harina.save(flush:true)
+
                 //defino categorias
                 RecipeCategory entrada = new RecipeCategory(description: "Entrada")
                 entrada.save(flush: true)
