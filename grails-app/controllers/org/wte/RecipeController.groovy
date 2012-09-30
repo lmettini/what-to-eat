@@ -20,7 +20,14 @@ class RecipeController {
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def edit ={
         def recipeToEdit = Recipe.get(params.id)
-        ["action":"edit",recipe:recipeToEdit, recipeComponents: recipeToEdit.components]
+        def categories = RecipeCategory.getAll()
+        def measureUnits = MeasureUnit.getAll()
+
+        ["action":"edit",
+        "recipe":recipeToEdit,
+        "recipeComponents": recipeToEdit.components,
+        "measureUnits":measureUnits,
+        "categories":categories]
     }
 
     @Secured(['IS_AUTHENTICATED_FULLY'])

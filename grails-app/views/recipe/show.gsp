@@ -8,7 +8,7 @@
     <div class="row-fluid">
         <form class="form-horizontal wte-form">
             <div class="hero-unit-forms">
-                <h2>${recipe.name}</h2>
+                <h2>${recipe.name}</h2> <label>(${recipe.category.description})</label>
 				<g:if test="${flash.message!=null}">
 					<div id="flashAlert" class="alert alert-success">${flash.message}</div>
 				</g:if>

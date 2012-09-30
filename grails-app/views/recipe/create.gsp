@@ -50,7 +50,6 @@
                             <div class="control-group">
                                 <label class="control-label" for="uploadImage">Sube una foto</label>
                                 <div class="controls">
-
                                     <button data-toggle="modal" type="button" class="btn" id="uploadImage">Cargar imagenes</button>
                                     <div>
                                     <ul id="imgListRec" >
