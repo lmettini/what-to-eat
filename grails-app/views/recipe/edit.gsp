@@ -8,6 +8,7 @@
         <div class="row-fluid">
             <form id="recipeForm" class="form-horizontal wte-form">
               <div class="hero-unit-forms">
+                <label id="recipeId" class="hidden"></label>
 
                 <h2>Editá la Receta</h2>
                 <br/>
@@ -101,7 +102,7 @@
                                 <div class="controls">
                                     <g:each in="${recipeComponents}" var="comp">
                                         <div class="ingredient-row">
-                                            <div id="ing-${comp.ingredientId}" class="alert token-ingredient" x-ingid="${comp.ingredientId}" x-qty="${comp.unit.id}" x-unit="${comp.unit.name}" x-id="${comp.id}">${comp.qty} ${comp.unit.name}  ${comp.ingredient.name}<button onclick="deleteIngred(${comp.ingredientId})" type="button" class="close">×</button></div>
+                                            <div id="ing-${comp.ingredientId}" class="alert token-ingredient" x-ingid="${comp.ingredientId}" x-qty="${comp.qty}" x-unit="${comp.unit.id}" x-id="${comp.id}">${comp.qty} ${comp.unit.name}  ${comp.ingredient.name}<button onclick="deleteIngred(${comp.ingredientId})" type="button" class="close">×</button></div>
                                         </div>
                                     </g:each>
                                 </div>
@@ -249,6 +250,7 @@
       });
 
       var action = "${params.action}"
+      if(${recipe.id})$('#recipeId').val(${recipe.id});
 
   </script>
   <script src="/js/recipe.js" type="text/javascript"></script>
