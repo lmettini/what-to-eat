@@ -9,7 +9,77 @@ class BootStrap {
         if(GrailsUtil.environment in ['production']){   
 
                 // si necesitamos iniciar algo en produ
+            // defino algunas unidades de medida
+            MeasureUnit centcub = new MeasureUnit(name: "Centímetros cúbicos")
+            centcub.save(flush:true)
 
+            MeasureUnit cucharada = new MeasureUnit(name: "Cucharadas")
+            cucharada.save(flush:true)
+
+            MeasureUnit gramos = new MeasureUnit(name: "Gramos")
+            gramos.save(flush:true)
+
+            MeasureUnit litros = new MeasureUnit(name: "Litros")
+            litros.save(flush:true)
+
+            MeasureUnit pizca = new MeasureUnit(name: "Pizca")
+            pizca.save(flush:true)
+
+            MeasureUnit tazas = new MeasureUnit(name: "Tazas")
+            tazas.save(flush:true)
+
+            MeasureUnit unidades = new MeasureUnit(name: "Unidades")
+            unidades.save(flush:true)
+
+            // defino ingredientes
+            Ingredient tallarines = new Ingredient(name: "Tallarines")
+            tallarines.save(flush:true)
+
+            Ingredient pimienta = new Ingredient(name: "Pimienta")
+            pimienta.save(flush:true)
+
+            Ingredient lenteja = new Ingredient(name: "Lenteja")
+            lenteja.save(flush:true)
+
+            Ingredient panceta = new Ingredient(name: "Panceta")
+            panceta.save(flush:true)
+
+            Ingredient tomate = new Ingredient(name: "Tomate")
+            tomate.save(flush:true)
+
+            Ingredient pollo = new Ingredient(name: "Pollo")
+            pollo.save(flush:true)
+
+            Ingredient papa = new Ingredient(name: "Papa")
+            papa.save(flush:true)
+
+            Ingredient azucar = new Ingredient(name: "Azucar")
+            azucar.save(flush:true)
+
+            Ingredient sal = new Ingredient(name: "Sal")
+            sal.save(flush:true)
+
+            Ingredient harina = new Ingredient(name: "Harina")
+            harina.save(flush:true)
+
+            //defino categorias
+            RecipeCategory entrada = new RecipeCategory(description: "Entrada")
+            entrada.save(flush: true)
+
+            RecipeCategory sopasYCremas = new RecipeCategory(description: "Sopas y Cremas")
+            sopasYCremas.save(flush: true)
+
+            RecipeCategory ensaladas = new RecipeCategory(description: "Ensaladas")
+            ensaladas.save(flush: true)
+
+            RecipeCategory platoPrincipal = new RecipeCategory(description: "Plato Principal")
+            platoPrincipal.save(flush: true)
+
+            RecipeCategory pastasYArroces = new RecipeCategory(description: "Pastas y Arroces")
+            pastasYArroces.save(flush: true)
+
+            RecipeCategory postre = new RecipeCategory(description: "Postres")
+            postre.save(flush: true)
         } else {
                 
 		SecUser adminuser = new SecUser(username:"admin", name: "admin", surname: "admin", email: "admin@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true, points: 0)
