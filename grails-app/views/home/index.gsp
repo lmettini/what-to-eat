@@ -24,24 +24,6 @@
       <br>
           <h3><a href="/help">No entiendo! ¿cómo funciona?</a></h3>
           <h3><a href="/recipe/create">Crear Receta</a></h3>
-          %{--<div class="row-fluid">--}%
-            %{--<div class="span4">--}%
-               %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/pie.png">Happy Pie</h2>--}%
-                    %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
-               %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
-            %{--</div><!--/span-->--}%
-            %{--<div class="span4">--}%
-              %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/brownie.png">Bouncin Brownies</h2>--}%
-              %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
-              %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
-            %{--</div><!--/span-->--}%
-            %{--<div class="span4">--}%
-
-              %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/cupcake.png">Sweet Cupcake</h2>--}%
-                    %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
-              %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
-            %{--</div><!--/span-->--}%
-          %{--</div><!--/row-->--}%
 
         </div><!--/span-->
       </div><!--/row-->

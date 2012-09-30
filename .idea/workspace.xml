@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae53777-e237-489d-898f-594582907ff9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/recipe/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/recipe/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/js/recipe.js" afterPath="$PROJECT_DIR$/web-app/js/recipe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
     </list>
     <ignored path="what-to-eat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,16 +65,46 @@
       <file leaf-file-name="RecipeController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="18" selection-start="3134" selection-end="3134" vertical-scroll-proportion="-7.3913045">
+            <state line="138" column="21" selection-start="4736" selection-end="4736" vertical-scroll-proportion="-14.521739">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/list.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="31" selection-start="314" selection-end="314" vertical-scroll-proportion="-1.7346939">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="28" selection-start="1690" selection-end="1690" vertical-scroll-proportion="2.0298507">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Recipe.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/Recipe.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="40" selection-start="73" selection-end="73" vertical-scroll-proportion="-1.5813954">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="30" selection-start="8055" selection-end="8055" vertical-scroll-proportion="-2.2040815">
+            <state line="136" column="29" selection-start="8027" selection-end="8027" vertical-scroll-proportion="-1.8571428">
               <folding />
             </state>
           </provider>
@@ -91,19 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="recipe.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-app/js/recipe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="4" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.826484">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ImageController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="42" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
+            <state line="167" column="4" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,15 +132,6 @@
         <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
             <state line="58" column="29" selection-start="2319" selection-end="2321" vertical-scroll-proportion="-18.163265">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-app/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5050" column="0" selection-start="103179" selection-end="103179" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/services/what/to/eat/ImageShackUploaderService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/Image2Controller.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/org/wte/Image.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/ImageController.groovy" />
@@ -163,8 +172,9 @@
         <option value="$PROJECT_DIR$/grails-app/views/recipe/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/recipe/edit.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
         <option value="$PROJECT_DIR$/web-app/js/recipe.js" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
       </list>
     </option>
   </component>
@@ -251,6 +261,10 @@
               <option name="myItemId" value="grails-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -266,7 +280,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listRecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="what-to-eat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="what-to-eat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="what-to-eat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="what-to-eat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -448,7 +502,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -541,37 +595,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.grails/1.3.7/projects/what-to-eat/plugins/spring-security-core-1.2.7.3/grails-app/i18n/spring-security-core.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="494" selection-end="494" vertical-scroll-proportion="0.38857144" />
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/login/auth.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="67" selection-start="683" selection-end="683" vertical-scroll-proportion="-5.2040815" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3806" column="14" selection-start="105139" selection-end="105139" vertical-scroll-proportion="0.21326165" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/commons/_header.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.6236162" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/RecipeCategory.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="93" selection-end="104" vertical-scroll-proportion="0.0" />
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/admin/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="25" selection-start="251" selection-end="251" vertical-scroll-proportion="0.34501845" />
@@ -598,16 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/Recipe.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="27" selection-start="185" selection-end="193" vertical-scroll-proportion="0.28977272">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="34" selection-start="3688" selection-end="3688" vertical-scroll-proportion="0.0">
@@ -629,23 +642,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/js/recipe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="4" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="30" selection-start="8055" selection-end="8055" vertical-scroll-proportion="-2.2040815">
+        <state line="136" column="29" selection-start="8027" selection-end="8027" vertical-scroll-proportion="-1.8571428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/RecipeComponent.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.06439394">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/wte/Recipe.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="40" selection-start="73" selection-end="73" vertical-scroll-proportion="-1.5813954">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/grails-1.3.7/lib/groovy-all-1.7.8.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="30" selection-start="13775" selection-end="13775" vertical-scroll-proportion="0.34896812">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="18" selection-start="3134" selection-end="3134" vertical-scroll-proportion="-7.3913045">
+        <state line="138" column="21" selection-start="4736" selection-end="4736" vertical-scroll-proportion="-14.521739">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/js/recipe.js">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/recipe/list.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="4" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.826484">
+        <state line="11" column="31" selection-start="314" selection-end="314" vertical-scroll-proportion="-1.7346939">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.15176152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="28" selection-start="1690" selection-end="1690" vertical-scroll-proportion="2.0298507">
           <folding />
         </state>
       </provider>

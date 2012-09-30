@@ -113,6 +113,11 @@ class RecipeController {
         }
         nRecipe.save(flush:true)
 
+        // borro todos los ingredientes y los agrego cada vez
+        def components = RecipeComponent.findAllByRecipe(nRecipe)
+        components*.delete(flush: true)
+        nRecipe.save(flush:true)
+
         dataJson.ingredientes.each { ing ->
             def component = new RecipeComponent(qty: ing.qty)
             component.save(flush:true);
