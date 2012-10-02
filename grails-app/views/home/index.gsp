@@ -6,46 +6,66 @@
   </head>
   <body>
     <div class="row-fluid">
-
         <div class="span12">
-          <div class="hero-unit-home">
-            <h1>HoyQueComemos</h1>
-
-          </div>
-
-      <div class="well">
-    <br>
-    <form action="#" method="post" id="search_form" class="clearfix">
-    <div>
-        <input type="text" id="input-recp" size="40" maxlength="150" name="search_text" placeholder="search for treats..." />
-    </div>
-    <input type="submit" name="search" value="Buscar" class="button-form" id="search_button">
-    </form>
-      <br>
-          <h3><a href="/help">No entiendo! ¿cómo funciona?</a></h3>
-          <h3><a href="/recipe/create">Crear Receta</a></h3>
-		  <h3><a href="#">Prueba deploy 30/09/2012</a></h3>
-          %{--<div class="row-fluid">--}%
-            %{--<div class="span4">--}%
-               %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/pie.png">Happy Pie</h2>--}%
-                    %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
-               %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
-            %{--</div><!--/span-->--}%
-            %{--<div class="span4">--}%
-              %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/brownie.png">Bouncin Brownies</h2>--}%
-              %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
-              %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
-            %{--</div><!--/span-->--}%
-            %{--<div class="span4">--}%
-
-              %{--<h2><img style="padding-right:10px" class="bs-icon" src="/img/cupcake.png">Sweet Cupcake</h2>--}%
-                    %{--<p>Cupcake ipsum dolor sit. Amet gummies cheesecake chupa chups lollipop tart wypas gingerbread. Tiramisu danish liquorice dessert. Amet gummies cheesecake chupa chups lollipop tart wypas</p>--}%
-              %{--<p class="pull-right"><a class="btn" href="#">Yummy Click »</a></p>--}%
-            %{--</div><!--/span-->--}%
-          %{--</div><!--/row-->--}%
-
-        </div><!--/span-->
-      </div><!--/row-->
+			<g:if test="${flash.message!=null}">
+				<div id="flashAlert" class="alert alert-error">${flash.message}</div>
+			</g:if>
+          	<div class="hero-unit-home">
+            	<h1>HoyQueComemos</h1>
+          	</div>
+      		<div class="well">
+    			<br>
+    			<form action="#" method="post" id="search_form" class="clearfix">
+    				<div>
+        				<input type="text" id="input-recp" size="40" maxlength="150" name="search_text" placeholder="search for treats..." />
+    				</div>
+    				<input type="submit" name="search" value="Buscar" class="button-form" id="search_button">
+    			</form>
+    			<br>
+				<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span8">
+						<h2>Recetas destacadas</h2>
+					</div>
+					<div class="span4">
+						<h2>Usuarios destacados</h2>
+					</div>
+				</div><!--/row-->
+				<div class="row-fluid">
+					<div class="span8">
+					<g:each status="i" in="${recipes}" var="recipe">
+						<div class="row-fluid">
+							<div class="span12 alert alert-info">
+           						<h2>
+									<g:if test="${recipe.firstImage() != null}">
+										<img style="padding-right:10px" class="bs-icon" src="${recipe.firstImage().thumbnail}">
+					  				</g:if>
+									${recipe.name}
+								</h2>
+								<br>
+                				<p>${recipe.description}</p>
+								<p class="pull-left">Votos: ${recipe.points}</p>
+           						<p class="pull-right"><a class="btn" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
+        					</div><!--/span-->
+      					</div><!--/row-->
+					</g:each>
+					</div><!--/span-->
+					<div class="span4 alert alert-info">
+					<g:each status="i" in="${users}" var="user">
+						<div class="row-fluid">
+							<div class="span12">
+           						<h3>
+									<a href="/userInfo/show/${user.id}">${user.username} (${user.points} votos)</a>
+           						</h3>
+        					</div><!--/span-->
+      					</div><!--/row-->
+					</g:each>
+					</div><!--/span-->
+				</div><!--/row-->
+				</div><!--/container-->
+			</div>
+		</div>
+	</div>
 	<content tag="js">	
      <script type="text/javascript">
     $(document).ready(function() {

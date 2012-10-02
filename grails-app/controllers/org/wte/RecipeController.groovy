@@ -20,14 +20,19 @@ class RecipeController {
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def edit ={
         def recipeToEdit = Recipe.get(params.id)
-        def categories = RecipeCategory.getAll()
-        def measureUnits = MeasureUnit.getAll()
+		if (recipeToEdit.user == springSecurityService.currentUser){
+        	def categories = RecipeCategory.getAll()
+        	def measureUnits = MeasureUnit.getAll()
 
-        ["action":"edit",
-        "recipe":recipeToEdit,
-        "recipeComponents": recipeToEdit.components,
-        "measureUnits":measureUnits,
-        "categories":categories]
+        	["action":"edit",
+        	"recipe":recipeToEdit,
+        	"recipeComponents": recipeToEdit.components,
+        	"measureUnits":measureUnits,
+        	"categories":categories]
+		} else {
+			flash.message = "No puede editar una receta que fue creada por otro usuario"
+			redirect(controller:"home",action:"index")
+		}
     }
 
     @Secured(['IS_AUTHENTICATED_FULLY'])
@@ -102,6 +107,10 @@ class RecipeController {
             nRecipe = new Recipe(name: dataJson.title, title: dataJson.title, user: user, summary: dataJson.summary, description: dataJson.descripcion, video: dataJson.video, points: 0,category: RecipeCategory.get(Long.parseLong(dataJson.categ)))
         }else{
             nRecipe = Recipe.get(Long.parseLong(dataJson.recipeId))
+			if (nRecipe.user != springSecurityService.currentUser){
+				flash.message = "No puede editar una receta que fue creada por otro usuario"
+				redirect(controller:"home",action:"index")
+			}
             nRecipe.name = dataJson.title
             nRecipe.title = dataJson.title
             nRecipe.user = user
