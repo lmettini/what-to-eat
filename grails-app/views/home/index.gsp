@@ -44,7 +44,7 @@
 								</h2>
 								<br>
                 				<p>${recipe.description}</p>
-								<p class="pull-left">Votos: ${recipe.points}</p>
+								<p class="pull-left">Creador: ${recipe.user.username} - Votos: ${recipe.points}</p>
            						<p class="pull-right"><a class="btn" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
         					</div><!--/span-->
       					</div><!--/row-->
@@ -55,7 +55,7 @@
 						<div class="row-fluid">
 							<div class="span12">
            						<h3>
-									<a href="/userInfo/show/${user.id}">${user.username} (${user.points} votos)</a>
+									<a href="/userInfo/show/${user.id}">${user.username} (${user.points} puntos)</a>
            						</h3>
         					</div><!--/span-->
       					</div><!--/row-->
