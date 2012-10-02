@@ -98,9 +98,9 @@ class RecipeController {
 
         def user = springSecurityService.currentUser
         Recipe nRecipe = null
-        if(dataJson.recipeId == null || dataJson.recipeId == 'undefined')
+        if(dataJson.recipeId == null || dataJson.recipeId == 'undefined'){
             nRecipe = new Recipe(name: dataJson.title, title: dataJson.title, user: user, summary: dataJson.summary, description: dataJson.descripcion, video: dataJson.video, points: 0,category: RecipeCategory.get(Long.parseLong(dataJson.categ)))
-        else{
+        }else{
             nRecipe = Recipe.get(Long.parseLong(dataJson.recipeId))
             nRecipe.name = dataJson.title
             nRecipe.title = dataJson.title
@@ -110,12 +110,15 @@ class RecipeController {
             nRecipe.video = dataJson.video
             nRecipe.points = 0
             nRecipe.category = RecipeCategory.get(Long.parseLong(dataJson.categ))
+			  // borro todos los ingredientes y los agrego cada vez
+				def components = []
+				components += nRecipe.components
+				components.each { cp ->
+				    nRecipe.removeFromComponents(cp)
+				    cp.delete()
+				}
         }
-        nRecipe.save(flush:true)
-
-        // borro todos los ingredientes y los agrego cada vez
-        def components = RecipeComponent.findAllByRecipe(nRecipe)
-        components*.delete(flush: true)
+        
         nRecipe.save(flush:true)
 
         dataJson.ingredientes.each { ing ->
