@@ -11,6 +11,7 @@ class BootStrap {
                 // si necesitamos iniciar algo en produ
             // defino algunas unidades de medida
 
+			RecipeComponent.findAll()*.delete(flush:true)
 			MeasureUnit.findAll()*.delete(flush:true)
 			Ingredient.findAll()*.delete(flush:true)
 			RecipeCategory.findAll()*.delete(flush:true)
