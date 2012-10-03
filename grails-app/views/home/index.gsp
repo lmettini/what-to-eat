@@ -33,7 +33,7 @@
 				</div><!--/row-->
 				<div class="row-fluid">
 					<div class="span8">
-					<g:each status="i" in="${recipes}" var="recipe">
+					<g:each in="${recipes}" var="recipe">
 						<div class="row-fluid">
 							<div class="span12 alert alert-info">
            						<h2>
@@ -43,6 +43,11 @@
 									${recipe.name}
 								</h2>
 								<br>
+								<p> Ingredientes: 
+										<g:each in="${recipe.components}" var="cp" status="i">
+											<g:if test="${i!=0}">, </g:if>${cp.ingredient.name}
+										</g:each>
+								</p>
                 				<p>${recipe.description}</p>
 								<p class="pull-left">Creador: ${recipe.user.username} - Votos: ${recipe.points}</p>
            						<p class="pull-right"><a class="btn" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
