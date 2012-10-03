@@ -10,6 +10,11 @@ class BootStrap {
 
                 // si necesitamos iniciar algo en produ
             // defino algunas unidades de medida
+
+			MeasureUnit.findAll()*.delete(flush:true)
+			Ingredient.findAll()*.delete(flush:true)
+			RecipeCategory.findAll()*.delete(flush:true)
+
             MeasureUnit centcub = new MeasureUnit(name: "Centímetros cúbicos")
             centcub.save(flush:true)
 
