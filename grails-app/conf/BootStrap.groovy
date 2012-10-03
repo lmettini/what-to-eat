@@ -14,6 +14,7 @@ class BootStrap {
 			RecipeComponent.findAll()*.delete(flush:true)
 			MeasureUnit.findAll()*.delete(flush:true)
 			Ingredient.findAll()*.delete(flush:true)
+			Recipe.findAll()*.delete(flush:true)
 			RecipeCategory.findAll()*.delete(flush:true)
 
             MeasureUnit centcub = new MeasureUnit(name: "Centímetros cúbicos")
