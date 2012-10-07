@@ -89,7 +89,7 @@
 				<tbody>
 	    	<g:each in="${recipe.likes}" var="userLike">
 	      				<tr>
-							<td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" /></td>
+							<td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
 							<td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
 	     				</tr>
               </g:each>

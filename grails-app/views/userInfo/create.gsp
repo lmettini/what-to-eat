@@ -75,7 +75,7 @@
 			   <div class="span10">
                    <div class="controls"> 
 				     <g:each var="i" in="${ (1..<11) }">
-					    <div class="span1"><img id="imgAvatar${i}" src="/img/avatars/avatar${i}.png" onmouseover="javascript:overAvatar(${i});" onmouseout="javascript:outAvatar(${i});" onclick="javascript:selectAvatar(${i});" /></div>
+					    <div class="span1"><img id="imgAvatar${i}" style="border: 2px solid #FFFFFF" src="/img/avatars/avatar${i}.png" onmouseover="javascript:overAvatar(${i});" onmouseout="javascript:outAvatar(${i});" onclick="javascript:selectAvatar(${i});" /></div>
 				      </g:each>
 				   </div>
 		 	   </div>
@@ -98,7 +98,7 @@
 				$("#imgAvatar" + nroAvt).css("border","2px solid #FF0000");
 			}
 			function outAvatar(nroAvt){
-				$("#imgAvatar" + nroAvt).css("border","0px solid");
+				$("#imgAvatar" + nroAvt).css("border","2px solid #FFFFFF");
 			}
 			function selectAvatar(nroAvt){
 				$("#imgSelectedAavatar").attr("src","/img/avatars/avatar" + nroAvt + ".png");
