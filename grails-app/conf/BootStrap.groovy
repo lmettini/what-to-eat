@@ -9,6 +9,9 @@ class BootStrap {
         if(GrailsUtil.environment in ['production']){   
 
                 // si necesitamos iniciar algo en produ
+				SecUser mcaruso = SecUser.findByUsername("mcaruso")
+				mcaruso.avatar = 1
+				mcaruso.save(flush: true)
 
         } else {
                 
