@@ -60,6 +60,7 @@
 						<div class="row-fluid">
 							<div class="span12">
            						<h3>
+									<img id="imgSelectedAavatar" src="/img/avatars/avatar${user.avatar}.png" width="40" height="47"  />
 									<a href="/userInfo/show/${user.id}">${user.username} (${user.points} puntos)</a>
            						</h3>
         					</div><!--/span-->
