@@ -4,8 +4,20 @@
     <title>HoyQueComemos</title>
   </head>
   <body>
+      <div class="hero-unit-home">
+          <h1>HoyQueComemos</h1>
+      </div>
       <div class="well">
-      		<h1>
+          <br>
+          <form action="#" method="post" id="search_form" class="clearfix">
+              <div>
+                  <input type="text" id="input-recp" size="40" maxlength="150" name="search_text" placeholder="search for treats..." />
+              </div>
+              <input type="submit" name="search" value="Buscar" class="button-form" id="search_button">
+          </form>
+          <br>
+
+          <h1>
 			Recetas que encontramos para los ingredientes: 
 			<g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each>
 			</h1>
@@ -34,5 +46,37 @@
 
 
 		</div>
+  <content tag="js">
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $("#search_button").click(function (e) {
+                  var tokens = $("#input-recp").tokenInput("get");
+                  if (tokens.length==0){
+                      alert("Por favor ingresá algún ingrediente que poseas.")
+                  } else {
+                      var i,query="";
+
+                      for(i=0;i<tokens.length;i++){
+                          if(i>0){
+                              query+=","
+                          }
+                          query+=tokens[i].id
+                      }
+                      document.location="/listRecipes?q="+query
+                  }
+                  e.preventDefault();
+                  e.stopPropagation();
+              });
+          });
+          // /ingredient/getRelated/
+          // http://shell.loopj.com/tokeninput/tvshows.php
+          $(document).ready(function() {
+              //$("#input-recp").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
+              $("#input-recp").tokenInput("/ingredient/getRelated/", {
+                  theme: "facebook"
+              });
+          });
+      </script>
+  </content>
   </body>
 </html>
