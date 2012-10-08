@@ -17,16 +17,16 @@
 						<input type="hidden" id="moderateAction" name="moderateAction" value="cancel">
 						<input type="hidden" id="rejectDescription" name="rejectDescription" value="">
                         <div class="control-group">
-                            <label class="control-label" for="title">Nombre</label>
-                            <div class="controls">
-                                <input type="text" id="name" name="name" class="input-xlarge" maxlength="100" value="${ingredient.name}">
+                            <label class="control-label"><strong>Nombre</strong></label>
+                            <div class="controls" style="margin-top: 5px;">
+                                <span>${ingredient.name}</span>
                             </div>
                         </div>
                     </fieldset>
                     <div class="form-actions">
-	 					<a id="cancelBtn" href="#" class="btn button-form">Cancelar</a>
+                        <a id="approveBtn" href="#" class="btn button-accept-form">Aceptar</a>
 						<a id="rejectBtn" href="#rejectModal" data-toggle="modal" class="btn button-form">Rechazar</a>
-						<a id="approveBtn" href="#" class="btn button-form">Aceptar</a>
+                        <a id="cancelBtn" href="#" class="button-cancel btn">Cancelar</a>
                     </div>
 			</div>
         </form>
@@ -40,7 +40,7 @@
 	  </div>
 	  <div class="modal-body">
           	 <div class="control-group">
-                  <label class="control-label" for="title">Motivo de rechazo:</label>
+                  <label class="control-label">Motivo de rechazo:</label>
                   <div class="controls">
 						<select id="rejectSelect">
 							<option>Ingrediente indebido</option>
@@ -50,8 +50,8 @@
               </div>
 	  </div>
 	  <div class="modal-footer">
-	    <a href="#" data-dismiss="modal" class="btn btn-primary">Cancelar</a>
-		<a id="rejectSubmit"href="#" class="btn btn-primary">Rechazar</a>
+		<a id="rejectSubmit"href="#" class="btn btn-reject">Rechazar</a>
+          <a href="#" data-dismiss="modal" class="btn btn-cancel">Cancelar</a>
 	  </div>
 	</div>
 	

@@ -59,7 +59,7 @@
                             <a class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
 						</g:if>
 						<g:else>
-					     	<a href="#likeUsersModal" role="button" class="btn" data-toggle="modal">${recipe.points}</a>
+                            <a class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
 						</g:else>						
 					</span>
 					<span>

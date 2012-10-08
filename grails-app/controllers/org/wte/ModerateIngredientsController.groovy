@@ -43,6 +43,7 @@ class ModerateIngredientsController {
 							cp.recipe.save(flush: true)
 				    }
 				}
+                flash.message = "El ingrediente ha sido aprobado"
 				redirect(controller: "moderateIngredients", action: "index")
 			} else {
 			 	render view: 'edit', model: [ingredient: ingredient]
@@ -58,7 +59,9 @@ class ModerateIngredientsController {
 					likes*.delete(flush: true)
 					recipe.removePointsToUser()
             		recipe.delete(flush: true)
+                    flash.message = "El ingrediente ha sido borrado"
         		} catch (org.springframework.dao.DataIntegrityViolationException e) {
+                    flash.message = "No se pudo borrar el ingrediente"
            			println e
        			}
 			}
