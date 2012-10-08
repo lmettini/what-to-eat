@@ -1,29 +1,37 @@
-.container-recipe {
-  color: #08C;
-  text-decoration: none;
-  background-color: #EBEBEB;
-  padding: 8px 35px 8px 14px;
-  margin-bottom: 18px;
-  border: 1px solid #fbeed5;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+.container-header {
+	background-color: #E03C4C;
+	color: #FFFFFF;
 }
 
-.container-users {
-  color: #08C;
-  text-decoration: none;
-  background-color: #EBEBEB;
-  padding: 8px 35px 8px 14px;
-  margin-bottom: 18px;
-  border: 1px solid #fbeed5;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+.container-row {
+	background-color: #FFFFFF;
+	color: #08C;
+}
+
+.container {
+	position: relative; 
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	border: 3px solid #ffffff; 
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	-o-border-radius: 10px; 
+	border-radius: 10px; 
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), 
+	inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
+	-moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), 
+	inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
+	-webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5), 
+	inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .bold {
 	font-weight: bold;
+}
+
+.user-tab{
+	font-weight: bold;
+	font-size:14px;
 }
 
 .user-information{

@@ -24,10 +24,10 @@
     			<br>
 				<div class="container-fluid">
 				<div class="row-fluid">
-					<div class="span8 container-recipe">
+					<div class="span8 container container-header">
 						<h2>Recetas destacadas</h2>
 					</div>
-					<div class="span4 container-users">
+					<div class="span4 container container-header">
 						<h2>Usuarios destacados</h2>
 					</div>
 				</div><!--/row-->
@@ -35,7 +35,7 @@
 					<div class="span8">
 					<g:each in="${recipes}" var="recipe">
 						<div class="row-fluid">
-							<div class="span12 container-recipe">
+							<div class="span12 container container-row">
            						<h2>
 									<g:if test="${recipe.firstImage() != null}">
 										<img style="padding-right:10px" class="bs-icon" src="${recipe.firstImage().thumbnail}">
@@ -43,19 +43,21 @@
 									${recipe.name}
 								</h2>
 								<br>
-								<p> Ingredientes: 
+								<div class="alert alert-info">
+									<p> Ingredientes: 
 										<g:each in="${recipe.components}" var="cp" status="i">
 											<g:if test="${i!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
-								</p>
-                				<p>${recipe.description}</p>
-								<p class="pull-left">Creador: ${recipe.user.username} - Votos: ${recipe.points}</p>
-           						<p class="pull-right"><a class="btn btn btn-info" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
+									</p>
+                					<p>${recipe.description}</p>
+									<p>Creador: ${recipe.user.username} - Votos: ${recipe.points}</p>
+           							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
+								</div>
         					</div><!--/span-->
       					</div><!--/row-->
 					</g:each>
 					</div><!--/span-->
-					<div class="span4 container-users">
+					<div class="span4 container container-row">
 						<table>
 					<g:each status="i" in="${users}" var="user">
 						<div class="row-fluid">
