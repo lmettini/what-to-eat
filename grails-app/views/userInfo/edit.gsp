@@ -10,7 +10,7 @@
             <h2>Editar usuario</h2>
             <br/>
 			<g:hasErrors bean="${user}">
-				<g:if test="${user.email != null && user.email.length() > 0}">
+				<g:if test="${user.email != null && user.email.trim().length() > 0}">
 					<g:hasErrors bean="${user}" field="email">
 			   			<div id="flashAlert" class="alert alert-error">El email ingresado ya se encuentra registrado en el sitio.</div>
 					</g:hasErrors>

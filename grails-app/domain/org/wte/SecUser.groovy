@@ -28,7 +28,7 @@ class SecUser {
 	}
 	
 	boolean mustShowValidationError(){
-	   return (user.username == null || user.username.length() == 0 || user.password == null || user.password.length() == 0 || user.name == null || user.name.length() == 0 ||  user.surname == null || user.surname.length() == 0 || user.email == null || user.email.length() == 0) 
+	   return (this.username == null || this.username.trim().length() == 0 || this.password == null || this.password.trim().length() == 0 || this.name == null || this.name.trim().length() == 0 ||  this.surname == null || this.surname.trim().length() == 0 || this.email == null || this.email.trim().length() == 0) 
 	}
 	
 	static mapping = {
