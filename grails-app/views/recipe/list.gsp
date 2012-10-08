@@ -8,7 +8,7 @@
    	  <div class="well">
 		<div class="hero-unit-forms">
 
-    		<h2>Mis Recetas - <a href="/recipe/create">Crear una nueva receta!</a></h2>
+    		<h2>Mis Recetas <a href="/recipe/create"><img src="/img/insert-recipe.png" title="Agregar una nueva receta"></a></h2>
 			<g:if test="${flash.message!=null}">
 				<div id="flashAlert" class="alert alert-success">${flash.message}</div>
 			</g:if>

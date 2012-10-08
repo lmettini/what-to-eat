@@ -40,17 +40,18 @@
 									<g:if test="${recipe.firstImage() != null}">
 										<img style="padding-right:10px" class="bs-icon" src="${recipe.firstImage().thumbnail}">
 					  				</g:if>
-									${recipe.name}
+                                       <a href="/recipe/show/${recipe.id}">${recipe.name}</a>
 								</h2>
 								<br>
 								<div class="alert alert-info">
-									<p> Ingredientes: 
+									<p> <strong>Ingredientes:</strong>
 										<g:each in="${recipe.components}" var="cp" status="i">
 											<g:if test="${i!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
 									</p>
                 					<p>${recipe.description}</p>
-									<p>Creador: ${recipe.user.username} - Votos: ${recipe.points}</p>
+									<p>Creador: <strong>${recipe.user.username}</strong></p>
+                                    <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
         					</div><!--/span-->

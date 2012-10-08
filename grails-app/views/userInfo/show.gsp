@@ -44,13 +44,13 @@
 								</h2>
 								<br>
 								<div class="alert alert-info">
-									<p> Ingredientes: 
+									<p><strong> Ingredientes:</strong>
 										<g:each in="${recipe.components}" var="cp" status="j">
 											<g:if test="${j!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
 									</p>
                 					<p>${recipe.description}</p>
-									<p>Votos: ${recipe.points}</p>
+                                    <a class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
         					</div><!--/span-->
@@ -75,7 +75,8 @@
 										</g:each>
 									</p>
                 					<p>${userlike.recipe.description}</p>
-									<p>Creador: ${userlike.recipe.user.username} - Votos: ${userlike.recipe.points}</p>
+									<p>Creador: ${userlike.recipe.user.username}</p>
+                                    <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${userlike.recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${userlike.recipe.id}">Ver detalle »</a></p>
 								</div>
         					</div><!--/span-->

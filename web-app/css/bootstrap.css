@@ -5158,3 +5158,11 @@ input[type="text"] .wte-form{
 .video-container{
     float:left;
 }
+
+.likes-recipe{
+    margin-bottom: -30px;
+}
+
+.back-to-recipes{
+    float:right;
+}

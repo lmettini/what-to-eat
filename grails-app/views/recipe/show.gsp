@@ -55,9 +55,8 @@
 				 <br/>
 				<div>
 					<span>
-						Cantidad de votos:
 						<g:if test="${recipe.points == 0}">
-							${recipe.points}
+                            <a class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
 						</g:if>
 						<g:else>
 					     	<a href="#likeUsersModal" role="button" class="btn" data-toggle="modal">${recipe.points}</a>
@@ -74,7 +73,7 @@
 						</g:if>
 					</span>
 					<div class="form-actions">
-						<a class="btn btn-danger" href="/">Volver a buscar recetas</a>
+						<a class="btn btn-danger back-to-recipes" href="/">Volver a buscar recetas</a>
 					</div>
 				</div>
             </div>
