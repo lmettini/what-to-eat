@@ -21,3 +21,14 @@
      -moz-border-radius: 4px;
           border-radius: 4px;
 }
+
+.bold {
+	font-weight: bold;
+}
+
+.user-information{
+	background-color: #F0F0F0;
+	padding: 8px 35px 8px 14px;
+	margin-bottom:15px;
+	font-size:14px;
+}

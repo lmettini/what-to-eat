@@ -6,37 +6,29 @@
 
 <body>
 <div id='login' class="well">
-	<div class='inner'>
+	<div class='hero-unit-forms'>
+		 <h2>Iniciar Sesion</h2>
+		<br>
         <g:if test='${flash.message}'>
-            <strong><div class='login_message'>${flash.message}</div></strong>
+            <strong><div class='alert alert-error'>${flash.message}</div></strong>
         </g:if>
-        <br/>
-        <div class='fheader'><g:message code="springSecurity.login.header"/></div>
 		<form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
 			<p>
-				<label for='username'><g:message code="springSecurity.login.username.label"/>:</label>
+				<label for='username'>Nombre de usuario:</label>
 				<input type='text' class='text_' name='j_username' id='username'/>
 			</p>
 
 			<p>
-				<label for='password'><g:message code="springSecurity.login.password.label"/>:</label>
+				<label for='password'>Contraseña:</label>
 				<input type='password' class='text_' name='j_password' id='password'/>
 			</p>
-
-			<p id="remember_me_holder">
-				<input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
-				<label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
+			<p>
+				<input type='submit' class="btn btn-primary" id="submit" value='Iniciar Sesion'/>
 			</p>
-			<p id="forgot_password">
-				<a href="/register/forgotPassword">Te olvidaste tu contraseña?</a>
-			</p>
+		</form>
 			<p>
 				<a href="/userInfo/create">Crear un nuevo usuario</a>
 			</p>
-			<p>
-				<input type='submit' class="btn" id="submit" value='${message(code: "springSecurity.login.button")}'/>
-			</p>
-		</form>
 	</div>
 </div>
 <script type='text/javascript'>

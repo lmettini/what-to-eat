@@ -13,7 +13,7 @@
             <br>
             <div class="tabbable tabs-left">
                 <ul class="nav nav-tabs">
-                    <li>
+                    <li class="active">
                         <a href="#q1" data-toggle="tab">¿Qué es HoyQueComemos.com?</a>
                     </li>
                     <li>
@@ -32,7 +32,7 @@
 
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane" id="q1">
+                    <div class="tab-pane active" id="q1">
                     <p>HoyQueComemos.com es un nuevo sitio que busca facilitarte el problema diario al que te
                             enfrentas cada vez que llegás a tu casa y no sabés que preparar para comer con los pocos alimentos que
                             tenés en la heladera.</p>

@@ -16,8 +16,8 @@
 			    	<div class="tab-pane active" id="tab1">
 						<br>
 						<div class="btn-group">
-						  <a class="btn" href="/ranking/bestrecipes">Mejores ${maxbestrecipes} recetas</a>
-						  <button class="btn disabled">Ver todas las recetas</button>
+						  <a class="btn btn-primary" href="/ranking/bestrecipes">Mejores ${maxbestrecipes} recetas</a>
+						  <button class="btn btn-primary disabled">Ver todas las recetas</button>
 						</div>
 						<br>
 						<table class="table table-hover">

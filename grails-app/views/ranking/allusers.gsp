@@ -18,8 +18,8 @@
 			    	<div class="tab-pane active" id="tab2">
 						<br>
 						<div class="btn-group">						 
-						  <a class="btn" href="/ranking/bestusers">Mejores ${maxbestusers} usuarios</a>
-						  <button class="btn disabled">Ver todos las usuarios</button>
+						  <a class="btn btn-primary" href="/ranking/bestusers">Mejores ${maxbestusers} usuarios</a>
+						  <button class="btn btn-primary disabled">Ver todos las usuarios</button>
 						</div>
 						<br>
 							<table class="table table-hover">
