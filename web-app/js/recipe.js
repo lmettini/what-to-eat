@@ -170,7 +170,8 @@ $("#submit-but").click(function (){
 
     var jsonEncoded = encodeURIComponent(json)
 
-    document.location = "/recipe/save?data="+jsonEncoded;
+    //document.location = "/recipe/save?data="+jsonEncoded;
+    document.location = "/recipe/save?data="+json;
 
 });
 
