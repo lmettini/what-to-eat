@@ -11,13 +11,15 @@
 		<fieldset>
       		<div class="row-fluid">
 	     		<div class="span5">
-					<g:if test="${user.email != null && user.email.length() > 0}">
-						<g:hasErrors bean="${user}" field="email">
-					   <div id="flashAlert" class="alert alert-error">El email ingresado ya se encuentra registrado en el sitio.</div>
-						</g:hasErrors>
-					</g:if>
 					<g:hasErrors bean="${user}">
-						<div id="flashAlert" class="alert alert-error">Debe completar todos los campos obligatorios</div>	
+						<g:if test="${user.email != null && user.email.length() > 0}">
+							<g:hasErrors bean="${user}" field="email">
+					   			<div id="flashAlert" class="alert alert-error">El email ingresado ya se encuentra registrado en el sitio.</div>
+							</g:hasErrors>
+						</g:if>
+						<g:if test="${user.mustShowValidationError()}">					
+							<div id="flashAlert" class="alert alert-error">Debe completar todos los campos obligatorios</div>
+						</g:if>	
 					</g:hasErrors>
                     <div class="control-group">
                             <label class="control-label" for="title">Nombre de usuario</label>

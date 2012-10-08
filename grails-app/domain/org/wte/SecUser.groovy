@@ -27,6 +27,10 @@ class SecUser {
 		email unique: true, blank: false, size: 1..100
 	}
 	
+	boolean mustShowValidationError(){
+	   return (user.username == null || user.username.length() == 0 || user.password == null || user.password.length() == 0 || user.name == null || user.name.length() == 0 ||  user.surname == null || user.surname.length() == 0 || user.email == null || user.email.length() == 0) 
+	}
+	
 	static mapping = {
 		password column: '`password`'
 	}
