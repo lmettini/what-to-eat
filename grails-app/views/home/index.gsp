@@ -24,10 +24,10 @@
     			<br>
 				<div class="container-fluid">
 				<div class="row-fluid">
-					<div class="span8">
+					<div class="span8 container-recipe">
 						<h2>Recetas destacadas</h2>
 					</div>
-					<div class="span4">
+					<div class="span4 container-users">
 						<h2>Usuarios destacados</h2>
 					</div>
 				</div><!--/row-->
@@ -35,7 +35,7 @@
 					<div class="span8">
 					<g:each in="${recipes}" var="recipe">
 						<div class="row-fluid">
-							<div class="span12 alert alert-info">
+							<div class="span12 container-recipe">
            						<h2>
 									<g:if test="${recipe.firstImage() != null}">
 										<img style="padding-right:10px" class="bs-icon" src="${recipe.firstImage().thumbnail}">
@@ -50,22 +50,24 @@
 								</p>
                 				<p>${recipe.description}</p>
 								<p class="pull-left">Creador: ${recipe.user.username} - Votos: ${recipe.points}</p>
-           						<p class="pull-right"><a class="btn" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
+           						<p class="pull-right"><a class="btn btn btn-info" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
         					</div><!--/span-->
       					</div><!--/row-->
 					</g:each>
 					</div><!--/span-->
-					<div class="span4 alert alert-info">
+					<div class="span4 container-users">
+						<table>
 					<g:each status="i" in="${users}" var="user">
 						<div class="row-fluid">
 							<div class="span12">
            						<h3>
-									<img id="imgSelectedAavatar" src="/img/avatars/avatar${user.avatar}.png" width="40" height="47"  />
+									<img id="imgSelectedAavatar" class="img-polaroid" src="/img/avatars/avatar${user.avatar}.png" width="40" height="47"  />
 									<a href="/userInfo/show/${user.id}">${user.username} (${user.points} puntos)</a>
            						</h3>
         					</div><!--/span-->
       					</div><!--/row-->
 					</g:each>
+					</table>
 					</div><!--/span-->
 				</div><!--/row-->
 				</div><!--/container-->

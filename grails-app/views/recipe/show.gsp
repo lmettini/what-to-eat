@@ -69,16 +69,18 @@
 		  						<span>Usted ya ha votado esta receta</span>
 							</g:if>
 							<g:else>
-					     		<a href="/recipe/like/${recipe.id}" class="btn">Votar receta</a>
+					<a class="btn btn-primary" href="/recipe/like/${recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
 							</g:else>
 						</g:if>
 					</span>
+					<div class="form-actions">
+						<a class="btn btn-danger" href="/">Volver a buscar recetas</a>
+					</div>
 				</div>
             </div>
         </form>
     </div>
-    <a href="/"><h2>Volver a buscar recetas!</h2></a>
-
+  
 	<div id="likeUsersModal" class="modal hide fade">
 	  <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
