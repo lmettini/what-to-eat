@@ -40,3 +40,10 @@
 	margin-bottom:15px;
 	font-size:14px;
 }
+
+.recipePre{
+    background-color: #ffffff;
+    border: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}

@@ -5161,6 +5161,7 @@ input[type="text"] .wte-form{
 
 .likes-recipe{
     margin-bottom: -30px;
+    cursor: default;
 }
 
 .back-to-recipes{
