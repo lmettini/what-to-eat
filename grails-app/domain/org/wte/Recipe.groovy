@@ -26,6 +26,8 @@ class Recipe {
 	    components component: true
 	}
 	
+	
+	
 	Image firstImage(){
 		if (this.images != null && this.images.size() > 0){
 			return (Image) this.images.toArray()[0]

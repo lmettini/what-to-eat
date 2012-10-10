@@ -14,7 +14,7 @@
 				</g:if>
                 <br/>
                 <label><strong>Resúmen</strong></label>
-                <h3>${recipe.summary}</h3>
+                <h3><pre>${recipe.summary}</pre></h3>
                 <br/>
                 <g:if test="${recipe.images}">
                     <label><h2>Fotos</h2></label>
@@ -50,7 +50,7 @@
                 </div>
                 <div id="recipe-description">
                     <label><strong>Pasos a seguir</strong></label>
-                    <span>${recipe.description}</span>
+                    <span><pre>${recipe.description}</pre></span>
                 </div>
 				 <br/>
 				<div>
