@@ -34,7 +34,7 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="q1">
                     <p>HoyQueComemos.com es un nuevo sitio que busca facilitarte el problema diario al que te
-                            enfrentas cada vez que llegás a tu casa y no sabés que preparar para comer con los pocos alimentos que
+                            enfrentás cada vez que llegás a tu casa y no sabés qué preparar para comer con los pocos alimentos que
                             tenés en la heladera.</p>
                     </div>
                     <div class="tab-pane" id="q2">
@@ -47,21 +47,21 @@
                     <p>Si y es muy fácil! Una vez que te hayas registrado en el sitio, podrás utilizar la opción de
             subir nuevas recetas. (<a href="/recipe/create">Crear una nueva receta!</a>)</p>
             <br>
-            <p>Pero HoyQueComemos.com no sólo te brinda la posibilidad de subir nuevas recetas, si no que
+            <p>HoyQueComemos.com no sólo te brinda la posibilidad de subir nuevas recetas, si no que
             también podrás agregar nuevos ingredientes. Además, el resto de los usuarios registrados puede calificar tu receta
-            para que formes parte de un Ranking de cocineros! Si tu receta es muy votada aparecerá en el inicio del sitio
+            para que formes parte de un Ranking de cocineros! Si tu receta es muy votada aparecerá, en el inicio del sitio
             donde muchos usuarios pueden usarla y agregarla a sus recetas favoritas! </p>
                     </div>
                     <div class="tab-pane" id="q4">
                     <p>Contamos con un importante módulo de moderación. De esta manera vamos a evitar que la
-            gente suba al sitio recetas que no sirvan o información inadecuada. Además, debido a que las receta se muestran hasta
+            gente suba al sitio recetas que no sirvan o información inadecuada. Además, debido a que las recetas se muestran hasta
             el momento en que sea moderada, mediante las valoraciones que los usuarios hagan, la misma perderá importancia si su contenido no es útil.
-            Con lo cual, cuando realices búsquedas de recetas, lo más probable es que dicha receta se muestre última o que directamente no se muestre .
+            Con lo cual, cuando realices búsquedas de recetas, lo más probable es que dicha receta se muestre última o directamente no se muestre .
             <br>La misma comunidad irá votando las mejores recetas o las que mas útiles sean!</p>
                     </div>
                     <div class="tab-pane" id="q5">
                     <p>En caso de que nos quieras consultar algo, no dudes en mandar un mail a
-                <a href="mailto:consultas@hoyquecomemos.com">consultas@hoyquecomemos.com</a>. Te contestaremos lo más rápido que podamos!  </p>
+                <a href="mailto:consultas@hoyquecomemos.com">consultas@hoyquecomemos.com</a>. Te contestaremos a la brevedad!  </p>
                     </div>
                 </div>
             </div>
