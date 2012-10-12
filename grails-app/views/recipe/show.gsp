@@ -54,12 +54,12 @@
                 </div>
 				 <br/>
 				<div>
-					<span>
+    					<span>
 						<g:if test="${recipe.points == 0}">
-                            <a class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                            <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
 						</g:if>
 						<g:else>
-                            <a href="#likeUsersModal" role="button" data-toggle="modal" class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                            <a href="#likeUsersModal" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
 						</g:else>						
 					</span>
 					<span>
@@ -68,7 +68,7 @@
 		  						<span>Usted ya ha votado esta receta</span>
 							</g:if>
 							<g:else>
-					<a class="btn btn-primary" href="/recipe/like/${recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
+					<a class="btn btn-primary likes-recipe" href="/recipe/like/${recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
 							</g:else>
 						</g:if>
 					</span>
