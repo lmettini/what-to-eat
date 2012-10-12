@@ -4957,15 +4957,17 @@ a.badge:hover {
           border-radius: 6px;
 }
 
-.hero-unit-home h1 {
-
+.hero-unit-home h1{
 background-color: rgba(210, 66, 66, 0.60); margin-bottom: 0; margin-top: 30px; padding:20px;
-font-family: 'Leckerli One', cursive;
+  font-family: 'Leckerli One', cursive;
   margin-bottom: 0;
   font-size: 50px;
- 
   color: white;
- 
+}
+.hero-unit-home h3 {
+    background-color: rgba(210, 66, 66, 0.60); margin-bottom: 0; padding:10px;
+    margin-bottom: 0;
+    color: white;
 }
 
 .hero-unit-home p {
