@@ -47,3 +47,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
+
+#show-recipe .span4{
+    margin-left: 0px;
+}
