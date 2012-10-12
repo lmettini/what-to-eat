@@ -71,7 +71,7 @@
       <br>
     </div>
     <br>
-    <a href="/"><h2>Volver a buscar recetas!</h2></a>
+        <a class="btn btn-danger back-to-recipes" style="margin-top: -20px" href="/">Volver a buscar recetas</a>
 </div>
 </body>
 </html>
