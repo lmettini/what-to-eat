@@ -77,6 +77,7 @@
                 </fieldset>
                     <div class="form-actions">
                         <input type="submit" id="nxtFS" name="create" value="Guardar" class="button-form">
+                        <a href="/" class="button-cancel btn" data-dismiss="modal">Cancelar</a>
                     </div>
 			</div>
         </form>
