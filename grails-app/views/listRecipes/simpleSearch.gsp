@@ -17,7 +17,17 @@
               <input type="submit" name="search" value="Buscar" class="button-form" id="search_button">
           </form>
           <br>
-
+<g:if test="${total == 0}">
+<h1>
+		<sec:ifLoggedIn>
+		<a  href="/recipe/create">No hay ninguna receta para ofrecerte. Si tenés una, la podés agregar vos!</a>
+  		</sec:ifLoggedIn>
+		 <sec:ifNotLoggedIn>
+		<a  href="/userInfo/create">No hay ninguna receta para ofrecerte. Si tenés una, la podés agregar vos!</a>
+	     </sec:ifNotLoggedIn>
+</h1>
+</g:if>
+<g:else>
           <h1>
 			Recetas que encontramos para la frase: ${params.query}
 			</h1>
@@ -56,6 +66,7 @@
 				</div>
 
 		</div>
+</g:else>
   <content tag="js">
       <script type="text/javascript">
           $(document).ready(function() {

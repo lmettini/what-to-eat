@@ -34,7 +34,7 @@ class ListRecipesController {
     }
 	
 	def simpleSearch = {	
-			def maxrows = 2
+			def maxrows = 10
 			def offset = params.offset ? params.offset.toInteger() : 0
 
 			def recipeCriteria = Recipe.createCriteria()
