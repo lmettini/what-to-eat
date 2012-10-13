@@ -68,7 +68,7 @@
                     <tr>
                         <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="60" height="70"  /></td>
                     </tr>
-                    <span><a href="/userInfo/show/"${recipe.user.id}>${recipe.user.username}</a></span>
+                    <span><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></span>
                 </div>
                 <br/>
                 <div>
