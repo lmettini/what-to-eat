@@ -117,7 +117,7 @@ class RecipeController {
             nRecipe.summary = dataJson.summary
             nRecipe.description = dataJson.descripcion
             nRecipe.video = dataJson.video
-            nRecipe.points = 0
+            nRecipe.points = nRecipe.points
             nRecipe.category = RecipeCategory.get(Long.parseLong(dataJson.categ))
 			  // borro todos los ingredientes y los agrego cada vez
 				def components = []
