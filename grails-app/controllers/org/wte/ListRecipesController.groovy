@@ -25,7 +25,7 @@ class ListRecipesController {
             }
         }
 
-        resultList.sort({it.ingredients.size() * -1})
+        resultList.sort({it.recipe.points * -1})
 
         [   "components":components,
             "resultList":resultList,
