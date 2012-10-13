@@ -87,6 +87,7 @@
 			   <div class="span10">
 				 	<div class="form-actions">
                         	<input type="submit" id="nxtFS" name="create" value="Registrar" class="button-form">
+                            <a href="/" class="button-cancel btn" data-dismiss="modal">Cancelar</a>
                     	</div>
 			     	</div>
 		       </div>
