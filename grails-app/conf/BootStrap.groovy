@@ -9,8 +9,7 @@ class BootStrap {
         if(GrailsUtil.environment in ['production']){   
 
                 // si necesitamos iniciar algo en produ
-					SecUser rameuser = SecUser.findByEmail("javier.rame@gmail.com");
-					rameuser.delete(flush:true);
+		
         } else {
                 
 		SecUser adminuser = new SecUser(username:"admin", name: "admin", surname: "admin", email: "admin@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true, points: 0)
