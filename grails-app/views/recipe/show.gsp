@@ -69,7 +69,8 @@
                 </div>
                 <br/>
                 <div>
-    					<span>
+                    <div>
+                    <span>
 						<g:if test="${recipe.points == 0}">
                             <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
 						</g:if>
@@ -77,6 +78,8 @@
                             <a href="#likeUsersModal" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
 						</g:else>						
 					</span>
+                    </div>
+                    <div style="margin-top: 7px; margin-left: 110px;">
 					<span>
 						<g:if test="${isNotAUserRecipe}">
 							<g:if test="${isLikedByCurrentUser}">
@@ -87,6 +90,7 @@
 							</g:else>
 						</g:if>
 					</span>
+                    </div>
 					<div class="form-actions">
 						<a class="btn btn-danger back-to-recipes" href="/">Volver a buscar recetas</a>
 					</div>
