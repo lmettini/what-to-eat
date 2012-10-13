@@ -26,6 +26,12 @@
 		          <li><g:link controller='logout'>Cerrar sesión</g:link></li>
 		     </ul>
       </div>
+		<div class="btn-group pull-right">
+			<form id="simpleSearchForm" action="/listRecipes/simpleSearch" method="GET">
+				<input id="simpleSearchText" type="text" name="query"/>
+				<input id="lupaImg" type="image" src="/img/lupa.gif" alt="Buscar">
+			</form>
+		</div>
       <div class="nav-collapse">
         <ul class="nav">
 	 		<li class="${pageProperty(name:'page.home')}"><a href="/">Inicio</a></li>

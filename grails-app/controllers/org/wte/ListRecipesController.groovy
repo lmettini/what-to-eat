@@ -32,4 +32,28 @@ class ListRecipesController {
             "ingredients": ingredientsList]
 
     }
+	
+	def simpleSearch = {	
+			def maxrows = 2
+			def offset = params.offset ? params.offset.toInteger() : 0
+
+			def recipeCriteria = Recipe.createCriteria()
+			def recipes = recipeCriteria.list(max: maxrows, offset: offset) {
+				order("points", "desc")
+				or {
+				        user{
+							ilike("username", "%" + params.query + "%")
+						}
+						ilike("title", "%" + params.query + "%")
+				    }
+			}
+			[recipes: recipes, total: recipes.totalCount, max: maxrows, offset: offset]
+	
+	}
+
+
+
+
+
+
 }

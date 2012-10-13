@@ -11,7 +11,6 @@ class ModerateRecipesController {
 	@Secured(["hasRole('ROLE_ADMIN')"])
     def index = { 
 		def offset = params.offset ? params.offset.toInteger() : 0
-		def recipesCount = Recipe.countByApproved(false)
 		
 		def recipeCriteria = Recipe.createCriteria()
 		def recipes = recipeCriteria.list(max: 10, offset: offset) {
@@ -19,7 +18,7 @@ class ModerateRecipesController {
 				eq("readyForModeration", true)
 		}
 	
-		[recipes: recipes, total: recipesCount, max: 10, offset: offset]
+		[recipes: recipes, total: recipes.totalCount, max: 10, offset: offset]
 	}
 	
 	@Secured(["hasRole('ROLE_ADMIN')"])
