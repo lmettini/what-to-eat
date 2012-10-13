@@ -6,6 +6,7 @@
   <body>
       <div class="hero-unit-home">
           <h1>HoyQueComemos</h1>
+          <h3>ingresá los ingredientes que quieras usar y encontrá las mejores recetas en solo unos segundos!</h3>
       </div>
       <div class="well">
           <br>
@@ -29,7 +30,7 @@
 							<g:if test="${res.recipe.firstImage() != null}">
 								<img style="padding-right:10px" class="bs-icon" src="${res.recipe.firstImage().thumbnail}">
 			  				</g:if>
-							${res.recipe.name}
+                           <a href="/recipe/show/${res.recipe.id}">${res.recipe.name}</a>
 						</h2>
 						<br>
 						<p> Ingredientes: 
@@ -38,9 +39,9 @@
 							</g:each>
 						</p>
         				<p>${res.recipe.description}</p>
-						<p class="pull-left">Creador: ${res.recipe.user.username}</p>
+						<p class="pull-left">Creador: ${res.recipe.user.username}</p><br><br>
                         <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${res.recipe.points} personas</a>
-   						<p class="pull-right"><a class="btn" href="/recipe/show/${res.recipe.id}">Ver detalle »</a></p>
+   						<p class="pull-right"><a class="btn btn-primary" href="/recipe/show/${res.recipe.id}">Ver detalle »</a></p>
 					</div><!--/span-->
 				</div><!--/row-->
 			</g:each>

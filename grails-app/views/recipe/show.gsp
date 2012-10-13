@@ -7,17 +7,22 @@
 <div class="well">
     <div class="row-fluid">
         <form class="form-horizontal wte-form">
-            <div class="hero-unit-forms">
-                <h2>${recipe.name}</h2> <label>(${recipe.category.description})</label>
+            <div id="show-recipe" class="hero-unit-forms">
+                <h2 style="float: left; margin-right: 10px;">${recipe.name}</h2> <label style="margin-top: 10px">(${recipe.category.description})</label>
 				<g:if test="${flash.message!=null}">
 					<div id="flashAlert" class="alert alert-success">${flash.message}</div>
 				</g:if>
                 <br/>
-                <label><strong>Resúmen</strong></label>
-                <h3><pre>${recipe.summary}</pre></h3>
+                <div class="span4 container container-header">
+                    Resúmen
+                </div>
+                <br/><br/><br/>
+                <h3><pre class="recipePre">${recipe.summary}</pre></h3>
                 <br/>
                 <g:if test="${recipe.images}">
-                    <label><h2>Fotos</h2></label>
+                    <div class="span4 container container-header">
+                        Fotos
+                    </div><br/><br/><br/>
 					<div class="controls">
                           <ul id="imgListRec" >
 							<g:each status="i" in="${recipe.images}" var="image">
@@ -27,18 +32,18 @@
                		</div>
                 </g:if>
                 <g:if test="${recipe.video}">
-                    <label><h2>Video</h2></label>
+                    <div class="span4 container container-header">
+                        Video
+                    </div><br/><br/><br/>
                     <div class="video-container">
                         <object width="425" height="350"><param name="movie" value="${recipe.video}"><embed src="${recipe.video}" type="application/x-shockwave-flash" width="425" height="350"></object>
                     </div>
                     <br/>
                 </g:if>
-				 <div id="recipe-description">
-		        	<label><strong>Autor</strong></label>
-					<span>${recipe.user.username}</span>
-				</div>
                 <br/>
-                <label><strong>Ingredientes</strong></label>
+                <div class="span4 container container-header">
+                    Ingredientes
+                </div>
                 <div id="ingredients-list">
                 <ul>
                     <g:each in="${recipeComponents}" var="comp">
@@ -49,17 +54,27 @@
                 </ul>
                 </div>
                 <div id="recipe-description">
-                    <label><strong>Pasos a seguir</strong></label>
-                    <span><pre>${recipe.description}</pre></span>
+                    <div class="span4 container container-header">
+                        Pasos a seguir
+                    </div><br/><br/><br/>
+                    <span><pre class="recipePre">${recipe.description}</pre></span>
                 </div>
 				 <br/>
-				<div>
-					<span>
+                <div id="recipe-autor">
+                    <div class="span4 container container-header">
+                        Autor
+                    </div>
+                    <br/><br/><br/><br/>
+                    <span>${recipe.user.username}</span>
+                </div>
+                <br/>
+                <div>
+    					<span>
 						<g:if test="${recipe.points == 0}">
-                            <a class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                            <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
 						</g:if>
 						<g:else>
-                            <a href="#likeUsersModal" role="button" data-toggle="modal" class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                            <a href="#likeUsersModal" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
 						</g:else>						
 					</span>
 					<span>
@@ -68,7 +83,7 @@
 		  						<span>Usted ya ha votado esta receta</span>
 							</g:if>
 							<g:else>
-					<a class="btn btn-primary" href="/recipe/like/${recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
+					<a class="btn btn-primary likes-recipe" href="/recipe/like/${recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
 							</g:else>
 						</g:if>
 					</span>

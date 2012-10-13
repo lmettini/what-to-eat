@@ -40,7 +40,7 @@
 									<g:if test="${recipe.firstImage() != null}">
 										<img style="padding-right:10px" class="bs-icon" src="${recipe.firstImage().thumbnail}">
 					  				</g:if>
-									${recipe.name}
+                                    <a href="/recipe/show/${recipe.id}">${recipe.name}</a>
 								</h2>
 								<br>
 								<div class="alert alert-info">
@@ -50,7 +50,7 @@
 										</g:each>
 									</p>
                 					<p>${recipe.description}</p>
-                                    <a class="btn btn-primary"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                                    <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
         					</div><!--/span-->
@@ -65,7 +65,7 @@
 									<g:if test="${userlike.recipe.firstImage() != null}">
 										<img style="padding-right:10px" class="bs-icon" src="${userlike.recipe.firstImage().thumbnail}">
 					  				</g:if>
-									${userlike.recipe.name}
+                                   <a href="/recipe/show/${userlike.recipe.id}">${userlike.recipe.name}</a>
 								</h2>
 								<br>
 								<div class="alert alert-info">

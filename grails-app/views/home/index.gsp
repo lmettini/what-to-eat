@@ -12,6 +12,7 @@
 			</g:if>
           	<div class="hero-unit-home">
             	<h1>HoyQueComemos</h1>
+                <h3>ingresá los ingredientes que quieras usar y encontrá las mejores recetas en solo unos segundos!</h3>
           	</div>
       		<div class="well">
     			<br>
