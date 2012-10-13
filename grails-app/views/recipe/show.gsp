@@ -65,7 +65,10 @@
                         Autor
                     </div>
                     <br/><br/><br/><br/>
-                    <span>${recipe.user.username}</span>
+                    <tr>
+                        <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="60" height="70"  /></td>
+                    </tr>
+                    <span><a href="/userInfo/show/"${recipe.user.id}>${recipe.user.username}</a></span>
                 </div>
                 <br/>
                 <div>
@@ -79,14 +82,14 @@
 						</g:else>						
 					</span>
                     </div>
-                    <div style="margin-top: 7px; margin-left: 110px;">
+                    <div >
 					<span>
 						<g:if test="${isNotAUserRecipe}">
 							<g:if test="${isLikedByCurrentUser}">
 		  						<span>Usted ya ha votado esta receta</span>
 							</g:if>
 							<g:else>
-					<a class="btn btn-primary likes-recipe" href="/recipe/like/${recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
+					            <a class="btn btn-primary likes-recipe" href="/recipe/like/${recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
 							</g:else>
 						</g:if>
 					</span>

@@ -51,7 +51,7 @@
 										</g:each>
 									</p>
                 					<p>${recipe.description}</p>
-									<p>Creador: <strong>${recipe.user.username}</strong></p>
+									<p>Autor: <strong>${recipe.user.username}</strong></p>
                                     <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>

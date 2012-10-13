@@ -39,7 +39,7 @@
 							</g:each>
 						</p>
         				<p>${res.recipe.description}</p>
-						<p class="pull-left">Creador: ${res.recipe.user.username}</p><br><br>
+						<p class="pull-left">Autor: ${res.recipe.user.username}</p><br><br>
                         <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${res.recipe.points} personas</a>
    						<p class="pull-right"><a class="btn btn-primary" href="/recipe/show/${res.recipe.id}">Ver detalle »</a></p>
 					</div><!--/span-->

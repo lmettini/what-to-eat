@@ -75,7 +75,7 @@
 										</g:each>
 									</p>
                 					<p>${userlike.recipe.description}</p>
-									<p>Creador: ${userlike.recipe.user.username}</p>
+									<p>Autor: ${userlike.recipe.user.username}</p>
                                     <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${userlike.recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${userlike.recipe.id}">Ver detalle »</a></p>
 								</div>
