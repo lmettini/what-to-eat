@@ -19,8 +19,23 @@
           <br>
 
           <h1>
-			Recetas que encontramos para los ingredientes: 
-			<g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each>
+            <g:if test="${resultList.empty }">
+                No hay ninguna receta para ofrecerte para los ingredientes:
+                <g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each>
+                <br>
+                <sec:ifLoggedIn>
+                    <a href="/recipe/create">Si tenés una, la podés agregar vos!</a>
+                </sec:ifLoggedIn>
+                <sec:ifNotLoggedIn>
+                    <a data-toggle="dropdown" href="/login">
+                        Si tenés una, la podés agregar vos!
+                    </a>
+                </sec:ifNotLoggedIn>
+            </g:if>
+            <g:if test="${!resultList.empty}">
+			    Recetas que encontramos para los ingredientes:
+                <g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each>
+            </g:if>
 			</h1>
 			<br>
 			<g:each in="${resultList}" var="res">
