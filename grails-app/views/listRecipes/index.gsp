@@ -12,7 +12,7 @@
           <br>
           <form action="#" method="post" id="search_form" class="clearfix">
               <div>
-                  <input type="text" id="input-recp" size="40" maxlength="150" name="search_text" placeholder="search for treats..." />
+                  <input type="text" id="input-recp" size="40" maxlength="150" name="search_text" />
               </div>
               <input type="submit" name="search" value="Buscar" class="button-form" id="search_button">
           </form>
