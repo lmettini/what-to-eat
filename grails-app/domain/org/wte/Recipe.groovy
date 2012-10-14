@@ -15,6 +15,9 @@ class Recipe {
 	boolean approved = false
 	boolean readyForModeration = true;
 
+	Date dateCreated
+    Date lastUpdated
+
 	static constraints = {
 		name blank: false, size: 1..100
 		title blank: false, size: 1..100
