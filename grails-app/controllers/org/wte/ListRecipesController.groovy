@@ -52,7 +52,41 @@ class ListRecipesController {
 	}
 
 
-
+	def contest = {
+		def cal = Calendar.instance
+		int month = cal.get(Calendar.MONTH)
+		int year = cal.get(Calendar.YEAR)
+		def todayCal = new GregorianCalendar(year, month, 1)
+		def previousMonthCal = new GregorianCalendar(year, month - 1, 1)
+		
+		def likes = UserLikeRecipe.findAllByDateCreatedBetween(previousMonthCal.time, todayCal.time)
+		def recipes = likes.collect (new HashSet()) { it.recipe }
+		def  winners = []		
+		recipes.each{ recipe ->	
+			def likesInMonth = likes.findAll { it.recipe.equals(recipe) }
+			def pointsInMonth = likesInMonth.size()
+			winners.add(new Winner(likes: likesInMonth, recipe: recipe, points: pointsInMonth))
+		}
+		 
+		winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
+		
+		Contest c = new Contest()
+		c.month = previousMonthCal.get(Calendar.MONTH)
+		c.year = previousMonthCal.get(Calendar.YEAR)
+		c.winners = []
+		if (winners.size() > 0 && winners.get(0) != null){
+			c.winners.add(winners.get(0))
+		}
+		if (winners.size() > 1 && winners.get(1) != null){
+			c.winners.add(winners.get(1))
+		}
+		if (winners.size() > 2 && winners.get(2) != null){
+			c.winners.add(winners.get(2))
+		}
+		c.save(flush:true)
+		
+      	[contest: c]
+	}
 
 
 
