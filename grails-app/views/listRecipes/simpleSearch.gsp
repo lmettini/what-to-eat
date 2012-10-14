@@ -20,10 +20,10 @@
 <g:if test="${total == 0}">
 <h1>
 		<sec:ifLoggedIn>
-		<a  href="/recipe/create">No hay ninguna receta para ofrecerte. Si tenés una, la podés agregar vos!</a>
+		No hay ninguna receta para ofrecerte. <a  href="/recipe/create">Si tenés una, la podés agregar vos!</a>
   		</sec:ifLoggedIn>
 		 <sec:ifNotLoggedIn>
-		<a  href="/userInfo/create">No hay ninguna receta para ofrecerte. Si tenés una, la podés agregar vos!</a>
+		No hay ninguna receta para ofrecerte. <a  href="/login">Si tenés una, la podés agregar vos!</a>
 	     </sec:ifNotLoggedIn>
 </h1>
 </g:if>
@@ -52,7 +52,7 @@
                         <tr>
                             <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="60" height="70"  /></td>
                         </tr>
-                        <span><a href="/userInfo/show/"${recipe.user.id}>${recipe.user.username}</a></span>
+                        <span><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></span>
                         <br><br>
                         <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
    						<p class="pull-right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>

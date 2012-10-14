@@ -12,7 +12,7 @@
           <br>
           <form action="#" method="post" id="search_form" class="clearfix">
               <div>
-                  <input type="text" id="input-recp" size="40" maxlength="150" name="search_text" placeholder="search for treats..." />
+                  <input type="text" id="input-recp" size="40" maxlength="150" name="search_text" />
               </div>
               <input type="submit" name="search" value="Buscar" class="button-form" id="search_button">
           </form>
@@ -58,7 +58,7 @@
                         <tr>
                             <td><img src="/img/avatars/avatar${res.recipe.user.avatar}.png" width="60" height="70"  /></td>
                         </tr>
-                        <span><a href="/userInfo/show/"${res.recipe.user.id}>${res.recipe.user.username}</a></span>
+                        <span><a href="/userInfo/show/${res.recipe.user.id}">${res.recipe.user.username}</a></span>
                         <br><br>
                         <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${res.recipe.points} personas</a>
    						<p class="pull-right"><a class="btn btn-primary" href="/recipe/show/${res.recipe.id}">Ver detalle »</a></p>
