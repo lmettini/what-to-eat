@@ -17,8 +17,11 @@ class ConcursoController {
 			//concursoService.closeContestByMonth()
 			concursoService.closeContestByDay()
 			contest = Contest.findByKey(key)
-		}  
-		def list = contest.winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
+		} 
+		def list = [] 
+		if (contest.winners != null && contest.winners.size() > 0){
+			list = contest.winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
+		}
 		[contest: contest, winners: list]
 	}
 	
