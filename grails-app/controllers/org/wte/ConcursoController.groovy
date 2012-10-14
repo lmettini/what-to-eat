@@ -13,19 +13,13 @@ class ConcursoController {
 		int endYear = cal.get(Calendar.YEAR)
 		String key = String.valueOf(endYear) + String.valueOf(endMonth) + String.valueOf(endDay)
 		Contest contest = Contest.findByKey(key)
-		def list = []
-		if (contest != null){
-			list = contest.winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
-		}
+		if (contest == null){
+			//concursoService.closeContestByMonth()
+			concursoService.closeContestByDay()
+			contest = Contest.findByKey(key)
+		}  
+		def list = contest.winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
 		[contest: contest, winners: list]
 	}
 	
-	def closeContestByMonth = {
-		concursoService.closeContestByMonth()
-	}
-
-	def closeContestByDay = {
-		concursoService.closeContestByDay()
-	}
-
 }

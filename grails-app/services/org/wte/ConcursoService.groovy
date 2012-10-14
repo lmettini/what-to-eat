@@ -11,10 +11,10 @@ class ConcursoService {
 
 	def closeContestByMonth() {
 		def cal = Calendar.instance
-		int endDay = cal.get(Calendar.DAY_OF_MONTH)
+		int endDay = 1
 		int endMonth = cal.get(Calendar.MONTH)
 		int endYear = cal.get(Calendar.YEAR)
-		int beginDay = endDay
+		int beginDay = 1
 		int beginMonth = endMonth - 1
 		int beginYear = endYear
 		this.closeContest(endYear, endMonth, endDay, beginYear, beginMonth, beginDay)
