@@ -39,6 +39,7 @@
 			<sec:ifLoggedIn>
 				<li class="${pageProperty(name:'page.myRecipes')}"><a href="/recipe/list">Mis Recetas</a></li>
 			</sec:ifLoggedIn>
+			<li class="${pageProperty(name:'page.contest')}"><a href="/concurso">Concurso del mes</a></li>
             <li class="${pageProperty(name:'page.help')}"><a href="/help">Ayuda y preguntas</a></li>
         </ul>
       </div><!--/.nav-collapse -->
