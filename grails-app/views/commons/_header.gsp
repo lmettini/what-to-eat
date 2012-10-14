@@ -28,7 +28,7 @@
       </div>
 		<div class="btn-group pull-right">
 			<form id="simpleSearchForm" action="/listRecipes/simpleSearch" method="GET">
-				<input id="simpleSearchText" type="text" name="query"/>
+				<input id="simpleSearchText" type="text" name="query" maxlength="300"/>
 				<input id="lupaImg" type="image" src="/img/lupa.gif" alt="Buscar">
 			</form>
 		</div>
