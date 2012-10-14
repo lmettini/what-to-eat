@@ -22,7 +22,7 @@ class ConcursoService {
 	
 	def closeContestByDay(){
 		def cal = Calendar.instance
-		int endDay = cal.get(Calendar.DAY_OF_MONTH) + 1
+		int endDay = cal.get(Calendar.DAY_OF_MONTH)
 		int endMonth = cal.get(Calendar.MONTH)
 		int endYear = cal.get(Calendar.YEAR)
 		int beginDay = endDay - 1
