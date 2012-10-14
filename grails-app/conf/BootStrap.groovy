@@ -10,9 +10,18 @@ class BootStrap {
 
                 // si necesitamos iniciar algo en produ
 			
-			UserLikeRecipe.finAll()*.delete(flush:true)
+			UserLikeRecipe.findAll()*.delete(flush:true)
 			Contest.findAll()*.delete(flush:true);
-				
+			
+			Recipe.findAll().each { recipe ->
+	           recipe.points = 0
+				recipe.save(flush:true)
+			}
+			
+			SecUser.findAll().each { user ->
+	           user.points = 0
+				user.save(flush:true)
+			}	
         } else {
                 
 		SecUser adminuser = new SecUser(username:"admin", name: "admin", surname: "admin", email: "admin@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true, points: 0)
