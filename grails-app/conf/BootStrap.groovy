@@ -9,7 +9,7 @@ class BootStrap {
         if(GrailsUtil.environment in ['production']){   
 
                 // si necesitamos iniciar algo en produ
-				Winner.findAll()*.delete(flush:true);
+			
 			Contest.findAll()*.delete(flush:true);
 				
         } else {
