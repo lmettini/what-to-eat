@@ -10,6 +10,7 @@ class BootStrap {
 
                 // si necesitamos iniciar algo en produ
 			
+			UserLikeRecipe.finAll()*.delete(flush:true)
 			Contest.findAll()*.delete(flush:true);
 				
         } else {
