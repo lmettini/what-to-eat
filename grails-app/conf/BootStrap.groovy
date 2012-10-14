@@ -10,16 +10,6 @@ class BootStrap {
 
                 // si necesitamos iniciar algo en produ
 
-				 Recipe.findAll().each { recipe ->
-			            recipe.dateCreated = new Date()
-						recipe.lastUpdated = new Date()
-						recipe.save(flush:true)
-			        }
-				 UserLikeRecipe.findAll().each { userLike ->
-			            userLike.dateCreated = new Date()
-						userLike.lastUpdated = new Date()
-						userLike.save(flush:true)
-			        }
         } else {
                 
 		SecUser adminuser = new SecUser(username:"admin", name: "admin", surname: "admin", email: "admin@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true, points: 0)
