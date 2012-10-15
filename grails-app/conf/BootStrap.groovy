@@ -11,6 +11,7 @@ class BootStrap {
                 // si necesitamos iniciar algo en produ
 				Contest c = Contest.findByKey("2012915")
 				println "!!!!!!!!!!!!!!!!!!!!!!!!!!! CONTEST: " + c.year + " - " + c.monthDescription()
+				println "!!!!!!!!!!!!!!!!!!!!!!!!!!! WINNERS: " + c.winners
 				c.winners.each { winner ->
 		           	println "!!!!!!!!!!!!!!!!!!!!!!!!!!! WINNER RECIPE: " + winner.recipe.title + " - " + winner.points
 					println "!!!!!!!!!!!!!!!!!!!!!!!!!!! USER: " + winner.recipe.user.username
