@@ -9,19 +9,6 @@ class BootStrap {
         if(GrailsUtil.environment in ['production']){   
 
                 // si necesitamos iniciar algo en produ
-				Contest c = Contest.findByKey("2012915")
-				
-				println "!!!!!!!!!!!!!!!!!!!!!!!!!!! CONTEST: " + c.year + " - " + c.monthDescription()
-				println "!!!!!!!!!!!!!!!!!!!!!!!!!!! WINNERS: " + c.winners
-				c.winners.each { winner ->
-		           	println "!!!!!!!!!!!!!!!!!!!!!!!!!!! WINNER RECIPE: " + winner.recipe.title + " - " + winner.points
-					println "!!!!!!!!!!!!!!!!!!!!!!!!!!! USER: " + winner.recipe.user.username
-				}
-				c.delete(flush: true)
-				
-				UserLikeRecipe.findAll().each { like ->
-						println "!!!!!!!!!!!!!!!!!!!!!!!!!!! LIKE DATE: " + like.dateCreated
-				}
 				
         } else {
                 
