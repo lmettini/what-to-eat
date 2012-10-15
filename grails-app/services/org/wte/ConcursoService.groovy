@@ -39,6 +39,9 @@ class ConcursoService {
 			def endCal = new GregorianCalendar(endYear, endMonth, endDay)
 			def beginCal = new GregorianCalendar(beginYear, beginMonth, beginDay)
 			def likes = UserLikeRecipe.findAllByDateCreatedBetween(beginCal.time, endCal.time)
+			
+			println "!!!!!!!!!!!!!!!!!!!!!!!!!!! LIKES: " + c.likes
+			
 			def recipes = likes.collect (new HashSet()) { it.recipe }
 			def  winners = []		
 			recipes.each{ recipe ->	

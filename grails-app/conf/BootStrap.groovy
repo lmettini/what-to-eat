@@ -18,6 +18,11 @@ class BootStrap {
 					println "!!!!!!!!!!!!!!!!!!!!!!!!!!! USER: " + winner.recipe.user.username
 				}
 				c.delete(flush: true)
+				
+				UserLikeRecipe.findAll().each { like ->
+						println "!!!!!!!!!!!!!!!!!!!!!!!!!!! LIKE DATE: " + like.dateCreated
+				}
+				
         } else {
                 
 		SecUser adminuser = new SecUser(username:"admin", name: "admin", surname: "admin", email: "admin@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true, points: 0)
