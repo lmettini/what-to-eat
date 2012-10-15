@@ -10,13 +10,14 @@ class BootStrap {
 
                 // si necesitamos iniciar algo en produ
 				Contest c = Contest.findByKey("2012915")
+				
 				println "!!!!!!!!!!!!!!!!!!!!!!!!!!! CONTEST: " + c.year + " - " + c.monthDescription()
 				println "!!!!!!!!!!!!!!!!!!!!!!!!!!! WINNERS: " + c.winners
 				c.winners.each { winner ->
 		           	println "!!!!!!!!!!!!!!!!!!!!!!!!!!! WINNER RECIPE: " + winner.recipe.title + " - " + winner.points
 					println "!!!!!!!!!!!!!!!!!!!!!!!!!!! USER: " + winner.recipe.user.username
 				}
-		
+				c.delete(flush: true)
         } else {
                 
 		SecUser adminuser = new SecUser(username:"admin", name: "admin", surname: "admin", email: "admin@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true, points: 0)
