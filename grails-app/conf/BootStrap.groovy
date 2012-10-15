@@ -9,6 +9,12 @@ class BootStrap {
         if(GrailsUtil.environment in ['production']){   
 
                 // si necesitamos iniciar algo en produ
+				Contest c = Contest.findByKey("2012915")
+				println "!!!!!!!!!!!!!!!!!!!!!!!!!!! CONTEST: " + c.year + " - " + c.monthDescription()
+				c.winners { winner ->
+		           	println "!!!!!!!!!!!!!!!!!!!!!!!!!!! WINNER RECIPE: " + winner.recipe.title + " - " + winner.points
+					println "!!!!!!!!!!!!!!!!!!!!!!!!!!! USER: " + winner.recipe.user.username
+				}
 		
         } else {
                 
