@@ -72,8 +72,8 @@ class ModerateRecipesController {
 				mailService.sendMail {
 					to user.email
 					from conf.ui.register.emailFrom
-					subject "HoyQueComemos - Receta moderada"
-					html "La receta: " + recipeName + " se ha rechazado. La receta y todas los votos asociados han sido eliminadas de nuestro sistema. Motivo de rechazo: " + params.rejectDescription
+					subject "HoyQueComemos - Receta moderada" 
+					html view:"/email/recipeRejected", model:[recipeName:recipeName, params: params]
 					}
 			redirect(controller: "moderateRecipes", action: "index")
 		} else {

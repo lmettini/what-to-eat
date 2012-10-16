@@ -12,10 +12,8 @@ class ConcursoController {
 		int endMonth = cal.get(Calendar.MONTH)
 		int endYear = cal.get(Calendar.YEAR)
 		String key = String.valueOf(endYear) + String.valueOf(endMonth) + String.valueOf(endDay)
-		println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! endDay: " + endDay
 		Contest contest = Contest.findByKey(key)
 		if (contest == null){
-			println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! contest == null"
 			//concursoService.closeContestByMonth()
 			concursoService.closeContestByDay()
 			contest = Contest.findByKey(key)

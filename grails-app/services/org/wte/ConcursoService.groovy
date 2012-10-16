@@ -21,7 +21,6 @@ class ConcursoService {
 	}
 	
 	def closeContestByDay(){
-		println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ConcursoService.closeContestByDay"
 		def cal = Calendar.instance
 		int endDay = cal.get(Calendar.DAY_OF_MONTH)
 		int endMonth = cal.get(Calendar.MONTH)
@@ -33,18 +32,12 @@ class ConcursoService {
 	}
 	
 	private void closeContest(int endYear, int endMonth, int endDay, int beginYear, int beginMonth, int beginDay) {
-		println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ConcursoService.closeContest"
 		String key = String.valueOf(endYear) + String.valueOf(endMonth) + String.valueOf(endDay)
-		println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! key: " + key
 		Contest contest = Contest.findByKey(key)
 		if (contest == null){
-			println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! contest == null"
 			def endCal = new GregorianCalendar(endYear, endMonth, endDay)
 			def beginCal = new GregorianCalendar(beginYear, beginMonth, beginDay)
-			println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! beginCal: " + beginCal.time
-			println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! endCal: " + endCal.time
 			def likes = UserLikeRecipe.findAllByDateCreatedBetween(beginCal.time, endCal.time)
-			println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! likes: " + likes
 			def recipes = likes.collect (new HashSet()) { it.recipe }
 			def  winners = []		
 			recipes.each{ recipe ->	
@@ -52,9 +45,7 @@ class ConcursoService {
 				def pointsInMonth = likesInMonth.size()
 				winners.add(new Winner(likes: likesInMonth, recipe: recipe, points: pointsInMonth))
 			}
-			println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! winners: " + winners
 			winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
-			println "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! winners: " + winners
 			contest = new Contest(key: key, year: endYear, month: endMonth, dayOfMonth: endDay)
 			contest.winners = []
 			if (winners.size() > 0 && winners.get(0) != null){
@@ -80,7 +71,7 @@ class ConcursoService {
 			to recipe.user.email
 			from conf.ui.register.emailFrom
 			subject "HoyQueComemos - Su receta ha sido ganadora del concurso del mes de " + month
-			html "La receta " + recipe.title + " ha salido ganadora en la posicion: " + position
+			html view:"/email/contestWinner", model:[recipe:recipe, month: month, position: position]
 		}
 	}
 	
