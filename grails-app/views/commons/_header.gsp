@@ -29,7 +29,10 @@
 		<div class="btn-group pull-right">
 			<form id="simpleSearchForm" action="/listRecipes/simpleSearch" method="GET">
 				<input id="simpleSearchText" type="text" name="query" maxlength="300"/>
-				<input id="lupaImg" type="image" src="/img/lupa.gif" alt="Buscar">
+
+                <button type="submit" class="btn">
+                    <i class="icon-search"></i>
+                </button>
 			</form>
 		</div>
       <div class="nav-collapse">

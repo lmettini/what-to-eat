@@ -59,12 +59,13 @@
 					</div><!--/span-->
 				</div><!--/row-->
 			</g:each>
+            <g:if test="${total>max}">
 				<div class="pagination-container pagination-centered container-row">
 						<g:paginate next="Siguiente" prev="Anterior"
 				            controller="listRecipes" action="simpleSearch"    
 				        max="${max}" maxsteps="10" total="${total}" params="[query: params.query]" />
 				</div>
-
+            </g:if>
 		</div>
 </g:else>
   <content tag="js">
