@@ -11,7 +11,7 @@
                 <div class="row-fluid">
                 <h1 style="float: left; margin-right: 10px;">${recipe.name}</h1> <label style="margin-top: 10px">(${recipe.category.description})</label>
 				<g:if test="${flash.message!=null}">
-					<div id="flashAlert" class="alert alert-success">${flash.message}</div>
+					<div id="flashAlert" class="alert alert-success top8">${flash.message}</div>
 				</g:if>
                 </div>
 
@@ -76,27 +76,28 @@
 
                         <div class="row-fluid top8 botton8">
                             <div class="span0"></div>
-                            <div class="span11 offset1">
-                                <span>
+                            <div class="span12 offset1">
+                                <div class="row-fluid">
+
+                                    <div class="span3">
                                     <g:if test="${recipe.points == 0}">
-                                        <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
+                                        <a class=" btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
                                     </g:if>
                                     <g:else>
                                         <a href="#likeUsersModal" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
                                     </g:else>
-                                </span>
-
-                                <span>
+                                    </div>
+                                    <div class="span9">
                                     <g:if test="${isNotAUserRecipe}">
                                         <g:if test="${isLikedByCurrentUser}">
-                                            <span>Usted ya ha votado esta receta</span>
+                                            <p>Usted ya ha votado esta receta</p>
                                         </g:if>
                                         <g:else>
                                             <a class="btn btn-primary likes-recipe" href="/recipe/like/${recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
                                         </g:else>
                                     </g:if>
-                                </span>
-
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

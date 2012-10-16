@@ -32,7 +32,7 @@
 			Recetas que encontramos para la frase: ${params.query}
 			</h1>
 			<br>
-			<g:each in="${recipes}" var="recipe">
+			<g:each in="${recipes}" var="recipe"  status="j">
 				<div class="row-fluid">
 					<div class="span12 alert alert-info">
    						<h2>
@@ -54,10 +54,33 @@
                         </tr>
                         <span><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></span>
                         <br><br>
-                        <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                        <a <g:if test="${recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
    						<p class="pull-right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 					</div><!--/span-->
 				</div><!--/row-->
+                <g:if test="${recipe?.likes?.size()>0}">
+                	<div id="likeUsersModal${j}" class="modal hide fade">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                            <h3>Usuarios que les gusto la receta</h3>
+                          </div>
+                          <div class="modal-body">
+                                <table class="table table-hover">
+                                    <tbody>
+                                <g:each in="${recipe?.likes}" var="userLike">
+                                            <tr>
+                                                <td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
+                                                <td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
+                                            </tr>
+                                  </g:each>
+                                </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <a href="#" data-dismiss="modal" class="btn btn-primary">Cerrar</a>
+                          </div>
+                    </div>
+                    </g:if>
 			</g:each>
             <g:if test="${total>max}">
 				<div class="pagination-container pagination-centered container-row">
