@@ -37,7 +37,7 @@ class UserInfoController {
 					to user.email
 					from conf.ui.register.emailFrom
 					subject "HoyQueComemos - Su usuario ha sido creado"
-					html "Su usuario es: " + user.username + ". Su contraseña es: " + pass
+					html view: "/email/registrationConfirmation", model:[user:user, pass: pass]
 				}
 			}
 			redirect(controller: "home", action: "index")
