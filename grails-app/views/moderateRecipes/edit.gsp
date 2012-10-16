@@ -68,11 +68,11 @@
                             </div>
                     </fieldset>
                     <div class="form-actions">
-	 					<a id="cancelBtn" href="/moderateRecipes" class="btn button-form">Cancelar</a>
-						<a id="rejectBtn" href="#rejectModal" data-toggle="modal" class="btn button-form">Rechazar</a>
-						<a id="approveBtn" href="#" class="btn button-form">Aceptar</a>
+                      <a id="approveBtn" href="#" class="btn button-accept-form">Aceptar</a>
+                      <a id="rejectBtn" href="#rejectModal" data-toggle="modal" class="btn button-form">Rechazar</a>
+                      <a id="cancelBtn" href="/moderateRecipes" class="button-cancel btn">Cancelar</a>
                     </div>
-			</div>
+          </div>
         </form>
     </div>
   </div>
@@ -96,11 +96,11 @@
                   </div>
               </div>
 	  </div>
-	  <div class="modal-footer">
-	    <a href="#" data-dismiss="modal" class="btn btn-primary">Cancelar</a>
-		<a id="rejectSubmit"href="#" class="btn btn-primary">Rechazar</a>
-	  </div>
-	</div>
+        <div class="modal-footer">
+            <a id="rejectSubmit"href="#" class="btn btn-reject">Rechazar</a>
+            <a href="#" data-dismiss="modal" class="btn btn-cancel">Cancelar</a>
+        </div>
+    </div>
 	
 	<content tag="js">
 		 <script type="text/javascript">
