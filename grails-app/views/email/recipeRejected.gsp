@@ -9,6 +9,6 @@ La receta: ${recipeName} se ha rechazado
 La receta y todas los votos asociados han sido eliminadas de nuestro sistema.
 </p>
 <p>
-Motivo de rechazo: ${params.rejectDescription}
+Motivo de rechazo: ${rejectDescription}
 </p>
 <a href="http://what-to-eat.herokuapp.com/recipe/list">Ver mis recetas</a>

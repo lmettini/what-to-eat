@@ -9,6 +9,6 @@ El ingrediente: ${ingredientName} se ha rechazado
 El ingrediente y todas las recetas asociadas han sido eliminadas de nuestro sistema.
 </p>
 <p>
-Motivo de rechazo: ${params.rejectDescription}
+Motivo de rechazo: ${rejectDescription}
 </p>
 <a href="http://what-to-eat.herokuapp.com/recipe/list">Ver mis recetas</a>

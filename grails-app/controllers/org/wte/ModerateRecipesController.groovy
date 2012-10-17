@@ -73,7 +73,7 @@ class ModerateRecipesController {
 					to user.email
 					from conf.ui.register.emailFrom
 					subject "HoyQueComemos - Receta moderada" 
-					html view:"/email/recipeRejected", model:[recipeName:recipeName, params: params]
+					html view:"/email/recipeRejected", model:[recipeName:recipeName, rejectDescription: params.rejectDescription]
 					}
 			redirect(controller: "moderateRecipes", action: "index")
 		} else {
