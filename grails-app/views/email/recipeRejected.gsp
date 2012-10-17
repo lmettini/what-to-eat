@@ -1,6 +1,6 @@
 <div>
 	<h1>HoyQueComemos</h1>
-    <h3>Ingresá los ingredientes que tengas y encontrá las mejores recetas en solo unos segundos!</h3>
+    <h3>Ingresá los ingredientes que tengas y encontrá las mejores recetas en sólo unos segundos!</h3>
 </div>
 <p>
 La receta: ${recipeName} se ha rechazado

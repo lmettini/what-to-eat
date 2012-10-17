@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae53777-e237-489d-898f-594582907ff9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateIngredientsController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateIngredientsController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateRecipesController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateRecipesController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/email/contestWinner.gsp" afterPath="$PROJECT_DIR$/grails-app/views/email/contestWinner.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/email/ingredientRejected.gsp" afterPath="$PROJECT_DIR$/grails-app/views/email/ingredientRejected.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/email/recipeRejected.gsp" afterPath="$PROJECT_DIR$/grails-app/views/email/recipeRejected.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/ranking/allusers.gsp" afterPath="$PROJECT_DIR$/grails-app/views/ranking/allusers.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/email/registrationConfirmation.gsp" afterPath="$PROJECT_DIR$/grails-app/views/email/registrationConfirmation.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp" />
     </list>
     <ignored path="what-to-eat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,28 +100,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModerateRecipesController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateRecipesController.groovy">
+      <file leaf-file-name="_header.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/commons/_header.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="129" selection-start="2512" selection-end="2512" vertical-scroll-proportion="-12.130435">
+            <state line="23" column="47" selection-start="945" selection-end="945" vertical-scroll-proportion="-0.6938776">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ingredientRejected.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/email/ingredientRejected.gsp">
+      <file leaf-file-name="index.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="45" selection-start="336" selection-end="336" vertical-scroll-proportion="-3.8163266">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recipeRejected.gsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/email/recipeRejected.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="21" selection-start="302" selection-end="302" vertical-scroll-proportion="0.35823753">
+            <state line="14" column="53" selection-start="432" selection-end="461" vertical-scroll-proportion="0.44990548">
               <folding />
             </state>
           </provider>
@@ -148,22 +140,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/userInfo/edit.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/recipe/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/HomeController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/moderateRecipes/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/ranking/allusers.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/RecipeController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/RankingController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/email/ingredientRejected.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateIngredientsController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateRecipesController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/email/contestWinner.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/email/ingredientRejected.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/email/recipeRejected.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/email/registrationConfirmation.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp" />
       </list>
     </option>
   </component>
@@ -316,6 +308,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="moderateIngredients" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="what-to-eat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="what-to-eat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="what-to-eat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="what-to-eat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -624,7 +660,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15584415" sideWeight="0.34253246" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17938311" sideWeight="0.61525977" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17938311" sideWeight="0.6737013" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38474026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3268921" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -728,49 +764,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/HomeController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="41" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="64" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.94014084">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="18" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.032136105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/ranking/allusers.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="79" selection-start="780" selection-end="780" vertical-scroll-proportion="0.2398524">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/moderateRecipes/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="12" selection-start="5535" selection-end="5535" vertical-scroll-proportion="0.710775">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/userInfo/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="52" selection-start="687" selection-end="687" vertical-scroll-proportion="0.032136105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="966" selection-end="1337" vertical-scroll-proportion="0.032136105">
           <folding />
         </state>
       </provider>
@@ -813,6 +809,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateRecipesController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="129" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.49119717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateIngredientsController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="136" selection-start="2590" selection-end="2633" vertical-scroll-proportion="-17.0">
@@ -820,23 +823,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ModerateRecipesController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/commons/_header.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="129" selection-start="2512" selection-end="2512" vertical-scroll-proportion="-12.130435">
+        <state line="23" column="47" selection-start="945" selection-end="945" vertical-scroll-proportion="-0.6938776">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/email/ingredientRejected.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="45" selection-start="336" selection-end="336" vertical-scroll-proportion="-3.8163266">
+        <state line="2" column="80" selection-start="110" selection-end="110" vertical-scroll-proportion="0.105919">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/email/contestWinner.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="79" selection-start="109" selection-end="110" vertical-scroll-proportion="0.09970675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="61" selection-start="430" selection-end="430" vertical-scroll-proportion="0.40078586">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="86" selection-start="259" selection-end="259" vertical-scroll-proportion="0.23379175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/email/registrationConfirmation.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="80" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0651341">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/email/recipeRejected.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="21" selection-start="302" selection-end="302" vertical-scroll-proportion="0.35823753">
+        <state line="2" column="80" selection-start="110" selection-end="110" vertical-scroll-proportion="0.062730625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="53" selection-start="432" selection-end="461" vertical-scroll-proportion="0.44990548">
           <folding />
         </state>
       </provider>
