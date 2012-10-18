@@ -64,3 +64,7 @@
 #show-recipe .span4{
     margin-left: 0px;
 }
+
+#prize-image{
+    float:right;
+}
