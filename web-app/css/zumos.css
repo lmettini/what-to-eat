@@ -67,4 +67,11 @@
 
 #prize-image{
     float:right;
+    margin-top: -40px;
+}
+#prize-label{
+    float:right;
+    margin-top: -40px;
+    margin-right: 145px;
+    font-weight: bold;
 }

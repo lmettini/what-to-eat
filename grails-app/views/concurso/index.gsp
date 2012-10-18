@@ -28,13 +28,14 @@
 				                       <a href="/recipe/show/${winner.recipe.id}">${winner.recipe.name}</a>
 									</h2>
 									<br>
+                                    <label id="prize-label">Premio</label>
 									<p> Ingredientes: 
 										<g:each in="${winner.recipe.components}" var="cp" status="j">
 											<g:if test="${j!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
 									</p>
                                     <tr>
-                                        <td><img id="prize-image" style="padding-right:10px" class="bs-icon" src="/img/${i}.jpg"></td>
+                                        <td><img id="prize-image" style="padding-right:10px" class="bs-icon" src="/img/${i}.jpg" width="180" height="150"></td>
                                     </tr>
                                     <p>${winner.recipe.description}</p>
 				    				<p>Autor:</p>
