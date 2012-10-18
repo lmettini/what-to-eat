@@ -154,6 +154,9 @@
 
                             <div class="form-horizontal wte-form form-actions">
                                 <a class="btn btn-danger back-to-recipes" href="/">Volver a buscar recetas</a>
+                                <sec:ifLoggedIn>
+                                    <a id="edit-recipe-button" class="btn btn-primary" href="/recipe/edit/${recipe.id}">Editar la receta</a>
+                                </sec:ifLoggedIn>
                             </div>
             </div>
         <!--/form-->
@@ -187,7 +190,15 @@
 				$("#flashAlert").alert();
 				});
 	    </g:if>
-	</script>
+        $(document).ready(function() {
+            $('#edit-recipe-button').hide();
+            var loggedUsername = "<sec:username/>";
+            var username = "${recipe.user.username}";
+            if(loggedUsername && username == loggedUsername.toString()){
+                $('#edit-recipe-button').show();
+            }
+        });
+    </script>
 </content>
 </body>
 </html>

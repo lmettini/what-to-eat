@@ -75,3 +75,7 @@
     margin-right: 145px;
     font-weight: bold;
 }
+#edit-recipe-button{
+    float: right;
+    margin-right: 10px;
+}
