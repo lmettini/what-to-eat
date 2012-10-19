@@ -45,9 +45,8 @@ class ConcursoService {
 				def pointsInMonth = likesInMonth.size()
 				winners.add(new Winner(likes: likesInMonth, recipe: recipe, points: pointsInMonth, contest: contest))
 			}
-			winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
+			winners.sort( { w1, w2 -> w1.points.equals(w2.points)? w1.recipe.dateCreated <=> w2.recipe.dateCreated: w1.points>w2.points? -1: 1 } as Comparator )
 			contest = new Contest(key: key, year: endYear, month: endMonth, dayOfMonth: endDay)
-			//contest.winners = []
 			if (winners.size() > 0 && winners.get(0) != null){
 				contest.addToWinners(winners.get(0))
 				this.sendEmail(winners.get(0).recipe, 1, contest.monthDescription())

@@ -20,7 +20,7 @@ class ConcursoController {
 		} 
 		def list = [] 
 		if (contest.winners != null && contest.winners.size() > 0){
-			list = contest.winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
+			list = contest.winners.sort( { w1, w2 -> w1.points.equals(w2.points)? w1.recipe.dateCreated <=> w2.recipe.dateCreated: w1.points>w2.points? -1: 1 } as Comparator )
 		}
 		[contest: contest, winners: list]
 	}
