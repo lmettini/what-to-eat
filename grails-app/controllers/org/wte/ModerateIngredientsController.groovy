@@ -53,9 +53,11 @@ class ModerateIngredientsController {
 			recipeComponents.each { component ->
 				def recipe = component.recipe
 			  	def components = RecipeComponent.findAllByRecipe(recipe)
+				def winners = Winner.findAllByRecipe(recipe)
 				def likes = UserLikeRecipe.findAllByRecipe(recipe)
         		try {
 		    		components*.delete(flush: true)
+					winners*.delete(flush: true)
 					likes*.delete(flush: true)
 					recipe.removePointsToUser()
             		recipe.delete(flush: true)
