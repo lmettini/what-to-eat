@@ -92,13 +92,24 @@
             </g:if>
 		</div>
 </g:else>
+
+    <div id="noIngs" class="modal hide fade">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h3>Debes ingresar al menos un ingrediente para comenzar la busqueda</h3>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <a href="#" data-dismiss="modal" class="btn">Aceptar</a>
+      </div>
+    </div>
   <content tag="js">
       <script type="text/javascript">
           $(document).ready(function() {
               $("#search_button").click(function (e) {
                   var tokens = $("#input-recp").tokenInput("get");
                   if (tokens.length==0){
-                      alert("Por favor ingresá algún ingrediente que poseas.")
+                        $("#noIngs").modal("show");
                   } else {
                       var i,query="";
 

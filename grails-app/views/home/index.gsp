@@ -78,13 +78,23 @@
 			</div>
 		</div>
 	</div>
+    <div id="noIngs" class="modal hide fade">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h3>Debes ingresar al menos un ingrediente para comenzar la busqueda</h3>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <a href="#" data-dismiss="modal" class="btn">Aceptar</a>
+      </div>
+    </div>
 	<content tag="js">	
      <script type="text/javascript">
     $(document).ready(function() {
         $("#search_button").click(function (e) {
             var tokens = $("#input-recp").tokenInput("get");
             if (tokens.length==0){
-                alert("Por favor ingresá algún ingrediente que poseas.")
+                $("#noIngs").modal("show");
             } else {
                 var i,query="";
 
@@ -94,6 +104,7 @@
                     }
                     query+=tokens[i].id
                 }
+                $.cookie('newbieMsgShowed','true',{ expires: 1000, path: '/' })
                 document.location="/listRecipes?q="+query
             }
             e.preventDefault();
@@ -113,6 +124,22 @@
                 searchingText : "Buscando.."
 
             });
+
+            var msg = $.cookie('newbieMsgShowed');
+            if(msg == null || msg != "true"){
+                $(".token-input-input-token-facebook").popover({
+                    animation: true,
+                    delay: { show: 1000, hide: 100 },
+                    title: "Comenzá tu busqueda",
+                    content: "Ingresá los ingredientes que tengas y descubrí que podes cocinar",
+                    placement: "right",
+                    trigger: "manual"
+                });
+                $(".token-input-input-token-facebook").popover("show");
+                $("#token-input-input-recp").bind("focus",function(){
+                    $(".token-input-input-token-facebook").popover("hide");
+                });
+            }
         });
         </script>
 	</content>
