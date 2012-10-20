@@ -105,7 +105,13 @@
         $(document).ready(function() {
             //$("#input-recp").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
             $("#input-recp").tokenInput("/ingredient/getRelated/", {
-                theme: "facebook"
+                resultsLimit : 20,
+                minChars : 2,
+                theme: "facebook",
+                hintText : "Ingresa tus ingredientes",
+                noResultsText : "No encontramos ese ingrediente.",
+                searchingText : "Buscando.."
+
             });
         });
         </script>

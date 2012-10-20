@@ -79,3 +79,28 @@
     float: right;
     margin-right: 10px;
 }
+
+.row-desc{
+    margin-right: 21px;
+    background-color: white !important;
+}
+
+.rec-title{
+    margin: 5px;
+}
+
+.dflt-img{
+    background-color: #E48D8D;
+    border: 2px solid #EDEDED;
+}
+.img-rec{
+    margin: 35px;
+}
+
+.list-title{
+    margin: 15px;
+}
+
+.list-title-first{
+    margin-left: 15px;
+}

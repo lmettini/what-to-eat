@@ -13,6 +13,9 @@ class IngredientController {
 	    	ilike("name", "%${params.q}%")
 			eq("approved", true)
 		}
+        if(ingredients.size()>20){
+            ingredients = ingredients[0..19]
+        }
         render " ${params.callback} (${ingredients.collect{def tmp = [:];tmp.name=it.name;tmp.id=it.id;tmp} as JSON}) "
     }
 	
@@ -28,6 +31,9 @@ class IngredientController {
 			    }
 	    	}
 		}
+        if(ingredients.size()>20){
+            ingredients = ingredients[0..19]
+        }
         render " ${params.callback} (${ingredients.collect{def tmp = [:];tmp.name=it.name;tmp.id=it.id;tmp} as JSON}) "
     }
 	

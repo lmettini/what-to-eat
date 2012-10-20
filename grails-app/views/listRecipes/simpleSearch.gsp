@@ -28,34 +28,35 @@
 </h1>
 </g:if>
 <g:else>
-          <h1>
+            <h2 class="list-title-first">
 			Recetas que encontramos para la frase: ${params.query}
-			</h1>
+			</h2>
 			<br>
 			<g:each in="${recipes}" var="recipe"  status="j">
-				<div class="row-fluid">
-					<div class="span12 alert alert-info">
-   						<h2>
-							<g:if test="${recipe.firstImage() != null}">
-								<img style="padding-right:10px" class="bs-icon" src="${recipe.firstImage().thumbnail}">
-			  				</g:if>
+                <div class="row-fluid lert alert-info">
+					<div class="span2 ">
+                        <g:if test="${recipe.firstImage() != null}">
+                            <img width="120" height="120" class="bs-icon img-rec" src="${recipe.firstImage().thumbnail}">
+                        </g:if><g:else>
+                           <img width="120" height="120" class="bs-icon img-rec dflt-img" src="/img/dflt.png">
+                        </g:else>
+                    </div><!--/span-->
+                    <div class="span10">
+                        <h2 class="rec-title">
                            <a href="/recipe/show/${recipe.id}">${recipe.name}</a>
-						</h2>
-						<br>
-						<p> Ingredientes: 
-							<g:each in="${recipe.components}" var="cp" status="i">
-								<g:if test="${i!=0}">, </g:if>${cp.ingredient.name}
-							</g:each>
-						</p>
-        				<p>${recipe.description}</p>
-        				<p>Autor:</p>
-                        <tr>
-                            <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="60" height="70"  /></td>
-                        </tr>
-                        <span><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></span>
-                        <br><br>
-                        <a <g:if test="${recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
-   						<p class="pull-right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
+                        </h2>
+								<div class="alert alert-info row-desc">
+									<p> <strong>Ingredientes:</strong>
+										<g:each in="${recipe.components}" var="cp" status="i">
+											<g:if test="${i!=0}">, </g:if>${cp.ingredient.name}
+										</g:each>
+									</p>
+                					<p>${recipe.description}</p>
+                                    <p>Autor: <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p>
+                                    <a <g:if test="${res?.recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+           							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
+								</div>
+
 					</div><!--/span-->
 				</div><!--/row-->
                 <g:if test="${recipe?.likes?.size()>0}">
@@ -118,7 +119,12 @@
           $(document).ready(function() {
               //$("#input-recp").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
               $("#input-recp").tokenInput("/ingredient/getRelated/", {
-                  theme: "facebook"
+                resultsLimit : 20,
+                minChars : 2,
+                theme: "facebook",
+                hintText : "Ingresa tus ingredientes",
+                noResultsText : "No encontramos ese ingrediente.",
+                searchingText : "Buscando.."
               });
           });
       </script>
