@@ -19,7 +19,7 @@
           <br>
 
             <g:if test="${fullMatchList.size()==0 && midMatchList.size()==0}">
-                <h2 class="list-title-first">
+                <h1 class="no-recipe-title">
                 No hay ninguna receta para ofrecerte para los ingredientes:
                 <g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each>
                 <br>
@@ -31,7 +31,7 @@
                         Si tenés una, la podés agregar vos!
                     </a>
                 </sec:ifNotLoggedIn>
-			    </h2>
+			    </h1>
             </g:if>
             <g:if test="${fullMatchList.size()>0}">
                 <h2 class="list-title-first">
@@ -94,7 +94,7 @@
 			</g:each>
 
 
-            <g:if test="${midMatchList.size()>0}">  <g:if test="${fullMatchList.size()>0}"><hr></g:if>   <h2 class="list-title" >Recetas en las que te faltan 2 o menos ingredientes para hacerla</h2> </g:if>
+            <g:if test="${midMatchList.size()>0}">  <g:if test="${fullMatchList.size()>0}"><hr><h2 class="list-title"></g:if><g:else><h2 class="list-title-first" ></g:else>   Recetas en las que te faltan 2 o menos ingredientes para hacerla</h2> </g:if>
             <g:each in="${midMatchList}" var="res" status="j">
 					<div class="row-fluid lert alert-info">
 					<div class="span2 ">
@@ -148,8 +148,6 @@
 			</g:each>
 
 
-
-		</div>
   <content tag="js">
       <script type="text/javascript">
           $(document).ready(function() {

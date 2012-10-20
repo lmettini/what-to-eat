@@ -18,7 +18,7 @@
           </form>
           <br>
 <g:if test="${total == 0}">
-<h1>
+<h1 class="no-recipe-title">
 		<sec:ifLoggedIn>
 		No hay ninguna receta para ofrecerte. <a  href="/recipe/create">Si tenés una, la podés agregar vos!</a>
   		</sec:ifLoggedIn>
