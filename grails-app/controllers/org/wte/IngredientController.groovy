@@ -39,7 +39,7 @@ class IngredientController {
 		  if (ingredient.save(flush: true)) { 
 			render "El ingrediente se creo con exito" 
 		  } else {
-			render "No se pudo crear el ingrediente" 
+			render "Debe completar todos los campos obligatorios"
 		  }
 	}
 	

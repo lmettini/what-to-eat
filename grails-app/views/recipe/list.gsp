@@ -25,8 +25,8 @@
       				<tr>
 						<td><a href="/recipe/show/${recipe.id}">${recipe.name}</a></td>
 						<td>${recipe.summary}</td>
-						<td><a href="/recipe/edit/${recipe.id}"><img src="\img\edit.png" title="Editar la receta"/></a></td>
-						<td><a href="#deleteModal${i}" role="button" data-toggle="modal"><img src="\img\delete.png" title="Eliminar la receta"/></a></td>
+						<td><a href="/recipe/edit/${recipe.id}"><img src="/img/edit.png" title="Editar la receta"/></a></td>
+						<td><a href="#deleteModal${i}" role="button" data-toggle="modal"><img src="/img/delete.png" title="Eliminar la receta"/></a></td>
      				</tr>
                     	<div id="deleteModal${i}" class="modal hide fade">
                           <div class="modal-header">

@@ -58,24 +58,26 @@ class ModerateRecipesController {
 				def user = recipe.user
 				def recipeName = recipe.name
 				def components = RecipeComponent.findAllByRecipe(recipe)
+				def winners = Winner.findAllByRecipe(recipe)
 				def likes = UserLikeRecipe.findAllByRecipe(recipe)
             	try {
 			    	components*.delete(flush: true)
+					winners*.delete(flush: true)
 					likes*.delete(flush: true)
 					recipe.removePointsToUser()
                 	recipe.delete(flush: true)
+					def conf = SpringSecurityUtils.securityConfig
+					mailService.sendMail {
+						to user.email
+						from conf.ui.register.emailFrom
+						subject "HoyQueComemos - Receta moderada" 
+						html view:"/email/recipeRejected", model:[recipeName:recipeName, rejectDescription: params.rejectDescription]
+					}
                 	flash.message = "La receta ha sido borrada"
             	} catch (org.springframework.dao.DataIntegrityViolationException e) {
                		flash.message = "No se pudo borrar la receta"
            		}
-				def conf = SpringSecurityUtils.securityConfig
-				mailService.sendMail {
-					to user.email
-					from conf.ui.register.emailFrom
-					subject "HoyQueComemos - Receta moderada" 
-					html view:"/email/recipeRejected", model:[recipeName:recipeName, params: params]
-					}
-			redirect(controller: "moderateRecipes", action: "index")
+				redirect(controller: "moderateRecipes", action: "index")
 		} else {
 		
 			redirect(controller: "moderateRecipes", action: "index")

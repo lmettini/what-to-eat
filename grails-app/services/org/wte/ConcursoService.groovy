@@ -43,21 +43,20 @@ class ConcursoService {
 			recipes.each{ recipe ->	
 				def likesInMonth = likes.findAll { it.recipe.equals(recipe) }
 				def pointsInMonth = likesInMonth.size()
-				winners.add(new Winner(likes: likesInMonth, recipe: recipe, points: pointsInMonth))
+				winners.add(new Winner(likes: likesInMonth, recipe: recipe, points: pointsInMonth, contest: contest))
 			}
-			winners.sort( { w1, w2 -> w2.points <=> w1.points } as Comparator )
+			winners.sort( { w1, w2 -> w1.points.equals(w2.points)? w1.recipe.dateCreated <=> w2.recipe.dateCreated: w1.points>w2.points? -1: 1 } as Comparator )
 			contest = new Contest(key: key, year: endYear, month: endMonth, dayOfMonth: endDay)
-			contest.winners = []
 			if (winners.size() > 0 && winners.get(0) != null){
-				contest.winners.add(winners.get(0))
+				contest.addToWinners(winners.get(0))
 				this.sendEmail(winners.get(0).recipe, 1, contest.monthDescription())
 			}
 			if (winners.size() > 1 && winners.get(1) != null){
-				contest.winners.add(winners.get(1))
+				contest.addToWinners(winners.get(1))
 				this.sendEmail(winners.get(1).recipe, 2, contest.monthDescription())
 			}
 			if (winners.size() > 2 && winners.get(2) != null){
-				contest.winners.add(winners.get(2))
+				contest.addToWinners(winners.get(2))
 				this.sendEmail(winners.get(2).recipe, 3, contest.monthDescription())
 			}
 			contest.save(flush:true)

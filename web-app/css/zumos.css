@@ -64,3 +64,18 @@
 #show-recipe .span4{
     margin-left: 0px;
 }
+
+#prize-image{
+    float:right;
+    margin-top: -40px;
+}
+#prize-label{
+    float:right;
+    margin-top: -40px;
+    margin-right: 145px;
+    font-weight: bold;
+}
+#edit-recipe-button{
+    float: right;
+    margin-right: 10px;
+}

@@ -53,9 +53,11 @@ class ModerateIngredientsController {
 			recipeComponents.each { component ->
 				def recipe = component.recipe
 			  	def components = RecipeComponent.findAllByRecipe(recipe)
+				def winners = Winner.findAllByRecipe(recipe)
 				def likes = UserLikeRecipe.findAllByRecipe(recipe)
         		try {
 		    		components*.delete(flush: true)
+					winners*.delete(flush: true)
 					likes*.delete(flush: true)
 					recipe.removePointsToUser()
             		recipe.delete(flush: true)
@@ -73,7 +75,7 @@ class ModerateIngredientsController {
 				to user.email
 				from conf.ui.register.emailFrom
 				subject "HoyQueComemos - Ingrediente moderado"
-				html view:"/email/ingredientRejected", model:[ingredientName:ingredientName, params: params]
+				html view:"/email/ingredientRejected", model:[ingredientName:ingredientName, rejectDescription: params.rejectDescription]
 			}
 			redirect(controller: "moderateIngredients", action: "index")
 		} else {
