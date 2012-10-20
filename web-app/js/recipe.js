@@ -40,13 +40,13 @@ $("#nxtFS").bind("click",function(){
 function updateCounter(){
     var count = $("#descrip").val().length;
 
-    if(count>1000){
+    if(count>5000){
         $("#counter").addClass("badge-important");
     } else{
         $("#counter").removeClass("badge-important");
     }
 
-    $("#counter").html(1000-count);
+    $("#counter").html(5000-count);
 }
 
 $("#descrip").keyup(function(){updateCounter()});
@@ -139,7 +139,7 @@ function secondtStepOk(){
         $("#ing-alert2").show();
         return false
     }
-    if($("#descrip").val().length>1000){
+    if($("#descrip").val().length>5000){
         $(".alert-desc").show();
         return false
     }
