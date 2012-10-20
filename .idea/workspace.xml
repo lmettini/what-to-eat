@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae53777-e237-489d-898f-594582907ff9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/zumos.css" afterPath="$PROJECT_DIR$/web-app/css/zumos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/what-to-eat.iml" afterPath="$PROJECT_DIR$/what-to-eat.iml" />
     </list>
     <ignored path="what-to-eat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,19 +113,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zumos.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="zumos.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-app/css/zumos.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="46" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.6347826">
+            <state line="94" column="46" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListRecipesController.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ListRecipesController.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="74" selection-start="1429" selection-end="1429" vertical-scroll-proportion="-8.521739">
+            <state line="27" column="8" selection-start="838" selection-end="838" vertical-scroll-proportion="0.3265306">
               <folding />
             </state>
           </provider>
@@ -206,10 +196,10 @@
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/IngredientController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy" />
         <option value="$PROJECT_DIR$/web-app/css/zumos.css" />
         <option value="$PROJECT_DIR$/grails-app/views/listRecipes/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/listRecipes/simpleSearch.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy" />
       </list>
     </option>
   </component>
@@ -936,13 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="74" selection-start="1429" selection-end="1429" vertical-scroll-proportion="-8.521739">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="58" selection-start="2401" selection-end="2401" vertical-scroll-proportion="-7.6595745">
@@ -966,7 +949,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-app/css/zumos.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="46" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.6347826">
+        <state line="94" column="46" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/org/wte/ListRecipesController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="8" selection-start="838" selection-end="838" vertical-scroll-proportion="0.3265306">
           <folding />
         </state>
       </provider>
