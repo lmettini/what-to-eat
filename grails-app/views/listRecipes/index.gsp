@@ -94,7 +94,7 @@
 			</g:each>
 
 
-            <g:if test="${midMatchList.size()>0}">  <g:if test="${fullMatchList.size()>0}"><hr><h2 class="list-title"></g:if><g:else><h2 class="list-title-first" ></g:else>   Recetas en las que te faltan 2 o menos ingredientes para hacerla</h2> </g:if>
+            <g:if test="${midMatchList.size()>0}">  <g:if test="${fullMatchList.size()>0}"><hr><h2 class="list-title"></g:if><g:else><h2 class="list-title-first" ></g:else>   Recetas en las que te faltan 1 o 2 ingredientes para hacerla</h2> </g:if>
             <g:each in="${midMatchList}" var="res" status="j">
 					<div class="row-fluid lert alert-info">
 					<div class="span2 ">
