@@ -22,15 +22,6 @@
                 <h1 class="no-recipe-title">
                 No hay ninguna receta para ofrecerte para los ingredientes:
                 <g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each>
-                <br>
-                <sec:ifLoggedIn>
-                    <a href="/recipe/create">Si tenés una, la podés agregar vos!</a>
-                </sec:ifLoggedIn>
-                <sec:ifNotLoggedIn>
-                    <a data-toggle="dropdown" href="/login">
-                        Si tenés una, la podés agregar vos!
-                    </a>
-                </sec:ifNotLoggedIn>
 			    </h1>
             </g:if>
             <g:if test="${fullMatchList.size()>0}">
@@ -79,7 +70,7 @@
                                     <tbody>
                                 <g:each in="${res?.recipe?.likes}" var="userLike">
                                             <tr>
-                                                <td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
+                                                <td><img id="imgSelectedAvatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
                                                 <td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
                                             </tr>
                                   </g:each>
@@ -94,14 +85,23 @@
 			</g:each>
 
 
-            <g:if test="${midMatchList.size()>0}">  <g:if test="${fullMatchList.size()>0}"><hr><h2 class="list-title"></g:if><g:else><h2 class="list-title-first" ></g:else>   Recetas en las que te faltan 1 o 2 ingredientes para hacerla</h2> </g:if>
+            <g:if test="${midMatchList.size()>0}">
+                <g:if test="${fullMatchList.size()>0}">
+                    <hr><h2 class="list-title">
+                </g:if>
+                <g:else>
+                    <h2 class="list-title-first" >
+                </g:else>
+                Recetas en las que te faltan 1 o 2 ingredientes para hacerla</h2>
+                <h3 style="margin-left: 16px;">Ingredientes buscados: <g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each></h3>
+            </g:if>
             <g:each in="${midMatchList}" var="res" status="j">
 					<div class="row-fluid lert alert-info">
 					<div class="span2 ">
                         <g:if test="${res.recipe.firstImage() != null}">
-                            <img width="120" height="120" class="bs-icon img-rec" src="${res.recipe.firstImage().thumbnail}">
+                            <a href="/recipe/show/${res.recipe.id}"><img width="120" height="120" class="bs-icon img-rec" src="${res.recipe.firstImage().thumbnail}"></a>
                         </g:if><g:else>
-                           <img width="120" height="120" class="bs-icon img-rec dflt-img" src="/img/dflt.png">
+                            <a href="/recipe/show/${res.recipe.id}"><img width="120" height="120" class="bs-icon img-rec dflt-img" src="/img/dflt.png"></a>
                         </g:else>
                     </div><!--/span-->
                     <div class="span10">
@@ -115,7 +115,13 @@
 										</g:each>
 									</p>
                 					<p>${res.recipe.description}</p>
-                                    <p>Autor: <strong><a href="/userInfo/show/${res.recipe.user.id}">${res.recipe.user.username}</a></strong></p>
+                                    <p style="float: left;">Autor:</p>
+                                    <p>
+                                        <tr>
+                                            <td><img src="/img/avatars/avatar${res.recipe.user.avatar}.png" width="60" height="70"  /></td>
+                                        </tr>
+                                        <strong><a href="/userInfo/show/${res.recipe.user.id}">${res.recipe.user.username}</a></strong></p>
+
                                     <a <g:if test="${res?.recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${res.recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${res.recipe.id}">Ver detalle »</a></p>
 								</div>

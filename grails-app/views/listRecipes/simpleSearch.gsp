@@ -36,9 +36,9 @@
                 <div class="row-fluid lert alert-info">
 					<div class="span2 ">
                         <g:if test="${recipe.firstImage() != null}">
-                            <img width="120" height="120" class="bs-icon img-rec" src="${recipe.firstImage().thumbnail}">
+                            <a href="/recipe/show/${recipe.id}"><img width="120" height="120" class="bs-icon img-rec" src="${recipe.firstImage().thumbnail}"></a>
                         </g:if><g:else>
-                           <img width="120" height="120" class="bs-icon img-rec dflt-img" src="/img/dflt.png">
+                        <a href="/recipe/show/${recipe.id}"><img width="120" height="120" class="bs-icon img-rec dflt-img" src="/img/dflt.png"></a>
                         </g:else>
                     </div><!--/span-->
                     <div class="span10">
@@ -52,7 +52,12 @@
 										</g:each>
 									</p>
                 					<p>${recipe.description}</p>
-                                    <p>Autor: <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p>
+                                    <p style="float: left;">Autor:</p>
+                                    <p>
+                                    <tr>
+                                        <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="60" height="70"  /></td>
+                                    </tr>
+                                    <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p>
                                     <a <g:if test="${res?.recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
