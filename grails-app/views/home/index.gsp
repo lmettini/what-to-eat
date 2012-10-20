@@ -64,7 +64,7 @@
 					<g:each status="i" in="${users}" var="user">
 						<div class="row-fluid">
 							<div class="span12">
-           						<h3>
+           						<h3 class="user-detacado">
 									<img id="imgSelectedAavatar" class="img-polaroid" src="/img/avatars/avatar${user.avatar}.png" width="40" height="47"  />
 									<a href="/userInfo/show/${user.id}">${user.username} (${user.points} puntos)</a>
            						</h3>
