@@ -12,6 +12,11 @@
       		<div class="row-fluid">
 	     		<div class="span5">
 						<g:hasErrors bean="${user}">
+						<g:if test="${user.username != null && user.username.trim().length() > 0}">
+							<g:hasErrors bean="${user}" field="username">
+					   			<div id="flashAlert" class="alert alert-error">El nombre de usuario ingresado ya está siendo usado por otro usuario.</div>
+							</g:hasErrors>
+						</g:if>
 						<g:if test="${user.email != null && user.email.trim().length() > 0}">
 							<g:hasErrors bean="${user}" field="email">
 					   			<div id="flashAlert" class="alert alert-error">El email ingresado ya se encuentra registrado en el sitio.</div>
