@@ -21,7 +21,7 @@
 
                         <div class="row-fluid top8">
                             <div class="span10 container container-header no-border">
-                                Resúmen
+                                <h3>Resúmen</h3>
                             </div>
                         </div>
                         <div class="row-fluid">
@@ -30,7 +30,7 @@
 
                         <div class="row-fluid top8">
                             <div class="span10 container container-header  no-border">
-                                Ingredientes
+                                <h3>Ingredientes</h3>
                             </div>
                         </div>
 
@@ -48,7 +48,7 @@
 
                         <div class="row-fluid top8">
                             <div class="span10 container container-header no-border">
-                                Pasos a seguir
+                                <h3>Pasos a seguir</h3>
                             </div>
                         </div>
                         <div class="row-fluid">
@@ -60,7 +60,7 @@
 
                         <div class="row-fluid top8">
                             <div class="span10 container container-header no-border">
-                                Autor
+                                <h3>Autor</h3>
                             </div>
                         </div>
 
@@ -110,7 +110,7 @@
                         <g:if test="${recipe.images}">
                             <div class="row-fluid top8">
                                 <div class="span10 container container-header no-border">
-                                    Fotos
+                                    <h3>Fotos</h3>
                                 </div>
                             </div>
 
@@ -137,7 +137,7 @@
 
                             <div class="row-fluid top8">
                                 <div class="span10 container container-header no-border">
-                                    Video
+                                    <h3>Video</h3>
                                 </div>
                             </div>
 
