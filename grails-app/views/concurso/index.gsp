@@ -45,7 +45,6 @@
 				                    <span><a href="/userInfo/show/${winner.recipe.user.id}">${winner.recipe.user.username}</a></span>
 				                    <br><br>
 				                    <a href="#likeUsersModal${i}" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${winner.points} personas en el mes</a>
-				<a class="btn btn-primary likes-recipe" href="/recipe/like/${winner.recipe.id}"><i class="icon-thumbs-up icon-white"></i> Me gusta</a>
 									<p class="pull-right"><a class="btn btn-primary" href="/recipe/show/${winner.recipe.id}">Ver detalle »</a></p>
 								</div><!--/span-->
 							</div><!--/row-->
