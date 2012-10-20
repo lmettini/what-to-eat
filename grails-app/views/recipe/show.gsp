@@ -20,7 +20,7 @@
                     <div class="span6">
 
                         <div class="row-fluid top8">
-                            <div class="span10 container container-header">
+                            <div class="span10 container container-header no-border">
                                 Resúmen
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="row-fluid top8">
-                            <div class="span10 container container-header">
+                            <div class="span10 container container-header  no-border">
                                 Ingredientes
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="row-fluid top8">
-                            <div class="span10 container container-header">
+                            <div class="span10 container container-header no-border">
                                 Pasos a seguir
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="row-fluid top8">
-                            <div class="span10 container container-header">
+                            <div class="span10 container container-header no-border">
                                 Autor
                             </div>
                         </div>
@@ -109,7 +109,7 @@
 
                         <g:if test="${recipe.images}">
                             <div class="row-fluid top8">
-                                <div class="span10 container container-header">
+                                <div class="span10 container container-header no-border">
                                     Fotos
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                         <g:if test="${recipe.video}">
 
                             <div class="row-fluid top8">
-                                <div class="span10 container container-header">
+                                <div class="span10 container container-header no-border">
                                     Video
                                 </div>
                             </div>
