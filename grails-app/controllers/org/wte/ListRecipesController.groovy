@@ -25,7 +25,9 @@ class ListRecipesController {
             }
         }
 
-        resultList = resultList.sort({it.recipe.points * -1})
+         resultList = resultList.sort({it.recipe.points * -1})
+
+        def searchIds = ingredientsList.collect {it.id}
 
         def full =resultList.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()==0}
         def mid = resultList.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()>0 && rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()<=2}
