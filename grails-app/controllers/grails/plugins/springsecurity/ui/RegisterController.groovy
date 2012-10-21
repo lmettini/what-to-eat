@@ -122,7 +122,6 @@ class RegisterController extends AbstractS2UiController {
 	}
 
 	def forgotPassword = {
-		println "!!!!!!!!!!!!!!!! FORGOT PASSWORD"
 		if (!request.post) {
 			// show the form
 			return
@@ -130,7 +129,7 @@ class RegisterController extends AbstractS2UiController {
 
 		String username = params.username
 		if (!username) {
-			flash.error = message(code: 'spring.security.ui.forgotPassword.username.missing')
+			flash.message = "Por favor ingrese un nombre de usuario."
 			redirect action: 'forgotPassword'
 			return
 		}
@@ -138,7 +137,7 @@ class RegisterController extends AbstractS2UiController {
 		String usernameFieldName = SpringSecurityUtils.securityConfig.userLookup.usernamePropertyName
 		def user = lookupUserClass().findWhere((usernameFieldName): username)
 		if (!user) {
-			flash.error = message(code: 'spring.security.ui.forgotPassword.user.notFound')
+			flash.message = "No hay ninguna cuenta con ese nombre de usuario."
 			redirect action: 'forgotPassword'
 			return
 		}

@@ -9,7 +9,9 @@
 	<div id='login' class="well">
 		<div class='hero-unit-forms'>
 				 <h2>Olvidaste tu contraseña?</h2>
-				
+				<g:if test="${flash.message!=null}">
+					<div id="flashAlert" class="alert alert-error">${flash.message}</div>
+				</g:if>
 					<g:form action='forgotPassword' name="forgotPasswordForm" autocomplete='off'>
 
 					<g:if test='${emailSent}'>
