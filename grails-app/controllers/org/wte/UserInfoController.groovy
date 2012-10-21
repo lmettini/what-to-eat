@@ -40,6 +40,7 @@ class UserInfoController {
 					html view: "/email/registrationConfirmation", model:[user:user, pass: pass]
 				}
 			}
+			springSecurityService.reauthenticate user.username
 			redirect(controller: "home", action: "index")
 		} else {
 			render view: 'create', model: [user: user]

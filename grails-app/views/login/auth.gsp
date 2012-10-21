@@ -26,6 +26,9 @@
 				<input type='submit' class="btn btn-primary" id="submit" value='Iniciar Sesion'/>
 			</p>
 		</form>
+		<p>
+			<a href="/register/forgotPassword">Te olvidaste tu contraseña?</a>
+		</p>
 			<p>
 				<a href="/userInfo/create">Crear un nuevo usuario</a>
 			</p>
