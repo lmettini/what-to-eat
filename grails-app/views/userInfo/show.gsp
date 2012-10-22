@@ -50,11 +50,32 @@
 										</g:each>
 									</p>
                 					<p>${recipe.summary}</p>
-                                    <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                                    <a href="#likeUsersModal${i}" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
         					</div><!--/span-->
       					</div><!--/row-->
+							<div id="likeUsersModal${i}" class="modal hide fade" style="z-index: 2061">
+							  <div class="modal-header">
+							    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+							    <h3>Usuarios que les gusto la receta ${recipe.name}</h3>
+							  </div>
+							  <div class="modal-body">
+									<table class="table table-hover">
+										<tbody>
+							    	<g:each in="${recipe.likes}" var="userLike">
+							      				<tr>
+													<td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
+													<td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
+							     				</tr>
+						              </g:each>
+									</tbody>
+								</table>
+							  </div>
+							  <div class="modal-footer">
+							    <a href="#" data-dismiss="modal" class="btn btn-primary">Cerrar</a>
+							  </div>
+							</div>
 						</g:each>
                 	</div>
                 	<div class="tab-pane" id="tab2">
@@ -76,11 +97,32 @@
 									</p>
                 					<p>${userlike.recipe.summary}</p>
 									<p>Autor: ${userlike.recipe.user.username}</p>
-                                    <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${userlike.recipe.points} personas</a>
+                                    <a href="#likeUsersModal2${i}" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${userlike.recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${userlike.recipe.id}">Ver detalle »</a></p>
 								</div>
         					</div><!--/span-->
       					</div><!--/row-->
+							<div id="likeUsersModal2${i}" class="modal hide fade" style="z-index: 2061">
+							  <div class="modal-header">
+							    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+							    <h3>Usuarios que les gusto la receta ${userlike.recipe.name}</h3>
+							  </div>
+							  <div class="modal-body">
+									<table class="table table-hover">
+										<tbody>
+							    	<g:each in="${userlike.recipe.likes}" var="userLike">
+							      				<tr>
+													<td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
+													<td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
+							     				</tr>
+						              </g:each>
+									</tbody>
+								</table>
+							  </div>
+							  <div class="modal-footer">
+							    <a href="#" data-dismiss="modal" class="btn btn-primary">Cerrar</a>
+							  </div>
+							</div>
 			  			</g:each>
                 	</div>
               	</div>
