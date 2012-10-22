@@ -19,6 +19,9 @@
 					<div id="flashAlert" class="alert alert-error">Debe completar todos los campos obligatorios</div>
 				</g:if>	
 			</g:hasErrors>
+			<g:if test="${wrongPassword}">
+		   			<div id="flashAlert" class="alert alert-error">Debe ingresar 2 contraseñas iguales</div>
+			</g:if>
                     <fieldset>
                         <div class="control-group">
                             <label class="control-label" for="name">Nombre</label>
@@ -43,6 +46,12 @@
                             <div class="controls">
                                  <input type="password" id="password" name="password" class="input-xlarge" maxlength="100" value="${user.password}">
                                 <label>(escribí tu nueva contraseña si querés cambiarla!)</label>
+                            </div>
+                        </div>
+						<div class="control-group">
+                            <label class="control-label" for="password2">Confirmar contraseña</label>
+                            <div class="controls">
+                                 <input type="password" id="password2" name="password2" class="input-xlarge" maxlength="100" value="<g:if test='${params.password2 == null || wrongPassword == true}'>${user.password}</g:if><g:else>${params.password2}</g:else>">
                             </div>
                         </div>
 						<div class="control-group">

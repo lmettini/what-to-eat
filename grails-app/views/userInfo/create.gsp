@@ -22,11 +22,13 @@
 					   			<div id="flashAlert" class="alert alert-error">El email ingresado ya se encuentra registrado en el sitio.</div>
 							</g:hasErrors>
 						</g:if>
-					
 						<g:if test="${user.mustShowValidationError()}">					
 							<div id="flashAlert" class="alert alert-error">Debe completar todos los campos obligatorios</div>
 						</g:if>	
 					</g:hasErrors>
+					<g:if test="${wrongPassword}">
+				   			<div id="flashAlert" class="alert alert-error">Debe ingresar 2 contraseñas iguales</div>
+					</g:if>
                     <div class="control-group">
                             <label class="control-label" for="title">Nombre de usuario</label>
                             <div class="controls">
@@ -57,6 +59,12 @@
                                  <input type="password" id="password" name="password" class="input-xlarge" maxlength="100" value="${user.password}">
                             </div>
                         </div>
+							<div class="control-group">
+	                            <label class="control-label" for="password2">Confirmar contraseña</label>
+	                            <div class="controls">
+	                                 <input type="password" id="password2" name="password2" class="input-xlarge" maxlength="100" value="${params.password2}">
+	                            </div>
+	                        </div>
 						<div class="control-group">
 	                         <label class="control-label" for="mailPublic">Hacer público mi mail</label>
 	                          <div class="controls">

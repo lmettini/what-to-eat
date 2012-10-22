@@ -27,6 +27,10 @@ class UserInfoController {
 		def user = new SecUser(enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, points: 0)
 		user.properties = params
 		if (user.validate()){
+			if (!user.password.equals(params.password2)){
+				render view: 'create', model: [user: user, wrongPassword: true]
+				return
+			}
 			if (!params.mailPublic){
 				user.mailPublic = false
 			}
@@ -43,7 +47,11 @@ class UserInfoController {
 			springSecurityService.reauthenticate user.username
 			redirect(controller: "home", action: "index")
 		} else {
-			render view: 'create', model: [user: user]
+			boolean wrongPassword = false
+			if (!user.password.equals(params.password2)){
+				wrongPassword = true
+			}
+			render view: 'create', model: [user: user, wrongPassword: wrongPassword]
 		}
 	}
 	
@@ -52,13 +60,21 @@ class UserInfoController {
 		def user = springSecurityService.currentUser
 		user.properties = params
 		if (user.validate()){
+			if (!user.password.equals(params.password2)){
+				render view: 'edit', model: [user: user, wrongPassword: true]
+				return
+			}
 			if (!params.mailPublic){
 				user.mailPublic = false
 			}
 			user.save(flush: true)
 			redirect(controller: "home", action: "index")
 		} else {
-			forward(action:"edit")
+			boolean wrongPassword = false
+			if (!user.password.equals(params.password2)){
+				wrongPassword = true
+			}
+			render view: 'edit', model: [user: user, wrongPassword: wrongPassword]
 		}
 	}
 	
