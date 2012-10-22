@@ -51,19 +51,13 @@
 										</g:each>
 									</p>
                 					<p>${recipe.summary}</p>
-<<<<<<< HEAD
-									<p>Autor: <strong>${recipe.user.username}</strong></p>
-                                    <a href="#likeUsersModal${j}" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
-=======
                                     <p style="float: left;">Autor:</p>
                                     <p>
                                         <tr>
                                             <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="60" height="70"  /></td>
                                         </tr>
                                         <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p>
-
-                                    <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
->>>>>>> 148d9a0... Agregado de avatar de usuario en la home y link en imagen de receta
+                                    <a href="#likeUsersModal${j}" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
         					</div><!--/span-->
@@ -78,7 +72,7 @@
 										<tbody>
 							    	<g:each in="${recipe.likes}" var="userLike">
 							      				<tr>
-													<td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
+													<td><img id="imgSelectedAvatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
 													<td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
 							     				</tr>
 						              </g:each>
