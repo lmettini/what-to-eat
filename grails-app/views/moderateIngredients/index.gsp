@@ -22,7 +22,7 @@
   					<g:each in="${ingredients}" var="ingredient">
       				<tr>
 						<td>${ingredient.name}</td>
-						<td>${ingredient.creator.username}</td>
+						<td><g:if test="${ingredient.creator!=null}">${ingredient.creator.username}</g:if></td>
 						<td><a href="/moderateIngredients/edit/${ingredient.id}">Moderar</a></td>
      				</tr>
   					</g:each>
