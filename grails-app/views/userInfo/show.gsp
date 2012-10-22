@@ -49,7 +49,7 @@
 											<g:if test="${j!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
 									</p>
-                					<p>${recipe.description}</p>
+                					<p>${recipe.summary}</p>
                                     <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
@@ -74,7 +74,7 @@
 											<g:if test="${j!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
 									</p>
-                					<p>${userlike.recipe.description}</p>
+                					<p>${userlike.recipe.summary}</p>
 									<p>Autor: ${userlike.recipe.user.username}</p>
                                     <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${userlike.recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${userlike.recipe.id}">Ver detalle »</a></p>
