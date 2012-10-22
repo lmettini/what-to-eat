@@ -39,13 +39,18 @@ class IngredientController {
 	
 	@Secured(['IS_AUTHENTICATED_FULLY'])
 	def save = {
-		Ingredient ingredient = new Ingredient(params)
+		Ingredient ingredient = Ingredient.findByName(params.name);
+		if (ingredient != null){
+			render "El ingrediente ingresado ya existe en nuestra base de datos. Si no lo logra ver en nuestra lista es porque esta pendiente de moderación."
+			return
+		}
+		ingredient = new Ingredient(params)
 		ingredient.creator = springSecurityService.currentUser
 		ingredient.approved = false
 		  if (ingredient.save(flush: true)) { 
 			render "El ingrediente se creo con exito" 
 		  } else {
-			render "Debe completar todos los campos obligatorios"
+			render "No se pudo guardar el ingrediente"
 		  }
 	}
 	
