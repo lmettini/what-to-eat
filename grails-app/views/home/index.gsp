@@ -34,7 +34,7 @@
 				</div><!--/row-->
 				<div class="row-fluid">
 					<div class="span8">
-					<g:each in="${recipes}" var="recipe">
+					<g:each in="${recipes}" var="recipe" status="j">
 						<div class="row-fluid">
 							<div class="span12 container container-row">
            						<h2>
@@ -52,11 +52,32 @@
 									</p>
                 					<p>${recipe.summary}</p>
 									<p>Autor: <strong>${recipe.user.username}</strong></p>
-                                    <a class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                                    <a href="#likeUsersModal${j}" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
         					</div><!--/span-->
       					</div><!--/row-->
+							<div id="likeUsersModal${j}" class="modal hide fade" style="z-index: 2061">
+							  <div class="modal-header">
+							    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+							    <h3>Usuarios que les gusto la receta ${recipe.name}</h3>
+							  </div>
+							  <div class="modal-body">
+									<table class="table table-hover">
+										<tbody>
+							    	<g:each in="${recipe.likes}" var="userLike">
+							      				<tr>
+													<td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
+													<td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
+							     				</tr>
+						              </g:each>
+									</tbody>
+								</table>
+							  </div>
+							  <div class="modal-footer">
+							    <a href="#" data-dismiss="modal" class="btn btn-primary">Cerrar</a>
+							  </div>
+							</div>
 					</g:each>
 					</div><!--/span-->
 					<div class="span4 container container-row">
