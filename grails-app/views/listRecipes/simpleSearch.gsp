@@ -51,7 +51,7 @@
 											<g:if test="${i!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
 									</p>
-                					<p>${recipe.description}</p>
+                					<p>${recipe.summary}</p>
                                     <p style="float: left;">Autor:</p>
                                     <p>
                                     <tr>

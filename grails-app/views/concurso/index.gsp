@@ -37,7 +37,7 @@
                                     <tr>
                                         <td><img id="prize-image" style="padding-right:10px" class="bs-icon" src="/img/${i}.jpg" width="180" height="150"></td>
                                     </tr>
-                                    <p>${winner.recipe.description}</p>
+                                    <p>${winner.recipe.summary}</p>
 				    				<p>Autor:</p>
 				                    <tr>
 				                        <td><img src="/img/avatars/avatar${winner.recipe.user.avatar}.png" width="60" height="70"  /></td>

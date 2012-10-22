@@ -51,7 +51,7 @@
 											<g:if test="${i!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
 									</p>
-                					<p>${res.recipe.description}</p>
+                					<p>${res.recipe.summary}</p>
                                     <p>Autor: <strong><a href="/userInfo/show/${res.recipe.user.id}">${res.recipe.user.username}</a></strong></p>
                                     <a <g:if test="${res?.recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${res.recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${res.recipe.id}">Ver detalle »</a></p>
@@ -114,7 +114,7 @@
 											<g:if test="${i!=0}">, </g:if>${cp.ingredient.name}
 										</g:each>
 									</p>
-                					<p>${res.recipe.description}</p>
+                					<p>${res.recipe.summary}</p>
                                     <p style="float: left;">Autor:</p>
                                     <p>
                                         <tr>
