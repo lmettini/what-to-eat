@@ -41,16 +41,23 @@ class IngredientController {
 	def save = {
 		Ingredient ingredient = Ingredient.findByName(params.name);
 		if (ingredient != null){
-			render "El ingrediente ingresado ya existe en nuestra base de datos. Si no lo logra ver en nuestra lista es porque esta pendiente de moderación."
-			return
-		}
+			if (ingredient.approved == true){
+				render "El ingrediente ya se encuentra en nuestra base de datos" 
+				return
+			} else {
+				if (ingredient.creator == springSecurityService.currentUser){
+					render "Usted ya ha creado este ingrediente. Ya puede utilizarlo" 
+					return
+				}
+			}
+		} 
 		ingredient = new Ingredient(params)
 		ingredient.creator = springSecurityService.currentUser
 		ingredient.approved = false
 		  if (ingredient.save(flush: true)) { 
 			render "El ingrediente se creo con exito" 
 		  } else {
-			render "No se pudo guardar el ingrediente"
+			render "No se pudo crear el ingrediente"
 		  }
 	}
 	
