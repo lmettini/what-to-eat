@@ -19,7 +19,7 @@
 								<br>
 								<div class="btn-group">		
 								  <button class="btn btn-primary disabled">Mejores ${maxbestusers} usuarios</button>
-									<a class="btn btn-primary" href="/ranking/allusers">Ver todos las usuarios</a>
+									<a class="btn btn-primary" href="/ranking/allusers">Ver todos los usuarios</a>
 								</div>
 								<br>
 								<table class="table table-hover">
