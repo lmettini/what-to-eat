@@ -196,6 +196,7 @@ $.TokenList = function (input, url_or_data, settings) {
         })
         .attr("id", settings.idPrefix + input.id)
         .focus(function () {
+			$("#tab2Alert").hide();
             if (settings.tokenLimit === null || settings.tokenLimit !== token_count) {
                 show_dropdown_hint();
             }

@@ -45,7 +45,8 @@ class IngredientController {
 				render "El ingrediente ya se encuentra en nuestra base de datos" 
 				return
 			} else {
-				if (ingredient.creator == springSecurityService.currentUser){
+				ingredient = Ingredient.findByNameAndCreator(params.name, springSecurityService.currentUser)
+				if (ingredient != null){
 					render "Usted ya ha creado este ingrediente. Ya puede utilizarlo" 
 					return
 				}

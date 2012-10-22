@@ -17,6 +17,10 @@ function firstStepOk(){
     return true;
 }
 
+$("#descrip").focus(function(){
+    $("#tab2Alert").hide();
+});
+
 $("#title").focus(function(){
     $(".alert-title").hide();
 });
