@@ -70,12 +70,14 @@ class ModerateIngredientsController {
 			def user = ingredient.creator
 			def ingredientName = ingredient.name
 			ingredient.delete(flush: true)
-			def conf = SpringSecurityUtils.securityConfig
-			mailService.sendMail {
-				to user.email
-				from conf.ui.register.emailFrom
-				subject "HoyQueComemos - Ingrediente moderado"
-				html view:"/email/ingredientRejected", model:[ingredientName:ingredientName, rejectDescription: params.rejectDescription]
+			if (user != null){
+				def conf = SpringSecurityUtils.securityConfig
+				mailService.sendMail {
+					to user.email
+					from conf.ui.register.emailFrom
+					subject "HoyQueComemos - Ingrediente moderado"
+					html view:"/email/ingredientRejected", model:[ingredientName:ingredientName, rejectDescription: params.rejectDescription]
+				}
 			}
 			redirect(controller: "moderateIngredients", action: "index")
 		} else {
