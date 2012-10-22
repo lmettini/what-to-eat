@@ -107,13 +107,23 @@
     <div id="noIngs" class="modal hide fade">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-        <h3>Debes ingresar al menos un ingrediente para comenzar la busqueda</h3>
+        <h3>Debes ingresar al menos un ingrediente para comenzar la búsqueda</h3>
         <br>
       </div>
       <div class="modal-footer">
         <a href="#" data-dismiss="modal" class="btn">Aceptar</a>
       </div>
     </div>
+  <div id="moreThan300Char" class="modal hide fade">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+          <h3>Debes ingresar menos de 300 caracteres para realizar la búsqueda</h3>
+          <br>
+      </div>
+      <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Aceptar</a>
+      </div>
+  </div>
 	<content tag="js">	
      <script type="text/javascript">
     $(document).ready(function() {
@@ -122,6 +132,9 @@
             if (tokens.length==0){
                 $("#noIngs").modal("show");
             } else {
+                if ($('#search_text li p').text().length > 300){
+                    $('#moreThan300Char').modal('show');
+                } else {
                 var i,query="";
 
                 for(i=0;i<tokens.length;i++){
@@ -132,7 +145,7 @@
                 }
                 $.cookie('newbieMsgShowed','true',{ expires: 1000, path: '/' })
                 document.location="/listRecipes?q="+query
-            }
+            }}
             e.preventDefault();
             e.stopPropagation();
         });
