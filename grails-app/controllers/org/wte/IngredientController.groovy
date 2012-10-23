@@ -39,7 +39,8 @@ class IngredientController {
 	
 	@Secured(['IS_AUTHENTICATED_FULLY'])
 	def save = {
-		Ingredient ingredient = Ingredient.findByName(params.name);
+        def ingToAdd = params.name.capitalize().toString();
+		Ingredient ingredient = Ingredient.findByName(ingToAdd);
 		if (ingredient != null){
 			if (ingredient.approved == true){
 				render "El ingrediente ya se encuentra en nuestra base de datos" 
@@ -51,7 +52,8 @@ class IngredientController {
 					return
 				}
 			}
-		} 
+		}
+
 		ingredient = new Ingredient(params)
 		ingredient.creator = springSecurityService.currentUser
 		ingredient.approved = false

@@ -82,8 +82,9 @@
                                 <div class="controls ">
                                     <input type="text" id="ingred">
                                     <input type="number" min="0" max="99999" autocomplete="off" class="span1 inline-input" id="qty" maxlength="5">
+                                    Medida
                                     <select class="span2 inline-input" id="units">
-                                        <option value="0">Medida</option>
+                                        <option value="0"></option>
                                         <g:each in="${measureUnits}" var="mu">
                                             <option value="${mu.id}">${mu.name}</option>
                                         </g:each>
