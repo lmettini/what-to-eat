@@ -81,7 +81,9 @@ $(".add-ing").click(function (){
     var qty = $("#qty").val();
     var unit = $("#units").val();
 
-    if (ing.length!=1 || qty=="" || qty<=0 || unit==0){
+    // los campos cantidad y medida son optativos
+    //if (ing.length!=1 || qty=="" || qty<=0 || unit==0){
+    if (ing.length!=1 || qty<0 ){
         $("#ing-alert1").show();
         return
     }
