@@ -22,7 +22,13 @@
                 <h1 class="no-recipe-title">
                 No hay ninguna receta para ofrecerte con los ingredientes:
                 <g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each>
-			    </h1>
+                    <sec:ifLoggedIn>
+                        <a  href="/recipe/create">.<br>Si tenés una, la podés agregar vos!</a>
+                    </sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn>
+                        <a  href="/login">.<br>Si tenés una, la podés agregar vos!</a>
+                    </sec:ifNotLoggedIn>
+                </h1>
             </g:if>
             <g:if test="${fullMatchList.size()>0}">
                 <h2 class="list-title-first">
