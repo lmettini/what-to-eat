@@ -13,6 +13,8 @@ class IngredientController {
 	    	ilike("name", "%${params.q}%")
 			eq("approved", true)
 		}
+        ingredients = ingredients.sort({it.name.length()})
+        ingredients = ingredients.sort({it.name.toUpperCase().indexOf(params.q.toString().toUpperCase())})
         if(ingredients.size()>20){
             ingredients = ingredients[0..19]
         }
@@ -31,6 +33,8 @@ class IngredientController {
 			    }
 	    	}
 		}
+        ingredients = ingredients.sort({it.name.length()})
+        ingredients = ingredients.sort({it.name.toUpperCase().indexOf(params.q.toString().toUpperCase())})
         if(ingredients.size()>20){
             ingredients = ingredients[0..19]
         }

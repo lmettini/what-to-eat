@@ -3,6 +3,7 @@ package org.wte
 class ListRecipesController {
 
     def index = {
+
         def components = []
         def resultList = []
         def ingredientsList = []
@@ -30,13 +31,33 @@ class ListRecipesController {
         def searchIds = ingredientsList.collect {it.id}
 
         def full =resultList.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()==0}
-        def mid = resultList.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()>0 && rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()<=2}
+             def mid = resultList.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()>0 && rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()<=2}
+
+        def maxrows = 10
+        def offset = params.offset ? params.offset.toInteger() : 0
+        def init=maxrows*offset,end=maxrows*offset+maxrows-1
+
+
+        def all = full
+        all.addAll(mid)
+
+
+        if(end>all.size()) end = all.size()-1
+
+        all = all[init..end]
+
+        full =all.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()==0}
+        mid =all.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()>0 && rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()<=2}
+
 
         [   "components":components,
             "resultList":resultList,
             "ingredients": ingredientsList,
             "fullMatchList":full,
-            "midMatchList":mid]
+            "midMatchList":mid,
+            "total":all.size(),
+            "maxrows":maxrows,
+            "query":params.q]
 
     }
 	

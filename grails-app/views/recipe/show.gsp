@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="row-fluid">
-                            <h3><pre class="span11 recipePre">${recipe.summary}</pre></h3>
+                            <h3><p class="span11 recipePre">${recipe.summary}</p></h3>
                         </div>
 
                         <div class="row-fluid top8">
@@ -53,8 +53,8 @@
                         </div>
                         <div class="row-fluid">
                             <div class="span0"></div>
-                            <div class="span11 offset1">
-                                <span><pre class="recipePre">${recipe.description}</pre></span>
+                            <div class="span10 offset1">
+                                <span><p class="recipePre">${recipe.description}</p></span>
                             </div>
                         </div>
 

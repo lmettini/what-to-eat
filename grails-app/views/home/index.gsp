@@ -25,10 +25,10 @@
     			<br>
 				<div class="container-fluid">
 				<div class="row-fluid">
-					<div class="span8 container container-header">
+					<div class="span8 container container-header no-border">
 						<h2>Recetas destacadas</h2>
 					</div>
-					<div class="span4 container container-header">
+					<div class="span4 container container-header  no-border">
 						<h2>Usuarios destacados</h2>
 					</div>
 				</div><!--/row-->
@@ -51,12 +51,13 @@
 										</g:each>
 									</p>
                 					<p>${recipe.summary}</p>
-                                    <p style="float: left;">Autor:</p>
+                                    <div style="margin-top: 17px;">
+                                    <p style="float: left;margin-right: 10px;">Autor:</p>
                                     <p>
                                         <tr>
-                                            <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="60" height="70"  /></td>
+                                            <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="30" height="35"  /></td>
                                         </tr>
-                                        <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p>
+                                        <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p></div>
                                     <a href="#likeUsersModal${j}" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>

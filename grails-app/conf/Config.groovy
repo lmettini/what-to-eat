@@ -77,8 +77,8 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
-	trace  'org.hibernate.type'
-	debug  'org.hibernate.SQL'
+	error  'org.hibernate.type'
+	error  'org.hibernate.SQL'
 
     error  'org.codehaus.groovy.grails.web.servlet', //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP
@@ -155,3 +155,52 @@ zumos {
 
 grails.plugins.springsecurity.ui.register.emailFrom = "zumos.utn@gmail.com"
 
+
+
+
+// set per-environment serverURL stem for creating absolute links
+environments {
+    production {
+        uiperformance.enabled = true
+    }
+    development {
+	    uiperformance.enabled = false
+
+    }
+}
+
+// UI Performance
+uiperformance.keepOriginals= true
+uiperformance.html.compress = true
+uiPerformance.processImages = true
+uiperformance.etagfilter = false
+
+uiperformance.excludedMinifiedJs = [/.+jquery.+/]
+uiperformance.exclusions = [
+   "**/images/**",
+   "**/img/**",
+   "**/META-INF/**",
+   "**/old-loops/**",
+   "**/temp/**",
+   "**/WEB-INF/**",
+   "**/favicon.ico",
+   "**/css/temp/**",
+   "**/css/bak/**",
+   "**/js/bak/**",
+   "**/js/min/**",
+   "**/js/temp/**"
+]
+
+
+
+
+
+uiperformance.bundles = [
+   [type: 'css',
+    name: 'css_todos',
+    files: ['zumos','bootstrap','bootstrap-responsive','token-input','css1','css2','css3','css4','token-input-facebook']],
+   [type: 'js',
+    name: 'js_todos',
+    files: ['jquery','jquery.cookie','bootstrap-transition','bootstrap-alert','bootstrap-modal','bootstrap-dropdown','bootstrap-scrollspy','bootstrap-tab','bootstrap-tooltip','bootstrap-popover','bootstrap-button','bootstrap-collapse','bootstrap-carousel','bootstrap-typeahead','jquery.tokeninput']]
+]
+// Fin UI Performance

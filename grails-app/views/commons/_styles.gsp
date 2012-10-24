@@ -1,6 +1,4 @@
 <!-- Le styles -->
-<link href="/css/zumos.css" rel="stylesheet">
-<link href="/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
   body {
 background: url(/img/bg1.jpg) repeat;
@@ -20,16 +18,4 @@ background: url(/img/bg2.jpg) repeat;
 }
 </style>
 
-<link href="/css/bootstrap-responsive.css" rel="stylesheet">
-
-
-
-<link rel="stylesheet" href="/css/token-input.css" type="text/css" />
-<link rel="stylesheet" href="/css/token-input-facebook.css" type="text/css" />
-
-
-
-<link href="/css/css" rel="stylesheet" type="text/css">
-<link href="/css/css(1)" rel="stylesheet" type="text/css">
-<link href="/css/css(2)" rel="stylesheet" type="text/css">
-<link href="/css/css(3)" rel="stylesheet" type="text/css">
+<p:css name='css_todos'/>

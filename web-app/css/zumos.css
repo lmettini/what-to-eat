@@ -59,6 +59,7 @@
     border: none;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
+    text-align: justify;
 }
 
 #show-recipe .span4{
@@ -92,6 +93,7 @@
 .dflt-img{
     background-color: #E48D8D;
     border: 2px solid #EDEDED;
+    color: white;
 }
 .img-rec{
     margin: 35px;
@@ -118,4 +120,8 @@ margin-bottom: 10px;
 
 .no-border{
     border: 0px;
+}
+
+.list-margin{
+    margin-top: 10px;
 }

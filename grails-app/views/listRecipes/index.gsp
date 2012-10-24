@@ -39,12 +39,12 @@
 			<br>
 
 			<g:each in="${fullMatchList}" var="res" status="j">
-				<div class="row-fluid lert alert-info">
+				<div class="row-fluid lert alert-info list-margin">
 					<div class="span2 ">
                         <g:if test="${res.recipe.firstImage() != null}">
                             <img width="120" height="120" class="bs-icon img-rec" src="${res.recipe.firstImage().thumbnail}">
                         </g:if><g:else>
-                           <img width="120" height="120" class="bs-icon img-rec dflt-img" src="/img/dflt.png">
+                           <a href="/recipe/show/${res.recipe.id}"><img width="120" height="120" class="bs-icon img-rec dflt-img" src="/img/dflt.png"></a>
                         </g:else>
                     </div><!--/span-->
                     <div class="span10">
@@ -58,7 +58,13 @@
 										</g:each>
 									</p>
                 					<p>${res.recipe.summary}</p>
-                                    <p>Autor: <strong><a href="/userInfo/show/${res.recipe.user.id}">${res.recipe.user.username}</a></strong></p>
+                                    <div style="margin-top: 17px;">
+                                    <p style="float: left;margin-right: 10px;">Autor:</p>
+                                    <p>
+                                        <tr>
+                                            <td><img src="/img/avatars/avatar${res.recipe.user.avatar}.png" width="30" height="35"  /></td>
+                                        </tr>
+                                        <strong><a href="/userInfo/show/${res.recipe.user.id}">${res.recipe.user.username}</a></strong></p></div>
                                     <a <g:if test="${res?.recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${res.recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${res.recipe.id}">Ver detalle »</a></p>
 								</div>
@@ -102,7 +108,7 @@
                 <h3 style="margin-left: 16px;">Ingredientes buscados: <g:each in="${ingredients}" var="ing" status="i"><g:if test="${i!=0}">, </g:if>${ing.name}</g:each></h3>
             </g:if>
             <g:each in="${midMatchList}" var="res" status="j">
-					<div class="row-fluid lert alert-info">
+					<div class="row-fluid lert alert-info list-margin">
 					<div class="span2 ">
                         <g:if test="${res.recipe.firstImage() != null}">
                             <a href="/recipe/show/${res.recipe.id}"><img width="120" height="120" class="bs-icon img-rec" src="${res.recipe.firstImage().thumbnail}"></a>
@@ -121,13 +127,14 @@
 										</g:each>
 									</p>
                 					<p>${res.recipe.summary}</p>
-                                    <p style="float: left;">Autor:</p>
+                                    <div style="margin-top: 17px;">
+                                    <p style="float: left;margin-right: 10px;">Autor:</p>
                                     <p>
                                         <tr>
-                                            <td><img src="/img/avatars/avatar${res.recipe.user.avatar}.png" width="60" height="70"  /></td>
+                                            <td><img src="/img/avatars/avatar${res.recipe.user.avatar}.png" width="30" height="35"  /></td>
                                         </tr>
                                         <strong><a href="/userInfo/show/${res.recipe.user.id}">${res.recipe.user.username}</a></strong></p>
-
+                                       </div>
                                     <a <g:if test="${res?.recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${res.recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${res.recipe.id}">Ver detalle »</a></p>
 								</div>
@@ -159,6 +166,15 @@
                     </g:if>
 			</g:each>
 
+       <g:if test="${total>maxrows}">
+				<div class="pagination-container pagination-centered container-row">
+						<g:paginate next="Siguiente" prev="Anterior"
+				            controller="listRecipes" action="index"
+				        max="${maxrows}" maxsteps="10" total="${total}" params="[q: params.q]" />
+				</div>
+            </g:if>
+
+
            <div id="noIngs" class="modal hide fade">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
@@ -168,6 +184,7 @@
               <div class="modal-footer">
                 <a href="#" data-dismiss="modal" class="btn">Aceptar</a>
               </div>
+        </div>
         </div>
   <content tag="js">
       <script type="text/javascript">

@@ -33,7 +33,7 @@
 			</h2>
 			<br>
 			<g:each in="${recipes}" var="recipe"  status="j">
-                <div class="row-fluid lert alert-info">
+                <div class="row-fluid lert alert-info list-margin">
 					<div class="span2 ">
                         <g:if test="${recipe.firstImage() != null}">
                             <a href="/recipe/show/${recipe.id}"><img width="120" height="120" class="bs-icon img-rec" src="${recipe.firstImage().thumbnail}"></a>
@@ -52,13 +52,15 @@
 										</g:each>
 									</p>
                 					<p>${recipe.summary}</p>
-                                    <p style="float: left;">Autor:</p>
+                                    <div style="margin-top: 17px;">
+                                    <p style="float: left;margin-right: 10px;">Autor:</p>
                                     <p>
-                                    <tr>
-                                        <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="60" height="70"  /></td>
-                                    </tr>
-                                    <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p>
-                                    <a <g:if test="${res?.recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
+                                        <tr>
+                                            <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="30" height="35"  /></td>
+                                        </tr>
+                                        <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p>
+                                     </div>
+                                    <a <g:if test="${recipe?.likes?.size()>0}">href="#likeUsersModal${j}" role="button" data-toggle="modal"</g:if> class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i>  ${recipe.points} personas</a>
            							<p style="text-align:right"><a class="btn btn-primary" href="/recipe/show/${recipe.id}">Ver detalle »</a></p>
 								</div>
 
