@@ -13,8 +13,7 @@
           	<div class="hero-unit-home">
             	<h1>HoyQueComemos</h1>
                 <h3>ingresá los ingredientes que tengas y encontrá las mejores recetas en sólo unos segundos!</h3>
-                  <div id="fb-like-button" class="fb-like" data-href="http://www.facebook.com/platform" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-                  <!--<div id="fb-like-button" class="fb-like" data-href="http://www.facebook.com/hoyquecomemos.zumos" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>-->
+                  <div id="fb-like-button" class="fb-like" data-href="http://www.facebook.com/zumos.hoyquecomemos" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
           	</div>
       		<div class="well">
     			<br>
@@ -105,8 +104,7 @@
                         <table>
                             <div class="row-fluid">
                                 <div class="span12 height430">
-                                    <div class="fb-like-box" data-href="http://www.facebook.com/platform" data-width="340" data-height="430" data-show-faces="true" data-stream="true" data-header="true"></div>
-                                <!--<div class="fb-like-box" data-href="http://www.facebook.com/hoyquecomemos.zumos" data-width="340" data-height="300" data-show-faces="true" data-stream="true" data-header="true"></div>-->
+                                <div class="fb-like-box" data-href="http://www.facebook.com/zumos.hoyquecomemos" data-width="340" data-height="430" data-show-faces="true" data-stream="true" data-header="true"></div>
                                 </div><!--/span-->
                             </div><!--/row-->
                         </table>
