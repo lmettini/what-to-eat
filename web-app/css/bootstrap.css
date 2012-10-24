@@ -5237,3 +5237,12 @@ input[type="text"] .wte-form{
 .dropdown-toggle{
     margin-top: 2px !important;
 }
+#fb-like-button{
+    float: right;
+    margin-right: 30px;
+    margin-top: -28px;
+}
+
+.height430{
+    height: 430px;
+}
