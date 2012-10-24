@@ -98,9 +98,24 @@
         					</div><!--/span-->
       					</div><!--/row-->
 					</g:each>
-					</table>
+                        </table>
 					</div><!--/span-->
-				</div><!--/row-->
+                    <div class="span4 container container-row">
+                        <table>
+                            <div id="fb-facepile" class="fb-facepile" data-href="http://www.facebook.com/zumos.hoyquecomemos" data-max-rows="1" data-width="300"></div>
+                        </table>
+                    </div><!--/span-->
+                    <div class="span4 container container-row">
+                        <table>
+                            <div class="row-fluid">
+                                <div class="span12 height430">
+                                <div class="fb-like-box" data-href="http://www.facebook.com/zumos.hoyquecomemos" data-width="340" data-height="430" data-show-faces="true" data-stream="true" data-header="true"></div>
+                                    <!--<div class="fb-activity" data-href="http://www.facebook.com/zumos.hoyquecomemos" data-width="340" data-height="430" data-header="true" data-recommendations="false"></div>-->
+                                </div><!--/span-->
+                            </div><!--/row-->
+                        </table>
+                    </div><!--/span-->
+                </div><!--/row-->
 				</div><!--/container-->
 			</div>
 		</div>
@@ -125,7 +140,16 @@
           <a href="#" data-dismiss="modal" class="btn">Aceptar</a>
       </div>
   </div>
-	<content tag="js">	
+	<content tag="js">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
      <script type="text/javascript">
     $(document).ready(function() {
         $("#search_button").click(function (e) {
