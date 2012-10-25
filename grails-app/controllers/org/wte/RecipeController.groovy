@@ -42,8 +42,19 @@ class RecipeController {
 	}
 
     def show ={
+        if(!params.id.toString().isLong()){
+            render(view:"notFound",model:[])
+            return
+        }
+
         def recipeToShow = Recipe.get(params.id)
-		def isNotAUserRecipe = recipeToShow.user != springSecurityService.currentUser
+
+        if(recipeToShow==null){
+            render(view:"notFound",model:[])
+            return
+        }
+
+		def isNotAUserRecipe = recipeToShow?.user != springSecurityService.currentUser
 		def isLikedByCurrentUser = recipeToShow.isLikedBy(springSecurityService.currentUser)
         [recipe: recipeToShow, recipeComponents: recipeToShow.components, isNotAUserRecipe: isNotAUserRecipe, isLikedByCurrentUser: isLikedByCurrentUser ]
     }

@@ -36,9 +36,9 @@
                 <div class="row-fluid lert alert-info list-margin">
 					<div class="span2 ">
                         <g:if test="${recipe.firstImage() != null}">
-                            <a href="/recipe/show/${recipe.id}"><img width="120" height="120" class="bs-icon img-rec" src="${recipe.firstImage().thumbnail}"></a>
+                            <a href="/recipe/show/${recipe.id}"><img width="170" height="170" class="bs-icon img-rec" src="${recipe.firstImage().medium}"></a>
                         </g:if><g:else>
-                        <a href="/recipe/show/${recipe.id}"><img width="120" height="120" class="bs-icon img-rec dflt-img" src="/img/dflt.png"></a>
+                        <a href="/recipe/show/${recipe.id}"><img width="170" height="170" class="bs-icon img-rec dflt-img" src="/img/dflt.png"></a>
                         </g:else>
                     </div><!--/span-->
                     <div class="span10">

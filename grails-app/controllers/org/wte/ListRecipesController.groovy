@@ -41,14 +41,14 @@ class ListRecipesController {
         def all = full
         all.addAll(mid)
 
+        if(all.size()>0){
+            if(end>all.size()) end = all.size()-1
 
-        if(end>all.size()) end = all.size()-1
+            all = all[init..end]
 
-        all = all[init..end]
-
-        full =all.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()==0}
-        mid =all.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()>0 && rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()<=2}
-
+            full =all.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()==0}
+            mid =all.findAll{rec -> rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()>0 && rec.recipe.components.findAll{!searchIds.contains(it.ingredient.id)}.size()<=2}
+        }
 
         [   "components":components,
             "resultList":resultList,
