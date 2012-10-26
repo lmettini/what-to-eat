@@ -55,7 +55,7 @@
                                     <p style="float: left;margin-right: 10px;">Autor:</p>
                                     <p>
                                         <tr>
-                                            <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="30" height="35"  /></td>
+                                            <td><img src="/img/avatars/avatar${recipe.user.avatar}-tiny.jpg" width="30" height="35"  /></td>
                                         </tr>
                                         <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p></div>
                                     <a href="#likeUsersModal${j}" role="button" data-toggle="modal" class="btn btn-primary likes-recipe"><i class="icon-thumbs-up icon-white"></i> ${recipe.points} personas</a>
@@ -73,7 +73,7 @@
 										<tbody>
 							    	<g:each in="${recipe.likes}" var="userLike">
 							      				<tr>
-													<td><img id="imgSelectedAvatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
+													<td><img id="imgSelectedAvatar" src="/img/avatars/avatar${userLike.user.avatar}-tiny.jpg" width="60" height="70"  /></td>
 													<td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
 							     				</tr>
 						              </g:each>
@@ -92,7 +92,7 @@
 						<div class="row-fluid">
 							<div class="span12">
            						<h3 class="user-detacado">
-									<img id="imgSelectedAavatar" class="img-polaroid" src="/img/avatars/avatar${user.avatar}.png" width="40" height="47"  />
+									<img id="imgSelectedAavatar" class="img-polaroid" src="/img/avatars/avatar${user.avatar}-tiny.jpg" width="40" height="47"  />
 									<a href="/userInfo/show/${user.id}">${user.username} (${user.points} puntos)</a>
            						</h3>
         					</div><!--/span-->

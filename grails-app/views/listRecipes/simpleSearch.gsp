@@ -36,9 +36,9 @@
                 <div class="row-fluid lert alert-info list-margin">
 					<div class="span2 ">
                         <g:if test="${recipe.firstImage() != null}">
-                            <a href="/recipe/show/${recipe.id}"><img width="170" height="170" class="bs-icon img-rec" src="${recipe.firstImage().medium}"></a>
+                            <a href="/recipe/show/${recipe.id}"><img class="bs-icon img-rec img-list" src="${recipe.firstImage().medium}"></a>
                         </g:if><g:else>
-                        <a href="/recipe/show/${recipe.id}"><img width="170" height="170" class="bs-icon img-rec dflt-img" src="/img/dflt.png"></a>
+                        <a href="/recipe/show/${recipe.id}"><img width="150" height="150" class="bs-icon img-rec dflt-img" src="/img/dflt.png"></a>
                         </g:else>
                     </div><!--/span-->
                     <div class="span10">
@@ -56,7 +56,7 @@
                                     <p style="float: left;margin-right: 10px;">Autor:</p>
                                     <p>
                                         <tr>
-                                            <td><img src="/img/avatars/avatar${recipe.user.avatar}.png" width="30" height="35"  /></td>
+                                            <td><img src="/img/avatars/avatar${recipe.user.avatar}-tiny.jpg" width="30" height="35"  /></td>
                                         </tr>
                                         <strong><a href="/userInfo/show/${recipe.user.id}">${recipe.user.username}</a></strong></p>
                                      </div>
@@ -77,7 +77,7 @@
                                     <tbody>
                                 <g:each in="${recipe?.likes}" var="userLike">
                                             <tr>
-                                                <td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}.png" width="60" height="70"  /></td>
+                                                <td><img id="imgSelectedAavatar" src="/img/avatars/avatar${userLike.user.avatar}-tiny.jpg" width="60" height="70"  /></td>
                                                 <td><a href="/userInfo/show/${userLike.user.id}">${userLike.user.username}</a></td>
                                             </tr>
                                   </g:each>

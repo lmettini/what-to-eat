@@ -53,7 +53,7 @@
                                <div class="controls">
                                    <g:each in="${recipe.components}" var="comp">
                                        <div class="ingredient-row">
-                                           <div id="ing-${comp.ingredientId}" class="alert token-ingredient" x-ingid="${comp.ingredientId}" x-qty="${comp.qty}" x-unit="${comp.unit.id}" x-id="${comp.id}">${comp.qty} ${comp.unit.name}  ${comp.ingredient.name}</div>
+                                           <div id="ing-${comp.ingredientId}" class="alert token-ingredient" x-ingid="${comp.ingredientId}" x-qty="${comp.qty}" x-unit="${comp?.unit?.id}" x-id="${comp.id}">${comp.qty} ${comp?.unit?.name}  ${comp.ingredient.name}</div>
                                        </div>
                                    </g:each>
                                </div>

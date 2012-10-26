@@ -96,7 +96,12 @@
     color: white;
 }
 .img-rec{
-    margin: 20px;
+    margin: 30px;
+}
+
+.img-list{
+    max-width: 150px;
+    max-height: 150px;
 }
 
 .list-title{

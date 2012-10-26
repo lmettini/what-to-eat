@@ -16,6 +16,7 @@ class RecipeComponent {
 	
     static constraints = {
          qty(nullable: true)
+         unit(nullable: true)
     }
 
 }

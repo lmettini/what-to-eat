@@ -145,16 +145,22 @@ class RecipeController {
             def component = new RecipeComponent(qty: ing.qty)
             component.save(flush:true);
 
-            def unit = MeasureUnit.get(ing.unit)
+            def unit
+            if(ing.unit!="0" && ing.unit!=""){
+                unit = MeasureUnit.get(ing.unit)
+                unit.addToComponents(component)
+            }
             def ingred = Ingredient.get(ing.ingredId)
 
-            unit.addToComponents(component)
             ingred.addToComponents(component)
             nRecipe.addToComponents(component)
 
             component.save(flush:true)
-            unit.save(flush:true)
             ingred.save(flush:true)
+
+            if(ing.unit!="0" && ing.unit!=""){
+                unit.save(flush:true)
+            }
 
 			if (nRecipe.hasAllIngredientsApproved()){
 				nRecipe.readyForModeration = true;
