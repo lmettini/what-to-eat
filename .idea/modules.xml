@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/what-to-eat.iml" filepath="$PROJECT_DIR$/what-to-eat.iml" />
-      <module fileurl="file://$PROJECT_DIR$/what-to-eat-grailsPlugins.iml" filepath="$PROJECT_DIR$/what-to-eat-grailsPlugins.iml" />
     </modules>
   </component>
 </project>

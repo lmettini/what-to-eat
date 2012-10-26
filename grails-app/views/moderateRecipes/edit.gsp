@@ -62,8 +62,8 @@
                                 <label class="control-label" for="steps">Descripcion</label>
                                 <div class="controls">
                                     <textarea id="descrip" name="description" class="input-xlarge" id="steps" rows="4">${recipe.description}</textarea>
-                                    <p class="help-block"><span id="counter" class="badge">1000</span> caracteres restantes</p>
-                                    <div id="descriptionDiv" class="alert alert-error help-block alert-desc">Superaste los 1000 caracteres permitidos</div>
+                                    <p class="help-block"><span id="counter" class="badge">5000</span> caracteres restantes</p>
+                                    <div id="descriptionDiv" class="alert alert-error help-block alert-desc">Superaste los 5000 caracteres permitidos</div>
                                 </div>
                             </div>
                     </fieldset>
@@ -158,13 +158,13 @@
 		function updateCounter(){
 		    var count = $("#descrip").val().length;
 
-		    if(count>1000){
+		    if(count>5000){
 		        $("#counter").addClass("badge-important");
 		    } else{
 		        $("#counter").removeClass("badge-important");
 		    }
 
-		    $("#counter").html(1000-count);
+		    $("#counter").html(5000-count);
 		}
 
 		$("#descrip").keyup(function(){updateCounter()});
