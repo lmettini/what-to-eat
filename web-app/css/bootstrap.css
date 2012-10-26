@@ -36,7 +36,7 @@ section {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #666666;
+  background-color: #a6dcde;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
   -webkit-border-radius: 4px;
@@ -48,8 +48,8 @@ section {
 }
 
 #search_form {
-    background: url(/img/bg1.jpg) repeat;
-    background-color: #a6dcde;
+    background: #333333 url(/img/bg1.jpg) repeat;
+    background-color: #333333;
     position: relative;
     padding: 10px 190px 10px 10px;
     border: 3px solid #ffffff;
