@@ -20,6 +20,3 @@ background: url(/img/bg2.jpg) repeat;
 
 <p:css name='css_todos'/>
 
-<!--[if IE]>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-<![endif]-->
