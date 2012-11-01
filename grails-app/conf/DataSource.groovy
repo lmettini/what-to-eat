@@ -13,8 +13,16 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:hsqldb:mem:devDB"
+            if(InetAddress.getLocalHost().getHostName()=="lmettini"){
+                driverClassName = "org.postgresql.Driver" //the database driver class name
+                username = "arofjsvuojifkr" //database name
+                password = "root" //database password
+                dbCreate = "update"
+                url = "jdbc:postgresql://localhost:5433/dd2qd1r0jj283p"
+            }else{
+                dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+                url = "jdbc:hsqldb:mem:devDB"
+            }
         }
     }
     test {

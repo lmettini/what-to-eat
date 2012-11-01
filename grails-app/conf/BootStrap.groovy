@@ -15,7 +15,8 @@ class BootStrap {
 
 				
         } else {
-                
+
+            if(InetAddress.getLocalHost().getHostName()!="lmettini"){
 		SecUser adminuser = new SecUser(username:"admin", name: "admin", surname: "admin", email: "admin@zumos.com", password:"1234", enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false, avatar: 1, mailPublic: true, points: 0)
 		adminuser.save(flush: true)
 		SecRole adminrole = new SecRole(authority: "ROLE_ADMIN")
@@ -621,7 +622,7 @@ ing = new Ingredient(name: 'Bonito');ing.save(flush:true);
 ing = new Ingredient(name: 'Pera');ing.save(flush:true);
 ing = new Ingredient(name: 'Hojaldre');ing.save(flush:true);
         
-        }
+        }      }
 
     }
     def destroy = {
