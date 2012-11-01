@@ -6,16 +6,14 @@ class ConcursoController {
 	
 	def index = {
 		def cal = Calendar.instance
-		//CUANDO HAYA QUE DEJAR EL CONCURSO DEL MES PONER LA LINEA DE ABAJO
-		//int endDay = 1
-		int endDay = cal.get(Calendar.DAY_OF_MONTH)
+		int endDay = 1
 		int endMonth = cal.get(Calendar.MONTH)
 		int endYear = cal.get(Calendar.YEAR)
 		String key = String.valueOf(endYear) + String.valueOf(endMonth) + String.valueOf(endDay)
 		Contest contest = Contest.findByKey(key)
 		if (contest == null){
-			//concursoService.closeContestByMonth()
-			concursoService.closeContestByDay()
+			concursoService.closeContestByMonth()
+			//concursoService.closeContestByDay()
 			contest = Contest.findByKey(key)
 		} 
 		def list = [] 
